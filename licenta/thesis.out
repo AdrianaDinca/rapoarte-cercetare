@@ -1,0 +1,29 @@
+\BOOKMARK [0][-]{table.caption.2}{Acknowledgements}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{1.1 State of the art}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{1.2 Motivations and Objectives}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{1.3 Contributions}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{1.4 Summary}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{2 Background}{}% 8
+\BOOKMARK [1][-]{section.2.1}{2.1 Naming and Identity Systems}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{2.2 Bitcoin Protocol}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Bitcoin History}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Bitcoin Competition}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Proof-of-work}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 Blockchain}{section.2.2}% 14
+\BOOKMARK [1][-]{section.2.3}{2.3 Discussion}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{3 Study of Namecoin Protocol}{}% 16
+\BOOKMARK [1][-]{section.3.1}{3.1 Namecoin Overview}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{3.2 Namecoin High Level Design}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{3.3 Namecoin Transactions}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{3.4 Namecoin's Naming Services Properties}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{3.5 Namecoin's Domain Name Services}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{4 Design}{}% 22
+\BOOKMARK [0][-]{chapter.5}{5 Implementation}{}% 23
+\BOOKMARK [1][-]{section.5.1}{5.1 Implementation Decisions}{chapter.5}% 24
+\BOOKMARK [0][-]{chapter.6}{6 Evaluation}{}% 25
+\BOOKMARK [1][-]{section.6.1}{6.1 Discussion}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{7 Summary and Future Work}{}% 27
+\BOOKMARK [0][-]{appendix.A}{A Namecoin Records Distribution according to expires\137in field}{}% 28
+\BOOKMARK [1][-]{section.A.1}{A.1 Namecoin Records relationship between expires\137in and value fields}{appendix.A}% 29

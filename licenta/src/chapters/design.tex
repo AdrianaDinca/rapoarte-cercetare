@@ -1,0 +1,30 @@
+\chapter{Design}
+\label{chapter:4}
+%This is an example of a footnote \footnote{\url{www.google.com}}. You can see %here a reference to \labelindexref{Section}{sub-sec:proj-objectives}
+
+This chapter presents the design decisions and the main components of a Namecoin exploring tool. The Namecoin Explorer tool was developed in order to validate the naming statements described in section~\ref{sec:dn-services-lbl}.
+The purpose is to help Namecoin node owners to discover, validate or explore information stored in the blockchain that are naming specific. The basic design of this tool is described in \labelindexref{Figure}{img:design}. The operating principle is quite simple. The Namecoin Explorer behaves as client by sending requests to the Namecoin node which plays the server role. Based on the request sent the Namecoin node offers responses in JSON standard format.
+
+\fig[scale=0.8]{src/img/design.pdf}{img:design}{Namecoin Explorer Design}
+
+The design of this tool aims to achieve many purposes such as validating and testing naming information stored in the blockchain, finding answers to Namecoin usability related scenarios, etc. The design was build taking into consideration all purposes of this tool.
+Before working on the tool design we thought about common use cases. For example, the value field of a name or identity may be of interest for a Namecoin user that wants to buy an already registered name. Another possible scenario is when a Namecoin user wants to see all the names registered in the blockchain that follows a certain pattern. There is common for a user to own more than one name grouped by a pattern that is meaningful for that user. Taking these details into consideration providing dumps of naming specific information that follows a certain pattern is useful and it represents a common use case.
+Also, the Namecoin Explorer aims to offer a clear and high level view on the Namecoin network usability thus we propose computing name numbers that follows one or more criteria. This functionality is offered via advanced filtering options. The filtering criteria are email, IP addreses, websites and BM addresses.
+As a result of using these filters an user can compute the number of names and identities registered that added a certain attribute in the value field and the unique names and identities that stores the same value in that attribute.
+
+In order to have access to Namecoin naming details an user must run a Namecoin node and have the blockchain downloaded on a local machine.
+As mentioned in section~\ref{run-nmc-lbl} there are two Namecoin versions. In order to be able to use our tool the Namecoin version installed must offer namecoin-cli features. The namecoin-cli binary provides access to Namecoin RPC~\cite{rfc1057}. The Namecoin client offers support to query the blockchain by exposing an API based on RPC. This API enables external applications to connect to Namecoin blockchain and send requests that are known by the RPC server and that can be handle by sending responses in a JSON~\cite{rfc7159} format.
+
+Based on the information presented above there were multiple possibilities of extracting the data from blockchain.
+Our tool aims to explore naming information stored in the blockchain based on request types.
+We created an application that connects to a Namecoin node and gets the relevant data based on the type of the request sent. The Namecoin project offers an API to answer specific information about Namecoin records using RPC~\cite{rfc5531} mechanism.
+The Namecoin node has the server role providing data from blockchain to a client. The client is a Java application that displays both information for a \code{.bit} domain or for all \code{.bit} registered domains. As described in \labelindexref{Figure}{img:design-block} the tool has the following components:
+\paragraph{$\bullet$ Data Acquisition:} this component is responsible for sending and receiving messages from/to the Namecoin node. The data acquisition handles connection errors and triggers events for notifying the user about the state of the Namecoin client.
+\paragraph{$\bullet$ Parser:} this component main purpose is parsing the data received from the acquisition module and storing into objects that can be processed by the user interface module.
+\paragraph{$\bullet$ User interface:} this component displays the data in a user-friendly interface and offers different features such as requesting data for a particular name or for a group of names that respects a given pattern. Also the user interface offers filtering options for exploring the naming related data from blockchain.
+\paragraph{$\bullet$ Filtering:} this component aims to compute numeric results based on a certain filter that offer insights into the Namecoin system usability after evaluation.
+
+\fig[scale=0.6]{src/img/design-block.pdf}{img:design-block}{Namecoin Explorer Block Diagram}
+
+
+

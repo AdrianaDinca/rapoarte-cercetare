@@ -1,0 +1,39 @@
+\chapter{Implementation}
+\label{chapter:5}
+
+The Namecoin Explorer is a Java application that establishes a connection to the Namecoin node and sends different commands that the protocol recognize. The Namecoin Explorer has a client side that was implemented for receiving the results set from the Namecoin node.
+
+In this chapter the Namecoin Explorer implementation details are described alongside the reasons for choosing a technology instead of another.
+The Namecoin Explorer was developed in Java programming language for simplicity reasons. The scope of this prototype was to be able to connect to a running Namecoin node, to bring domain name specific information and to compute numeric data that reveals the Namecoin network stakeholders and in which way is the network used. The use of Java technology was strongly connected with the fact this tool was created with the thought of allowing users with no technical background to run it without many requirements.
+
+The Namecoin Explorer was split into three different parts in order to provide modularity and simplicity. The three parts are the following:
+
+\paragraph{$\bullet$ Namecoin Explorer's Connection to Namecoin Node} was implemented using an existing API provided by Namecoin protocol that allows other applications to connect to nodes by using RPC\abbrev{RPC}{Remote Procedure Call}. As stated by \cite{rfc1057} and \cite{rfc5531} the RPC is an inter-process communication mechanism that allows the execution of a procedure in another address space as a local call without having the implementation details of the remote connection described explicitly in the code sections. The Namecoin Explorer tool initiates a RPC request to the Namecoin node to execute a certain procedure and waits that the server side sends the response to the Namecoin Explorer. The mechanism is similar to a client-server connection. The types of requests that the Namecoin Explorer sends to the Namecoin node are domain name specific information requests for a specified name or for a range of names that match a certain pattern. Also the explorer displays information about the Namecoin node that runs on the local machine.
+\paragraph{$\bullet$ Namecoin Explorer's UI} was implemented using SWT~\cite{swtbook} library. The UI component has two panels that provide different functions. The main panel contains information about the Namecoin node that runs on the machine and the two available ways in which a user can request details about a Namecoin domain name. The first function provided in the main panel is searching for a certain domain \code{.bit} that has to be registered in the Namecoin network as described in \labelindexref{Figure}{img:searchByName}. The name of the domain should be complete and correct in order to receive all the details that the domain has associated with it.
+The second function is the possibility of dumping multiple domains specific information in a file on disk. This functionality is displayed in \labelindexref{Figure}{img:dump}. The dump contains a list of domain names and their specific information based on the following two parameters: start name and max returned value. The dump list starts with the first domain whose name is the start name or comes first in lexicographic order from the list of valid domain names. \labelindexref{Figure}{img:dump-file} contains Namecoin records that are stored in a dump file.
+
+The second panel provides advanced filtering criteria as described in \labelindexref{Figure}{img:advancedFiltering} . This function was developed in order to collect numeric data about the registered domains and the content of the value field. There are four filtering criteria: ip, email, website and BM addresses\abbrev{BM}{Bitmessage adresses}. The second panel has functionalities that allows selecting one or multiple filtering criteria and displays the number of the domains that have the attributes selected in the value field and the number of unique values for the selected attributes from the main set of filtered domains.
+
+\fig[scale=0.5]{src/img/searchByName.png}{img:searchByName}{Main panel - Search by name}
+\fig[scale=0.3]{src/img/dump.png}{img:dump}{Main panel - Dumping list of domains}
+\fig[scale=0.2]{src/img/dump-file.png}{img:dump-file}{Dump file content}
+\paragraph{$\bullet$ Implementing Advanced Filtering Technics} aims to extract Namecoin network information in order to discover the stakeholders involved and how are they using this protocol. This information is used in the evaluation process that is going to be discussed later on chapter~\ref{chapter:6}. The panel displays the number of domains that have the selected attribute and the number of domains that have unique values for that attribute.
+
+The data is transfered between Namecoin Explorer and Namecoin node using JSON~\cite{rfc7159}. The library used when working with JSON objects is org.json~\footnote{\url{https://mvnrepository.com/artifact/org.json/json}} library. The decision of using this library is based on the following package's features: light-weight, language independent, data interchange format. 
+
+\fig[scale=0.5]{src/img/advancedFiltering.png}{img:advancedFiltering}{Second panel - Advanced filtering options}
+
+\section{Implementation Decisions}
+\label{sec:imp-dec-lbl}
+The decision of implementing the Namecoin Explorer using RPC is based on a detailed research of the available exploring tools developed for Namecoin blockchain. There is no tool dedicated to extracting name specific information.
+All available explorers are web clients that display the transactions that are going to be added in the blockchain.
+The problem we faced at the beginning was determining the best extraction solution.
+After researching we discovered a project that creates a SQL database with all transactions stored in a blockchain. The project is called bitcoin-abe  \footnote{\url{https://github.com/bitcoin-abe/bitcoin-abe.git}} and it is developed in order to extract data from Bitcoin blockchain.
+The bitcoin-abe parses the blockchain and extracts the data in a SQL database. In order to offer updated information about the data stored in the blockchain we had to recreate the database from scratch. The process of regenerating the database was difficult and time consuming so we stopped using it.
+
+The tool has to provide updated information so we decided to lookup into a solution to connect to the Namecoin node and extract the data we need without intermediary. The Namecoin documentation is sparse so we started reading naming specification from source code. As a result we discovered that the protocol offers the possibility to extract naming specific data from blockchain using RPC technology. The Namecoin RPC server delivers responses to certain requests. Using the existing functionalities provided by Namecoin client we developed an external tool that makes requests based on the types of calls supported by the Namecoin node. 
+
+%%TODO parse + change parser
+%%used the DB
+%%aspecte negative
+%%solutia

@@ -1,10 +1,20 @@
 \begin{thebibliography}{1}
 
-\bibitem{iso-odf}
-International~Organization for Standardization.
-\newblock Iso/iec 26300:2006 open document format.
-\newblock
-  \url{http://std.dkuug.dk/keld/iso26300-odf/is26300/iso_iec_26300:2006_e.pdf},
-  December 2006.
+\bibitem{sha2}
+Dmitry Khovratovich, Christian Rechberger, and Alexandra Savelieva.
+\newblock Bicliques for preimages: Attacks on skein-512 and the sha-2 family.
+\newblock \url{http://eprint.iacr.org/2011/286.pdf}, Originally published in
+  2011.
+\newblock Accessed: 2017-06-28.
+
+\bibitem{blockchaind}
+Tiana Laurence.
+\newblock {\em Blockchain For Dummies}.
+\newblock 2017.
+
+\bibitem{bitcoinwhitepaper}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em The Cryptography Mailing list at metzdowd.com}, 2008.
 
 \end{thebibliography}

@@ -1,0 +1,77 @@
+\chapter{Background}
+\label{chapter:2}
+
+%This thesis presents the \textbf{\project}.
+
+%This is an example of a footnote \footnote{\url{www.google.com}}. You can see %here a reference to \labelindexref{Section}{sub-sec:proj-objectives}.
+In this chapter we present the naming systems particularities by offering popular examples, the Bitcoin basic concepts which apply to Namecoin protocol and we propose a discussion that outlines the motivation for dedicating chapter~\ref{chapter:3} to Namecoin study. In section~\ref{sec:nmc-lbl} we describe traditional naming systems, existing protocols limitations ending with a brief presentation of the basic attributes of a naming system. The section~\ref{sec:bitcoinprotocol-lbl} offers a high level view of the Bitcoin project focusing on relevant attributes for naming services.
+Finally, in section~\ref{sec:discussion-lbl} we open a discussion about what motivated us to continue the exploration of Namecoin protocol.
+
+\section{Naming and Identity Systems}
+\label{sec:nmc-lbl}
+A naming system is a mechanism which offers an association between a name and an identification data object. The naming systems were developed as a solution to the exponential numeric growth of users of a network or system. This growth made the identification and authentication algorithms quite complex. The naming protocols faced security and privacy challenges thus the subject of user identification drawn the attention of computer scientists. O’Hearn~\cite{wilcox2001names} studied naming systems and reached the conclusion that traditional protocols have only two of the three desired attributes of a naming service. This conclusion is known by the community as the Zooko’s triangle~\cite{wilcox2001names}.
+
+The three desirable attributes of a naming service are: human meaningful, secure and decentralized. The idea of placing these three attributes in a corner of a triangle can be described as follows. In a triangle (see \labelindexref{Figure}{img:ztriangle}) only two corners can be connected by a single line so the three attributes will never be connected by the same line when placed in corners just like a system that couldn’t focus on all attributes.
+\fig[scale=0.8]{src/img/ztriangle.pdf}{img:ztriangle}{Zooko's triangle}
+
+For example, OpenID which is a naming protocol that allows us to carry our identity across other websites without the need to register again focuses only on security and human meaningful. The decentralized aspect is not solved so we have to trust at least one service provider. This protocol is used by software companies like Google, Twitter, Yahoo!, etc. 
+
+To solve the Zooko’s triangle problem, the Namecoin protocol was developed and until now there is no other protocol that was able to achieve on the three attributes. The Namecoin is a third-party identity provider, the blockchain, that can be used as an intermediate step between someone (maybe a service) that wants to know your identity and you. 
+Until 2011, the design of a system that follows the Zooko’s triangle was impossible.
+In order to have a naming system that is secure and easy to work with, a user should be able to choose name/identity strings that mapped with a certain value are uniquely identifying a network node  and that no one can convince a node that other value for that pair is correct.
+
+Although, the Namecoin system is not free of security attacks and errors this is the first system that solved the Zooko’ s triangle by using cryptocurrency technology. This protocol is limited to the human-legible phrases but has the advantage of making a name choice.
+More than that, the namecoin is the first alt-coin developed by forking the Bitcoin project. Namecoin implements both a merged mining and a decentralized DNS.
+
+Building a system that is decentralized based on the Bitcoin project was done by creating another blockchain using a new genesis block. This system has also several specific transaction types in order to provide domain name system features.
+The only TLD used is \code{.bit}.
+
+\section{Bitcoin Protocol}
+\label{sec:bitcoinprotocol-lbl}
+The Bitcoin protocol is a blockchain based project that was developed as a solution to the problem of trusting a third party entity. Before introducing Bitcoin, we offer a brief presentation of the currency exchange technologies available and the Nakamoto's motivation for building Bitcoin~\cite{bitcoinwhitepaper}.
+This section section outlines Bitcoin fundamental concepts such as Hashcash~\cite{hashcash}, Merkle Tree~\cite{merkletree}, Proof-of-work~\cite{proofofwork} and Byzantine Generals' Problem\cite{byzantine}.
+\subsection{Bitcoin History}
+\label{subsec:history-lbl}
+Electronic cash wouldn’t be possible without the existence of a mechanism that offers a common language for financial message exchange. As a result, the Society for Worldwide Interbank Financial Telecommunication was funded. SWIFT network has standardized messages for financial information transfer. Some examples of ISO standards used for transfer of electronic cash are ISO 15022 MT and ISO 20022 MX.
+The main issue of electronic cash protocols is the centralization. Satoshi Nakamoto is the creator of the first distributed system used for financial transfer by introducing the Bitcoin protocol.
+Antonopoulos~\cite{masterbit} states that the Bitcoin is the evolution of electronic cash, payment systems, how money are transferred over the world and even how the business looks nowadays.
+Prior Bitcoin, electronic cash and digital currencies were available only in centralized systems.
+
+\subsection{Bitcoin Competition}
+\label{subsec:overview-lbl}
+Based on prior work, the Bitcoin technology introduces proof-of-work~\cite{proofofwork} for cash minting, uses the blockchain~\cite{blockchain} for data storing and a consensus protocol based on the Byzantine Generals’ Problem~\cite{byzantine} to eliminate double-spending.
+
+The Bitcoin project is a popular blockchain based application but there are other blockchain projects that deserves to be brought to attention such as Ethereum, Namecoin or Ripple.
+The Ripple project started before Bitcoin in 2004 and it passed through many changes over time. Today, Ripple is a solution that enables banks and clients to exchange value. Similar with Bitcoin, Ripple is a distributed system with its own blockchain and a native currency called ripple.
+Ethereum is another blockchain based application that has its own Turing-complete programming language which makes it more powerful than Bitcoin by allowing users to create their applications on any programming language.
+Namecoin was the first fork of the Bitcoin project. It offers a domain name registry similar to the Internet’s DNS. It is an alternative domain name service for the root domain \code{.bit}.
+The project has its own currency called namecoin (symbol \code{NMC}) which is used to pay transactions fee for registration, update and transfer of domains name.
+
+One interesting aspect about Bitcoin technology is how it solves both the problem of double-spending and mining in a decentralized system. The protocol is developed on “sound cryptographic” principles that guarantee proof-of-work, proof-of-ownership and classic currencies attributes such as fungibility and scarcity.
+\subsection{Proof-of-work}
+\label{subsec:proof-of-work}
+The idea of using a proof-of-work~\cite{proofofwork} system to legitimate the user of an application was used before in other software systems.
+For example, Hashcash~\cite{hashcash} is a proof-of-work system introduced by Black that was invented to limit email spam and denial-of-service attacks. The idea is quite easy to follow: a legitimate sender needs to spend a reasonable amount of computing time in order to issue an email. If a legitimate user sends a reasonable number of emails, a spammer wants to send thousands of emails making the spamming effort very expensive. The receiver’s role is to validate the hash, which is quite easy. Hashcash is conceptually similar to the proof-of-work system used by Bitcoin miners.
+
+Solving the problem of double spending using a proof-of-work system provides security guarantees for naming/identity registration and transfer.
+
+
+\subsection{Blockchain}
+\label{subsec:blockchain-lbl}
+The blockchain is a public ledger of all transaction sent through the network that is known by every one that holds a Bitcoin node. More precisely, each node has a copy of the blockchain in order to validate or invalidate a transaction. The majority of nodes decide if a transaction is valid and if so that transaction is added in the latest created block by one of the miners. The choice of using blockchain for data storing is related with the fact that the blockchain’s deep history is immutable so it ensures the Bitcoin security.
+
+The blockchain has no central authority for managing bitcoin flow along the bitcoin nodes network. This technology is recognized as the “fifth evolution” of computing, the missing trust interface of the Internet as stated by Laurence~\cite{blockchaind}.
+
+The blockchain structure has the following components as described in \labelindexref{Figure}{img:mt-diag}:
+\paragraph{$\bullet$ The block}is an array of transactions recorded into a ledger. Depending on the blockchain the transaction has assigned a different type of value.
+Each block has its own hash and a merkle tree with hashed transactions. Storing transactions in a merkle tree is a design decision that saves disk space. Nakamoto~\cite{bitcoinwhitepaper}\ explains the reason why using a merkle tree makes disk space recover possible. The explanation for this is that "once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block’s hash, transactions are hashed in a Merkle Tree, with only the root included in the block’s hash. Old blocks can then be compacted by stubbing off branches of the tree. The interior hashes do not need to be stored" according to Satoshi~\cite{bitcoinwhitepaper}.
+\paragraph{$\bullet$ The chain}is simply a hash that connects two blocks in chronological order. The hash for a new block is generated based on the data that was in the previous block. The hash algorithm used by Bitcoin is Secure Hash Algorithm 256~\cite{sha2} that creates an unique (collision probability is negligible), fixed-size (256 bits) hash. 
+\paragraph{$\bullet$ The network}is represented by full nodes. We can think of it as a computer that runs an algorithm for securing the network.
+Mining is expensive and it requires a lot of computer power so the blockchain algorithm rewards miners for their service. The payment is usually a currency or a token.
+
+\fig[scale=0.5]{src/img/mt-diag.pdf}{img:mt-diag}{Blockchain Structure using Merkle Tree}
+
+\section{Discussion}
+\label{sec:discussion-lbl}
+As a resume of this chapter we described the traditional naming systems properties and limitations. Furthermore, we introduced the Namecoin protocol as a solution to the trust issue that exists in traditional protocols. For a clear understanding of the Namecoin protocol and what are the security guarantees it provides we offer a description of the basic principals of Bitcoin protocol on which Namecoin is developed.
+Based on the information presented above we reach the conclusion that there is not clear yet how the Namecoin protocol provides naming and identity services thus we dedicated the next chapter to studying only Namecoin specifications.

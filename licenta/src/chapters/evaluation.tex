@@ -1,0 +1,65 @@
+\chapter{Evaluation}
+\label{chapter:6}
+In this chapter we offer an evaluation of the Namecoin protocol current state. It focuses on determining who are the Namecoin client owners and how are they using this protocol. Network reliability is determined by many parameters such as the number of users, the network infrastructure, the proof-of-work~\cite{proofofwork} that need to be done, etc.
+The naming service is only a component of the Namecoin system. We focus on exploring this component as there are many gaps related with the naming features offered by Namecoin protocol. A Namecoin record is a key-value pair (see section \ref{nmc-design-lbl} for more details) that stores naming and identity specific information. The value field is configurable therefore a name owner can store anything as long as it respects the JSON standard format~\cite{rfc7159}. This field has a maximum size of 520 bytes. This limitation prevents overloading the Namecoin network and increasing significantly the Namecoin blockchain size.
+
+Using the Namecoin Explorer tool we were able to extract all valid Namecoin records that are registered in the blockchain and analyze information related with the content of the value field. After analyzing different dump files that contain the value field of registered Namecoin names we reach the conclusion that we need to compute the number of attributes that appear in the value field.
+As a result we discovered that there were many domains that contain the same attributes: email, BM address, website, ip/map, for_sale, owner's pseudonym, etc.
+The list with the most used attributes of the value fields is available in \labelindexref{Table}{table:count-att-table}. This data can suffer modifications with a new registration.
+
+\begin{center}
+	\begin{table}[htb]
+		\centering
+		\caption{Common attributes from Namecoin record value field}
+		\begin{tabular}{l*{6}{c}r}
+			Attribute stored in record value field & Number of occurrences & Number of records\\
+			\hline
+			Bitmessage address & 6874 & 10214\\
+			website & 1772 & 10214\\
+			email & 262 & 10214\\
+			ip & 24 & 10214
+		\end{tabular}
+		\label{table:count-att-table}
+	\end{table}
+\end{center}
+ 
+After reading samples of the dump files we observed that there are different records which have similar content in the value field. Taking this observation into consideration we decide to offer filtering options for the most popular attributes stored in the value field. The result of name filtering based on a certain criterion is displayed in \labelindexref{Table}{table:count-unique-table}. This table outlines the number of names that has a certain attribute and the number of the names that stores a unique content of that attribute.
+
+\begin{center}
+	\begin{table}[htb]
+		\centering
+		\caption{Namecoin records Distribution}
+		\begin{tabular}{l*{6}{c}r}
+			Attribute & Number of occurrences & Number of unique occurrences\\
+			\hline
+			Bitmessage address & 6874 & 12\\
+			website & 1772 & 1\\
+			email & 262 & 6\\
+			ip & 24 & 21
+		\end{tabular}
+		\label{table:count-unique-table}
+	\end{table}
+\end{center}
+
+The Namecoin system allows both the possibility to trade \code{NMC} cryptocurrency and to register/use naming services for different purposes.
+Analyzing this data we discovered that:
+\paragraph{$\bullet$ BM addresses} are present in percentage of 67.2 of Namecoin records from which 0.17 percentage are unique.
+\paragraph{$\bullet$ Websites} are present in percentage of 17.3 of Namecoin records from which 0.05 percentage are unique.
+\paragraph{$\bullet$ Emails} are present in percentage of 2.5 of Namecoin records from which 2.29 percentage are unique.
+\paragraph{$\bullet$ IPs} are present in percentage of 0.23 of Namecoin records from which 87.5 percentage are unique.
+
+These values outline that the number of Namecoin records owners is small in relation with Namecoin records registered. This information is also visible in \labelindexref{Figure}{img:distribution}.
+
+\fig[scale=0.6]{src/img/distribution.png}{img:distribution}{Attributes Distribution from Namecoin records value field}
+
+Based on this observation we decided to explore into more details the usability of the Namecoin network and finding the reasons for registering a large number of Namecoin names/identities. At the end of this analysis we reached the conclusion that Namecoin name owners register more than one name/identity in order to sell them at a higher price than the registration fee. Names with a correlation in the \code{TLD} which are also short are the first registered because the price of selling them is higher.
+
+The next step was to determine when a name was registered based on \code{expires_in} field of Namecoin record. The record's ownership lasts 36000 blocks so the maximum value of \code{expires_in} field is 36000 blocks. We decided to group the record into 60 intervals of length 600 blocks. After splitting the names into intervals based on the number of blocks left until ownership expiration we computed the number of records for each interval and also the number of records with a unique value for a certain filter and discovered that the names that contain the same values for attributes from the value field of the Namecoin record have also the same number of blocks left until expiration. This information was determined by analyzing the blockchain naming records numeric computations from Appendix~\ref{appendix:distribution-lbl}. 
+
+ 
+\section{Discussion}
+\label{sec:discussion}
+Another research direction is measuring the clustering of the Namecoin network.
+The percentage of Namecoin records that stores IP addresses information is quite small thus clustering analysis is not so relevant. Another interesting observation is that a significant percentage of Namecoin records have an Bitmessage address~\cite{bitmessage} attached to the value field. 
+Displaying Bitmessage addresses offer more privacy guarantees than displaying contact information such as websites, email accounts, etc. Adding the BM address in the value field of a Namecoin record doesn't compromise the security offered by the Namecoin network. 
+From the financial perspective, investing in this cryptocurrency is a wise decision when taking into account that the protocol is based on the Bitcoin project and that all the security guarantees of Bitcoin extends to Namecoin protocol too. There are also risks when investing in \code{NMC} currency especially Namecoin which lacks maturity and doesn't offer updates or periodic releases yet.

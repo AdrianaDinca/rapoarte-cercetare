@@ -1,0 +1,128 @@
+\begin{thebibliography}{10}
+
+\bibitem{opennic}
+.bit tld.
+\newblock \url{https://wiki.opennic.org/opennic:dot:bit}, 2017.
+\newblock Accessed: 2017-06-19.
+
+\bibitem{masterbit}
+Andreas~M. Antonopoulos.
+\newblock {\em Mastering Bitcoin 2nd Edition}.
+\newblock 2017.
+
+\bibitem{hashcash}
+Adam Back.
+\newblock Hashcash-a denial of service counter-measure.
+\newblock 2002.
+
+\bibitem{rfc2535}
+D.~Eastlake.
+\newblock Domain name system security extensions.
+\newblock RFC 2535, March 1999.
+
+\bibitem{openid}
+Eric Eldon.
+\newblock Single sign-on service openid getting more usage.
+\newblock
+  \url{https://venturebeat.com/2009/04/14/single-sign-on-service-openid-getting-more-usage/},
+  April 14, 2009.
+\newblock Accessed: 2017-06-23.
+
+\bibitem{rfc1057}
+Network~Working Group.
+\newblock Specifies version 1 of onc rpc.
+\newblock RFC 1057, June 1988.
+
+\bibitem{rfc7686}
+A.~Muffett J.~Appelbaum.
+\newblock The ".onion" special-use domain name.
+\newblock RFC 7686, October 2015.
+
+\bibitem{sha2}
+Dmitry Khovratovich, Christian Rechberger, and Alexandra Savelieva.
+\newblock Bicliques for preimages: Attacks on skein-512 and the sha-2 family.
+\newblock \url{http://eprint.iacr.org/2011/286.pdf}, Originally published in
+  2011.
+\newblock Accessed: 2017-06-28.
+
+\bibitem{byzantine}
+Leslie Lamport, Robert Shostak, and Marshall Pease.
+\newblock {\em The Byzantine generals problem}.
+\newblock ACM Transactions on Programming Languages and Systems (TOPLAS) 4.3,
+  1982.
+
+\bibitem{blockchaind}
+Tiana Laurence.
+\newblock {\em Blockchain For Dummies}.
+\newblock 2017.
+
+\bibitem{proofofwork}
+Ben Laurie and Richard Clayton.
+\newblock {\em Proof-of-work proves not to work; version 0.2}.
+\newblock Workshop on Economics and Information, Security, 2004.
+
+\bibitem{merkletree}
+R.~C Merkle.
+\newblock {\em A Digital Signature Based on a Conventional Encryption
+  Function}.
+\newblock Advances in Cryptology - CRYPTO '87. Lecture Notes in Computer
+  Science, 1988.
+
+\bibitem{rfc1034}
+P.~Mockapetris.
+\newblock Domain names - concepts and facilities.
+\newblock RFC 1034, November 1987.
+
+\bibitem{bitcoinwhitepaper}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em The Cryptography Mailing list at metzdowd.com}, 2008.
+
+\bibitem{swtbook}
+Steve Northover and Mike Wilson.
+\newblock {\em SWT: The Standard Widget Toolkit, Volume 1}.
+\newblock Addison-Wesley Professional, Jun 28, 2004.
+
+\bibitem{blockchain}
+Siraj Raval.
+\newblock {\em Decentralized Applications: Harnessing Bitcoin's Blockchain
+  Technology}.
+\newblock O'Reilly Media, 2016.
+
+\bibitem{bft}
+Nick Szabo.
+\newblock Secure property titles with owner authority.
+\newblock \url{http://nakamotoinstitute.org/secure-property-titles/},
+  Originally published in 1998.
+\newblock Accessed: 2017-06-22.
+
+\bibitem{rfc7159}
+Ed. T.~Bray.
+\newblock The javascript object notation (json) data interchange format.
+\newblock RFC 7159, March 2014.
+
+\bibitem{rfc5531}
+R.~Thurlow.
+\newblock Specifies version 2 of onc rpc.
+\newblock RFC 5531, May 2009.
+
+\bibitem{digitalsignature}
+Ralf~Merkle US~patent 4309569.
+\newblock {\em Method of providing digital signatures}.
+\newblock The Board Of Trustees Of The Leland Stanford Junior University, 1982.
+
+\bibitem{bitmessage}
+Jonathan Warren.
+\newblock Bitmessage:a peer-to-peer message authentication and delivery system.
+\newblock \url{https://bitmessage.org/bitmessage.pdf}, November 27, 2012.
+\newblock Accessed: 2017-06-26.
+
+\bibitem{wilcox2001names}
+Zooko Wilcox-O’Hearn.
+\newblock Distributed, secure, human-readable: Choose two.
+\newblock
+  \url{https://web.archive.org/web/20011020191610/http://zooko.com/distnames.html},
+  2001.
+\newblock Accessed: 2017-06-14.
+
+\end{thebibliography}

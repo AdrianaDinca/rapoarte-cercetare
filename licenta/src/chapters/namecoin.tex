@@ -1,0 +1,167 @@
+\chapter{Study of Namecoin Protocol}
+\label{chapter:3}
+% lm macro \code{name\_new}
+The Namecoin protocol is an open-source project based on the Bitcoin project that offers naming services.
+The protocol provides the possibility to register a name or identity and to associate data with it.
+There are many naming services available but none of them offer the three basic properties: secure, decentralized and human-meaningful.
+The Namecoin protocol claims to  provide all three properties.
+It is human-meaningful because the naming services involve registering a domain name \code{.bit} and attaching metadata for managing names and human readable keys that makes the protocol more user-friendly. 
+
+\section{Namecoin Overview}
+\label{run-nmc-lbl}
+The Namecoin protocol was forked from Bitcoin project and improved in order to offer naming services. All features available in Bitcoin are valid in Namecoin. 
+
+Namecoin protocol solves the trust issue of traditional naming systems by storing data in a blockchain structure in a decentralized network. Details on how the Namecoin protocol removes the third party element are discussed on chapter~\ref{chapter:2}. Eliminating the third party is a feature of the Bitcoin protocol that was inherited by Namecoin project alongside all Bitcoin's properties.
+According to Raval~\cite{blockchain}, the blockchains are "secure by design and are an example of a distributed computing system with high Byzantine fault tolerance. Decentralized consensus has therefore been achieved with a blockchain". The decentralization property of Namecoin protocol is provided by the existence of the Namecoin network. Each Namecoin node has voting right so the validation is done by the majority of network entities by solving the Byzantine Generals' Problem~\cite{bft}.
+The Namecoin is secure because it is very difficult to associate Namecoin nodes with real identities.
+The Zooko's triangle outlines that traditional naming systems can respect only two of the three desired properties mentioned above. Stated in Wilcox-O’Hearn~\cite{wilcox2001names} having all three properties was doubtfully until the release of Namecoin protocol.
+
+The software exists in two versions: namecoin-qt(with GUI) and namecoind(without GUI). Both versions offer the same functionalities.
+After installation, start the namecoin node and wait until the blockchain is downloaded on disk. The size of the blockchain increases with every new block added to the Namecoin chain.
+After the blockchain was downloaded the Namecoin node is connected to the Namecoin network and can access different features of the protocol.
+
+\section{Namecoin High Level Design}
+\label{nmc-design-lbl}
+As Bitcoin, the Namecoin is using a blockchain structure for storing transactions. The types of transactions that are store in the Namecoin chain are different from the Bitcoin. The protocol has its own blockchain apart from Bitcoin blockchain.
+The Namecoin protocol provides support for naming commands beside the common financial transactions available in Bitcoin protocol.
+The naming commands are Namecoin specific transactions. They are discussed in more details in section~\ref{nmc-trans-lbl}. 
+The financial messages that exists in Namecoin blockchain are similar with Bitcoin transactions. The only difference is that the traded currency is namecoin (\code{NMC}).
+
+Namecoin protocol uses an identity system based on addresses. Namecoin addresses are Base58 encoded hashes of receivers’ public keys. All payments and records are made to addresses. Each Namecoin node is identified by a Namecoin address~\cite{digitalsignature}.
+
+Namecoin specific features offer support for naming and identity registration using Namecoin records.
+Namecoin records are key-value pairs. In order to register key-value pair the user has to spend namecoins. Once the user owns their key-value pair the value field is available for 35999 blocks. With every new block added in the blockchain the \code{expires_in} field decreases by one block. When reaching zero blocks the value will expire and you need to spend Namecoins to update it. For the key field there is no expiration condition.
+Namecoin protocol specifies the possibility of organizing keys that have a common scope into groups.
+The keys can be grouped by different criteria. Each criterion defines a namespace.
+A key can belong to only one namespace or to none. The list of namespaces is unlimited. In order to register a key and associated it with a namespace, the key should have the following format \code{<namespace name>/<key name>}.
+Popular namespaces are \code{a} (application specific data), \code{d} (domain name specifications), \code{ds} (secure domain name), \code{id} (identity), \code{is} (secure identity), etc.
+Each user can create new namespaces or organize his keys based on already existing namespaces.
+Some examples of domain name specific information that are stored in the blockchain:
+\begin{lstlisting}
+{
+"name": "d/nf",
+"value": "{\"map\":{\"\":\"94.23.252.190\"}, \"fingerprint\": 
+[\"69:16:99:8B:A7:62:6F:BE:2A:F6:AF:62:E4:DA:4D:8F:32:B8:52:28\"]}",
+"expires_in": 34458
+}
+
+{
+"name": "d/nh",
+"value": "{\"for_sale\" : 1, \"website\" : \"http://blockchained.com\",
+\"name\" : \"phelix\"}",
+"expires_in": 34921
+}
+
+{
+"name": "None",
+"value": "http://PeerName.com",
+"expires_in": 29917
+}
+
+\end{lstlisting}
+
+
+\section{Namecoin Transactions}
+\label{nmc-trans-lbl}
+The protocol offers support for two types of transactions: currency exchange transactions and naming transactions.
+Currency exchange transactions are similar with other cryptocurrencies transactions based on bitcoins, ethereum, etc.
+Naming transactions are Namecoin' specific features. They are represented by a group of transactions for identifier registration: \code{name\_new}, \code{name\_firstupdate} and \code{name\_update}.
+
+The registration mechanism uses two commands:  \code{name\_new} and \code{name\_firstupdate}. A user who wants to register a new domain must initiate the command \code{name_new <name>}. After issuing this command the user will receive two hexadecimal numbers of different sizes. The larger hexadecimal number identifies the pre-order name and the shorter is a random value that identifies a user as the first one that pre-ordered that key. The \code{<rand>} is used in step two.
+This command has a small network fee that is destroyed by the protocol.
+The next command is \code{name_firstupdate <name> <rand> [<tx>] <value> [<toaddress>]} where \code{<name>} is the key that will be registered, \code{<rand>} is the shorter hexadecimal number, \code{[<tx>]} is optional and represents the previous transaction id, \code{<value>} is the data that a user associate with that key and \code{<toaddress>} is optional and is used for sending the registration to another node. This field \code{<value>} has no fixed structure and everyone can add different type of data such as digital certificates, files, contact information and so on. The  \code{<value>} field must meet the JSON standard~\cite{rfc7159}.
+This transaction type must be done 12 blocks after the \code{new\_name} transaction was generated and it is called only once for a certain domain.
+
+The command \code{name_update} is used for updating the value field, for changing the ownership or for renewing the name. The command \code{name_update <name> <value> [<toaddress>]} has the following meaning: \code{<name>} is the name registered, the \code{<value>} is the data associated with that name and the \code{[<toaddress>]} is optional and represents the new owner address.
+If someone wants to buy a domain the only available solution is to search if the owner of the name left external contact information in the value field.
+
+Although, this protocol provides naming and identity services, it can be used as a normal cryptocurrency exchange protocol. The protocol uses namecoins as exchange currency. Both registration transactions (except for \code{name_new}) and currency exchange transactions have a fee that gets to the miner that added the transaction in a block.
+
+The network fee is a protection against an attacker that wants to register all alphanumberic names for financial reasons or for sabotaging the Namecoin network.
+The higher the number of names the more difficult is to for miners to create new cryptocurrencies. This fee prevents attackers to buy all alphanumeric names by imposing a fee for each domain registered.
+Setting the value of a fee was discussed by the Namecoin community and for now the value is fixed. There are different opinions on how to set the price of these transactions and this issue is subject to debates on IRC channels and forums.
+The command \code{name_new} has two fees: the newtork fee that is worth 0.01 NMC and the transaction fee that is worth 0.005 NMC. The protocol guarantees that the network fee is destroyed. Only the transaction fee goes to miners.
+The commands \code{name_firstupdate} and \code{name_update} have a 0.005 NMC fee that goes to miners.
+\fig[scale=0.6]{src/img/nmc-node.pdf}{img:nmc-node}{Transactions in Namecoin Network}
+
+There are also Namecoin transactions that meet other purposes such as identifier lookup (\code{name\_filter}, \code{name\_history}, \code{name\_list}, \code{name\_scan} and \code{name\_show}), maintenance (\code{name\_clean}), general commands for controlling
+(\code{getinfo}, \code{help}, \code{stop}) and network commands (\code{addnode}, \code{getaddednodeinfo}, \code{getconnectioncount},
+\code{getnettotals}). A list of common transactions is available in \labelindexref{Table}{table:common-nmc-cmd}.
+The Namecoin protocol has also support for Bitcoin specific transactions related with blockchain, mining or wallet.
+
+Beside the registration operations a Namecoin name owner can transfer the name or identity to another Namecoin address.
+The decision of transferring a name to another entity belongs to the name or identity owner. The common transferring process is a external trade between a seller and a buyer.
+The protocol doesn't offer support for name or identity selling process. There is no possible way to contact a domain owner using Namecoin protocol. If the owner of a name or identity wants to sell that name it is common to include in the value field of the Namecoin record contact information such as email, name, website, etc. The Namecoin protocol provides the possibility of transferring a name by issuing the command \code{name_update} with parameter \code{<toaddress>}. The transfer of the name to another address is record in the blockchain and there is no way to alter the data stored in the Namecoin blockchain structure. Applying proof-of-work mechanism~\cite{proofofwork} when adding transactions into a block diminishes the chances to double spend a transaction. Selling a name is done by creating a \code{name_update} transaction and broadcasting it to all Namecoin nodes. The transaction has the address of the new name's owner. If the seller tries to double sell that domain, it needs to clone de blockchain, redo the block with that transaction and all blocks after it thus catching up is difficult. The scheme is called tampering and the change to succeed decreases exponentially as the chain gets longer.
+
+\begin{center}
+	\begin{table}[htb]
+		\centering
+		\caption{Common Namecoin Naming and Identity Transactions}
+		\begin{tabular}{l*{6}{c}r}
+			Command & Syntax\\
+			\hline
+			name_clean & clean unsatisfiable transactions from the wallet\\
+			name_firstupdate & perform a first update after a name_new reservation\\
+			name_history & list all name values of a name\\
+			name_list & list my own names\\
+			name_new & pre-order a name \\
+			name_pending & list all pending name operations\\
+			name_scan & scan all names \\
+			name_show & show values of a name\\
+			name_update & update and possibly transfer a name
+		\end{tabular}
+		\label{table:common-nmc-cmd}
+	\end{table}
+\end{center}
+
+\section{Namecoin's Naming Services Properties}
+\label{nmc-ns-prop-lbl}
+In this section we present Namecoin naming properties and argue that the Namecoin protocol solves the Zooko's triangle~\cite{wilcox2001names}.
+The human-meaningful property consists in associating meaningful data with a name that is human readable, easy to remember and use. The Namecoin records are key-value pairs that allow registering a name using alphanumeric characters that are user-friendly and meaningful.
+
+Naming systems aim to be decentralized by removing the third party entity. Namecoin is a decentralized system that solves the trust issue by using a network of blockchain nodes. The system achieves consensus under the limits of Byzantine fault tolerance~\cite{bft}. The validation power is evenly distributed between Namecoin nodes. The majority decides if a transaction is valid or not. The decision mechanism is discussed in depth in chapter~\ref{chapter:2}.
+
+Having a naming system that is secure means preserving secret the identity of a \code{.bit} name owner.
+As stated in Bitcoin whitepaper~\cite{bitcoinwhitepaper} the privacy means "keeping the public keys anonymous". The information about the identity of a node is not stored in transactions so this removes traces to a certain entity. The network has access to details such as the amount of the transaction and the destination address. This property of the Bitcoin protocol works the same for Namecoin technology so this protocol protects the identity of a name owner as well as the identities involved in currencies exchange.
+Taking these arguments into consideration we reach the conclusion that the Namecoin's assertions involving Zooko's triangle~\cite{wilcox2001names} are valid.
+
+
+\section{Namecoin's Domain Name Services}
+\label{sec:dn-services-lbl}
+%TODO MITM
+%TODO NMCONTROL (done)
+%TODO PLUGIN BROWSER (done)
+%TODO DNS-CHAIN
+Traditional naming systems failed to provide all three properties of Zooko's triangle~\cite{wilcox2001names}. Technologies used for naming are Tor services, DNSSec, I2P~\abbrev{I2P}{Invisible Internet Project}, OpenID, etc.
+
+As stated in RFC 7686~\cite{rfc7686} \code{.onion} domains are special TLD that can be accessed via Tor network. They are different from the internet DNS domains by relying upon Tor servers to resolve \code{.onion} domains.
+OpenID~\cite{openid} is a authentication solution that allows webmasters to use a third party entity that handles login services. From the point of view of a user, this technology offers the possibility to access different websites using the same credentials. DNSSec~\cite{rfc2535} is a DNS extension that resolves DNS security issues such as authentication of denial of existence, data integrity, etc. I2P is a technology for message communication between applications in a pseudonymous way via a secure network. 
+Thus Tor services are decentralized, secure but not human-meaningful and OpenID, I2P and DNSSec are secured and human-meaningful but not decentralized.
+
+The Namecoin's domain name services are decentralized, secure and human-meaningful. These properties apply to all names and identities registered in Namecoin network as described in ~\ref{nmc-ns-prop-lbl}.
+The \code{.bit} domains can have internet addresses associated and can be used for hosting different websites.
+The \code{.bit} domains cannot be resolved by public DNS but there are other means of resolving their IP addresses.
+Namecoin records are key-values pairs that can provide domain name services.
+A key for a domain name belongs to namespace \code{d} and has the following syntax: \code{d/<name>}. The value for that key should match the DNS namespace specification so it must contain addressing information such as TLD or IPs.
+An example of a simple domain name registration:
+ 
+\code{name_new d/test}
+
+\code{name_firstupdate d/test {"ip":"5.5.5.5"} <rand>}
+
+The protocol offers multiple solutions for domain name related issues. For example, the internet is trying to protect free-speech rights thus Namecoin is proposing a solution to fight against web censorship. The protocol is used also for accessing websites via .bit domains.
+
+There are many solutions for enabling \code{.bit} domains browsing: replacing the DNS server with a local server, changing the DNS server with a OpenNIC Tier 2 DNS Resolvers or installing a browser plugin that connects to an external DNS.
+The simplest solution is to replace the local DNS server with an OpenNIC server. OpenNIC resolves multiple domains such as \code{TLD}, \code{.bit}, \code{.emc}, \code{.coin}, etc. According to \cite{opennic}, the OpenNIC project is a centralized server that stores \code{.bit} domains - IP address pairs from the Namecoin blockchain generating a DNS area for different namespaces.
+Other solutions are proxy DNS (\code{.surf}) and browser extensions like PeerName, FreeSpeechMe and MeowBit. Each one has limitations and requires special environment conditions in order to function properly.
+There is also possible to have a local DNS server that queries the Namecoin blockchain. It must run on the same machine as a Namecoin node and retrieve the IP address of the desired \code{.bit} domain from the local blockchain. The NMControl project is an open-source project that add the \code{.bit} zone to the existing DNS.
+The NMControl server resolves only \code{.bit} domains. For enabling this feature the NMControl server must access a local Namecoin node blockchain. All other \code{TLD} are forwarded to the DNS server from the local network.
+
+
+
+
+
+
+
+
+

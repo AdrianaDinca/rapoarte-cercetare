@@ -1,0 +1,78 @@
+\chapter{Introduction}
+\label{chapter:intro}
+This thesis presents Namecoin technology specific information as an attempt to document and systematize the protocol's implementation details. In order to validate the information described in this paper we build an exploring tool that provides insights into the particularities of the Namecoin system. The structure of this paper outlines the challenges that the traditional naming systems are facing and how the blockchain resolves some of these issues focusing on the Namecoin solution.
+
+In this chapter we describe briefly the current state of naming systems, the limitations of these technologies and what are their basic attributes accordingly to O’Hearn~\cite{wilcox2001names}.
+Furthermore, we present what motivated us to analyze this protocol and what are the main objectives that we want to achieve as well as our contributions to the Namecoin community. 
+
+%
+% Structure proposal:
+% - DNS has limitations (mention 2-3)
+% - Blockhains help solve some of these limitations, introduce Namecoin
+% - We want to explore the Namecoin environment, analyze the security, the trust % relationships, how useful is it? what is its current state?
+% - We encounter problems: limited documentation, limited tools, no easy way to %understand how trust is established
+% - To achieve this, we needed to implement tools that do /this/ and /that/
+% - We conclude that... we estimate that...
+\section{State of the art}
+\label{sec:state-of-art-lbl}
+Naming services define relationships between real entities and names. The need for creating a name service is due to the difficulty of working with identity information such as addresses, IDs, etc. The large number of entities that are connected by the same network or that are using the same system made the identification mechanism quite complex so associating human-meaningful names with different identity information improved considerably the user experience.
+
+One popular naming system is DNS~\abbrev{DNS}{ Domain Name System}. As described in RFC 1034~\cite{rfc1034} the DNS has three components: domain name space, name servers and resolvers. The domain name space is represented by a tree where each node defines a domain that is under the management of an authoritative name server. Each server delegates responsibility for its sub-domains to other servers and so forth. Resolvers are responsible for extracting the identity data associated with name as a response to a client name request. ICANN~\abbrev{ICANN}{Internet Corporation for Assigned Names and Numbers} is a nonprofit organization that manages namespaces of the internet. The main issue of using a central authority is having a single point of failure.
+
+There are also other naming systems such as Tor services and OpenID. Tor services are used for anonymous communication. Tor aims to remove trace between user's identity and his online activity but there is no guarantee for anonymity. OpenID protocol allows us to have only one account that can be used to sign in to multiple websites. This mechanism is helpful for webmasters that don't have to offer an authentication mechanism.
+
+These naming systems have proven efficient but they failed to resolve the tree basic attributes of a naming system as stated by O’Hearn~\cite{wilcox2001names}.
+This problem is known as the Zooko's triangle and consists on building systems that solve only two of the three desired properties: decentralized, human-meaningful and secure. For example, DNS and OpenID are human-meaningful and secure but they are not fully decentralized. They rely on third parties to perform properly.
+As a solution to this problem, Satoshi Nakamoto~\cite{bitcoinwhitepaper} developed the Bitcoin project that is based on a blockchain structure that offers fully decentralization. Satoshi presents the solution to the Byzantine Generals’ Problem and what are the technical implementation details for achieving consensus on the Bitcoin distributed network.
+Starting from the Bitcoin project, other blockchains projects were developed such as Ethereum~\footnote{\url{https://github.com/ethereum/wiki/wiki/White-Paper}}, Namecoin~\footnote{\url{https://github.com/namecoin/namecoin-core.git}} or Ripple~\footnote{\url{https://github.com/ripple}}.
+The Namecoin project is the first fork of Bitcoin~\footnote{\url{https://github.com/bitcoin/bitcoin}} that claims to solve all three properties of Zooko's triangle.
+
+\section{Motivations and Objectives}
+\label{sec:motiv-obj-lbl}
+The thesis' motivations are based on thorough revision of the Namecoin system that lead us to the conclusion that the protocol documentation is sparse, it lacks maturity and it is unexplored enough. Developed by a small community, the Namecoin technology is still in a beginning phase and there are features not documented or incomplete specified.
+As a result of this research, we reach the conclusion that filling some of the gaps mentioned above is valuable and based on this we build some short and long term objectives:
+
+\paragraph{$\bullet$ Exploration phase:} discovering Namecoin technical implementation details by installing a Namecoin node on a local machine and testing different functionalities such as the registering a domain name, querying blockchain for naming and identity information for names already registered, running a local DNS server that resolves \code{.bit} domains, etc.
+\paragraph{$\bullet$ Validation phase:} building an argument for validating or invalidating that the Namecoin technology resolves the Zooko's triangle limitation. Namecoin technology claims to offer the first solution to Zooko's triangle but there are some security issues and unexplored features.
+\paragraph{$\bullet$ Evaluation phase:} analyzing the current state of the Namecoin system by developing a tool to explore Namecoin domain name specifications. The Namecoin Explorer tool must extract data from the blockchain and displayed it in a user-friendly interface. The tool will also do some accounting based on the complete list of Namecoin records in order to provide insights into the system.
+
+
+\section{Contributions}
+\label{sec:contrib-lbl}
+The study of the Namecoin protocol was a tough challenge from the point of view of sparse documentation, reading Namecoin source code and following forum discussions. Firstly, chapter~\ref{chapter:3} systematizes Namecoin naming and identity information after researching and testing specifications from different sources. The Namecoin naming services features are validated by creating the Namecoin Explorer tool. The purpose of this application is to explore naming information stored in the blockchain in order to evaluate some Namecoin system parameters(usability) and available trading functionalities for currency exchange and naming transfer. This paper claims to contribute to the Namecoin technology systematization by testing and validating the information from forums, IRC channels, wiki pages and other websites. Another contribution is the Namecoin Explorer tool that offers insights into the blockchain using a user-friendly interface. Based on the results extracted with this tool we offer an evaluation of the current state of the Namecoin system.
+
+
+\section{Summary}
+\label{sec:summary-lbl}
+The thesis contains seven chapters that are structured as follows:
+\paragraph{ Chapter 1} describes the state of the art of this thesis by presenting the Namecoin protocol in a global context. Also, the introductory chapter contains the motivations and objectives of developing this paper alongside our contributions to the Namecoin community.
+\paragraph{ Chapter 2} provides insights into the basic concepts that build the development foundation of Namecoin naming services. Popular naming systems examples, brief description of blockchain structure and a discussion about the reasons of exploring the Namecoin protocol are the main aspects presented in the background chapter.
+\paragraph{ Chapter 3} aims to systematize the Namecoin protocol and to validate the Namecoin naming/identity services specifications accumulated during the research period. This chapter consists of a study of the Namecoin protocol that focus on naming services. The study represents our contribution to the Namecoin community.
+\paragraph{ Chapter 4 and chapter 5} present the design and implementation details of the Namecoin exploration tool developed in order to validate the statements done in chapter~\ref{chapter:3}. Programming language decision, system architecture, brief discussion about the arguments of choosing a design beside other are discussed in these chapters.
+\paragraph{ Chapter 6} outlines Namecoin system parameters as well as usability information. The number of Namecoin records registered in a certain period of time, the list of the valid names registered and advanced filtering options are key elements for discovering who is using the Namecoin system and how is it used.
+\paragraph{ Chapter 7} builds the thesis conclusion by resuming our contributions and presents other research directions that are unexplored.
+
+% \labelindexref{Figure}{img:report-framework}.
+%This thesis presents the \textbf{\project}.
+
+%This is an example of a footnote \footnote{\url{www.google.com}}. You can see %here a reference to \labelindexref{Section}{sub-sec:proj-objectives}.
+
+%Here we have defined the CS abbreviation.\abbrev{CS}{Computer Science} and the %UPB abbreviation.\abbrev{UPB}{University Politehnica of Bucharest}
+
+%We can also include listings like the following:
+
+% Inline Listing example
+%\lstset{language=make,caption=Application Makefile,label=lst:app-make}
+%\begin{lstlisting}
+%CSRCS = app.c
+%SRC_DIR =..
+%include $(SRC_DIR)/config/application.cfg
+%\end{lstlisting}
+
+%Listings can also be referenced. References don't have to include %chapter/table/figure numbers... so we can have hyperlinks \labelref{like %this}{lst:makefile-test}.
+
+%\subsection{Tables}
+
+%We can also have tables... like \labelindexref{Table}{table:reports}.
+
+

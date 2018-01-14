@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: src/chapters/intro.aux
+A level-1 auxiliary file: src/chapters/background.aux
+A level-1 auxiliary file: src/chapters/namecoin.aux
+A level-1 auxiliary file: src/chapters/design.aux
+A level-1 auxiliary file: src/chapters/implementation.aux
+A level-1 auxiliary file: src/chapters/evaluation.aux
+A level-1 auxiliary file: src/chapters/summary-future-work.aux
+The style file: plain.bst
+Database file #1: src/main.bib
+Warning--to sort, need author or key in opennic
+Warning--empty publisher in masterbit
+Warning--empty journal in hashcash
+Warning--empty institution in rfc2535
+Warning--empty institution in rfc1057
+Warning--empty institution in rfc7686
+Warning--empty publisher in blockchaind
+Warning--empty institution in rfc1034
+Warning--empty institution in rfc7159
+Warning--empty institution in rfc5531
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            620 strings with 6889 characters,
+and the built_in function-call counts, 4840 in all, are:
+= -- 453
+> -- 182
+< -- 6
++ -- 80
+- -- 54
+* -- 214
+:= -- 865
+add.period$ -- 71
+call.type$ -- 22
+change.case$ -- 85
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 212
+empty$ -- 434
+format.name$ -- 54
+if$ -- 1003
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 18
+newline$ -- 118
+num.names$ -- 42
+pop$ -- 154
+preamble$ -- 1
+purify$ -- 71
+quote$ -- 0
+skip$ -- 129
+stack$ -- 0
+substring$ -- 114
+swap$ -- 21
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 10
+while$ -- 42
+width$ -- 24
+write$ -- 229
+(There were 10 warnings)
