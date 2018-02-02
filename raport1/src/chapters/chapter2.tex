@@ -1,5 +1,31 @@
-\chapter{State of the Art}
+\chapter{Background}
 \label{chapter:chapter2}
+
+\section{Decision Support Systems Architecture}
+\label{sec:ch3-sec}
+Developing Decision Support Systems requires high costs, human effort, time and the success of the system cannot be guaranteed. These system can be affected by many risks like system design, data quality and old technologies. Their purpose is to assist managers in decision making such as investments, budgeting, cash flows or financial planning.
+
+\textbf{Level 1 (bottom-tier) – data management}
+
+Level 1 (bottom-tier) is the level of data management and it involves data, metadata, DBMS, data warehouses and marts, data dictionaries and metadata dictionaries.
+The data that comes from operational databases and external sources is transformed using different types of filtering tools and predefined procedures.
+At this level of the architecture a series of tasks should be implemented in order to load data in a data warehouse such as collecting and extracting from external data, data cleaning and transformation and than loading the data in the data warehouse.
+The processes performed at this level are very important for the success of the DSS. A faulty design could lead to the failure of the DSS.
+
+\textbf{Level 2 (middle-tier) – model management or analysis level}
+
+The second level of the DSS architecture is involved in modeling and analysis. At this level the data is transformed and the necessary information is extracted. In order to get that information architects are using data analysis, simulation and forecast models that achieves the business requirements. An example of technology used at this level is OLAP. The OLAP tool is using multidimensional data representation that allows quick data analysis by using rool-up or slice operations.
+Data mining techniques are present at this level so they are extracting knowledge from that data not reports of the data.
+In \cite{39029} the authors state that 'very often, the success of a DSS is determined by the discovery of new facts and data correlations and not by building reports that presents data'.
+
+\textbf{Level 3 (top-tier) – The interface or the presentation layer}
+
+The level 3 contains the interaction between users and the system. The user interface should be specially designed to make the interaction more user friendly. This level involves queries and reports building tools, data viewing tools, data publishing and presenting tools. On this level, the human resource has an important role because he/she need to make the final decision. To facilitate the interaction between the system and the end-users the architects developed also smart portals using portal-based web technologies. BI portals offers users a good end-to-end experience by including nice graphics, report generation features, etc.
+
+\textbf{Level 4 – Telecommunications}
+
+The telecommunicationslevel interconnects all three levels and it contains web servers, computer networks, communication devices, etc.
+
 
 \section{Blockchain technical details}
 \label{sec:chapter2-section1}
@@ -19,48 +45,26 @@ Mining is expensive and it requires a lot of computer power so the blockchain al
 
 \section{Blockchain properties}
 \label{sec:chapter2-section2}
+\subsection{Proof-of-work}
+\label{subsec:proof-of-work}
+The idea of using a proof-of-work~\cite{proofofwork} system to legitimate the user of an application was used before in other software systems.
+For example, Hashcash~\cite{hashcash} is a proof-of-work system introduced by Black that was invented to limit email spam and denial-of-service attacks. The idea is quite easy to follow: a legitimate sender needs to spend a reasonable amount of computing time in order to issue an email. If a legitimate user sends a reasonable number of emails, a spammer wants to send thousands of emails making the spamming effort very expensive. The receiver’s role is to validate the hash, which is quite easy. Hashcash is conceptually similar to the proof-of-work system used by Bitcoin miners.
 
-\section{Blockchain based projects}
-\label{sec:chapter2-section3}
+Solving the problem of double spending using a proof-of-work system provides security guarantees for naming/identity registration and transfer.
 
-\subsection{Financial}
-\label{sub-sec:chapter2-subsection1}
-Blockchain and the financial world involve trading, money transfer and mort-
-gages. Right now the economic world releases on banks, governments and other
-financial institutions to transfer money from an account to another. Financial information transfer is monitored by governmental institutions and this type of information can be used to banks advantages in trading operations.
+\subsection{Consensus Protocol}
+\label{subsec:overview-lbl}
+Based on prior work, the Bitcoin technology introduces a consensus protocol based on the Byzantine Generals’ Problem~\cite{byzantine} to eliminate double-spending by transaction validating process.
 
-\subsection{Public sector}
-\label{sub-sec:chapter2-subsection2}
-The public sector activities can benefit from blockchain technology by chang-
-ing the asset registration, citizen identification process, medical records and
-medicine supply chain. The real power of blockchain consists of creating new
-solutions of performing old processes that are inefficient in the modern world.
-Checking paper records for validating the ownership of an asset had become very
-difficult and time consuming activity. The number of population is increasing
-at a high rate and public sector employees are forced to perform lucrative and
-repetitive tasks. Having all properties stored in a blockchain repository elim-
-inates the problems mention above and offers the guarantee of security and
-privacy.
+When a new transaction is broadcasted to the network, nodes have the option to add the transaction in their copy of the Blockchain or not. The majority of nodes which compose that network decides the single state of a transaction (valid or not) and the consensus is achieved.
 
-\subsection{Retail}
-\label{sub-sec:chapter2-subsection3}
-In the retail field blockchain can change the way the supply process, fidelity
-programs are implemented or the information sharing process is done (from
-supplier to retailer and the other way around).
-
-\subsection{Insurance}
-\label{sub-sec:chapter2-subsection4}
-There are many activities in the insurance industry than can be innovated such as risk provenance, claims processing, asset usage history or claims files.
-
-\subsection{Manufacturing}
-\label{sub-sec:chapter2-subsection5}
-Another industry that can benefit from blockchain technology is the manufac-
-turing starting with the supply chain, product parts or maintenance tracking.
 
 \section{Bitcoin project}
-The Bitcoin is the first cryptocurrency developed using blockchain technol-
-ogy. The unique attributes of the blockchain and the cryptographic principles
+The Bitcoin is the first cryptocurrency developed using blockchain technology. The unique attributes of the blockchain and the cryptographic principles
 brought Bitcoin a huge popularity. Satoshi Nakamoto is the pseudonim of the
 Bitcoin inventor. The real identity of Satoshi was never revealed. There are
 many suppositions but not of them was confirmed. He claimed to be a Japanese
 male around forty years old.
+
+One interesting aspect about Bitcoin technology is how it solves both the problem of double-spending and mining in a decentralized system. The protocol is developed on “sound cryptographic” principles that guarantee proof-of-work, proof-of-ownership and classic currencies attributes such as fungibility and scarcity.
+

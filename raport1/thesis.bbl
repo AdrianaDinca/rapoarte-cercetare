@@ -1,20 +1,79 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{39029}
+Ion~Lungu Adela~Bâra.
+\newblock Improving decision support systems with data mining techniques.
+\newblock 2012.
+
+\bibitem{hashcash}
+Adam Back.
+\newblock Hashcash-a denial of service counter-measure.
+\newblock 2002.
+
+\bibitem{dss-web}
+Olaf~Zimmermann Cesare~Pautasso and Frank Leymann.
+\newblock Restful web services vs. "big"' web services: making the right
+  architectural decision.
+\newblock \url{https://dl.acm.org/citation.cfm?id=1367606&preflayout=flat},
+  Originally published in 2008.
+\newblock Accessed: 2018-01-28.
+
+\bibitem{dds-efectiveness}
+M.~Bohanec D.~Mladenić, N.~Lavrač and S.~Moyle.
+\newblock Data mining and decision support: Integration and collaboratio.
+\newblock {\em Kluwer Academic Publishers}, 2002.
 
 \bibitem{sha2}
 Dmitry Khovratovich, Christian Rechberger, and Alexandra Savelieva.
 \newblock Bicliques for preimages: Attacks on skein-512 and the sha-2 family.
 \newblock \url{http://eprint.iacr.org/2011/286.pdf}, Originally published in
   2011.
-\newblock Accessed: 2017-06-28.
+\newblock Accessed: 2018-01-25.
+
+\bibitem{byzantine}
+Leslie Lamport, Robert Shostak, and Marshall Pease.
+\newblock {\em The Byzantine generals problem}.
+\newblock ACM Transactions on Programming Languages and Systems (TOPLAS) 4.3,
+  1982.
 
 \bibitem{blockchaind}
 Tiana Laurence.
 \newblock {\em Blockchain For Dummies}.
 \newblock 2017.
 
+\bibitem{proofofwork}
+Ben Laurie and Richard Clayton.
+\newblock {\em Proof-of-work proves not to work; version 0.2}.
+\newblock Workshop on Economics and Information, Security, 2004.
+
 \bibitem{bitcoinwhitepaper}
 Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system.
 \newblock {\em The Cryptography Mailing list at metzdowd.com}, 2008.
+
+\bibitem{5appforblock}
+John Rampton.
+\newblock 5 applications for blockchain in your business.
+
+\bibitem{blocktechguide}
+Ammer Rosic.
+\newblock What is blockchain technology? a step-by-step guide for beginners.
+\newblock \url{https://blockgeeks.com/guides/what-is-blockchain-technology/},
+  Originally published in 2017.
+\newblock Accessed: 2018-01-28.
+
+\bibitem{blocknextinternet}
+Don Tapscott and Alex Tapscott.
+\newblock Blockchain revolution.
+\newblock
+  \url{https://www.linkedin.com/pulse/whats-next-generation-internet-surprise-its-all-don-tapscott/},
+  Originally published in 2016.
+\newblock Accessed: 2018-01-28.
+
+\bibitem{def-dsss}
+Chang E.~Koh Watson~H., R. Kelly~Rainer.
+\newblock Executive information systems: A framework for development and a
+  survey of current practices.
+\newblock {\em MIS Quarterly}, 15, 1991.
 
 \end{thebibliography}
