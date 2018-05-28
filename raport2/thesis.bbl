@@ -1,5 +1,18 @@
 \begin{thebibliography}{1}
 
+\bibitem{isotc307blockch}
+ISO/TC 307.
+\newblock Blockchain and distributed ledger technologies.
+\newblock \url{https://www.iso.org/committee/6266604.html}.
+\newblock Accessed: 2018-05-28.
+
+\bibitem{appblockch2}
+Aviram Eisenberg.
+\newblock Five business opportunities for blockchain for 2018.
+\newblock
+  \url{https://igniteoutsourcing.com/publications/blockchain-business-applications/}.
+\newblock Accessed: 2018-05-27.
+
 \bibitem{edXTut}
 LinuxFoundationX LFS171x.
 \newblock Blockchain for business - an introduction to hyperledger
@@ -7,19 +20,11 @@ LinuxFoundationX LFS171x.
 \newblock \url{https://courses.edx.org/}, 2017.
 \newblock Accessed: 2018-05-27.
 
-\bibitem{blocktechguide}
-Ammer Rosic.
-\newblock What is blockchain technology? a step-by-step guide for beginners.
-\newblock \url{https://blockgeeks.com/guides/what-is-blockchain-technology/},
-  Originally published in 2017.
-\newblock Accessed: 2018-01-28.
-
-\bibitem{blocknextinternet}
-Don Tapscott and Alex Tapscott.
-\newblock Blockchain revolution.
+\bibitem{appblockch}
+John Rampton.
+\newblock 5 applications for blockchain in your business.
 \newblock
-  \url{https://www.linkedin.com/pulse/whats-next-generation-internet-surprise-its-all-don-tapscott/},
-  Originally published in 2016.
-\newblock Accessed: 2018-01-28.
+  \url{https://execed.economist.com/blog/industry-trends/5-applications-blockchain-your-business}.
+\newblock Accessed: 2018-05-27.
 
 \end{thebibliography}

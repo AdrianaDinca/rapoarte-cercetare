@@ -5,7 +5,8 @@
 \contentsline {subsection}{\numberline {1.1.2}Project Scope}{1}{subsection.1.1.2}
 \contentsline {subsection}{\numberline {1.1.3}Motivation and Objectives}{2}{subsection.1.1.3}
 \contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Decision Support Systems Architecture}{3}{section.2.1}
+\contentsline {section}{\numberline {2.1}Hyperledger Project}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Hyperledger Composer}{4}{section.2.2}
 \contentsline {chapter}{\numberline {3}Business Specifications and Architecture}{6}{chapter.3}
 \contentsline {section}{\numberline {3.1}Description and Business Specifications}{6}{section.3.1}
 \contentsline {section}{\numberline {3.2}Business Use Cases}{6}{section.3.2}
