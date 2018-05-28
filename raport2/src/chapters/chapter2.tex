@@ -1,0 +1,51 @@
+\chapter{Background}
+\label{chapter:chapter2}
+
+\section{Decision Support Systems Architecture}
+\label{sec:ch3-sec}
+In a blockchain application, the blockchain will store the state of the system, in addition to the immutable record of transactions that created that state. A client application will be used to send transactions to the blockchain. The smart contracts will encode some (if not all) of the business logic.
+
+All these details are already integrated into Hyperledger frameworks and modules, thus making use of the power of Blockchain was tremendous simplified.
+Hyperledger blockchains are generally permissioned blockchains, which means that the parties that join the network are authenticated and authorized to participate on the network. Hyperledger’s main goal is to create enterprise grade, open source, distributed ledger frameworks and code bases to support business use cases.
+
+If you look at permissionless blockchains, like the Bitcoin blockchain or the Ethereum blockchain, anyone can join the network, as well as write and read transactions. The actors in the system are not known, which means there could be some malicious actors within the network.
+Hyperledger reduces these security risks and ensures that only the parties that want to transact are the ones that are part of the transaction and, rather than displaying the record of the transactions to the whole network, they remain visible only to the parties involved. So, Hyperledger provides all the capabilities of the blockchain architecture - data privacy, information sharing, immutability, with a full stack of security protocols - all for the enterprise.
+
+Hyperledger has taken a leadership role to develop cross-industry standards and provide a neutral space for software collaboration. The financial services industry, in particular, is witnessing an unprecedented level of collaboration between institutions that have traditionally been competitors. The advent of a new foundational or infrastructural technology like the blockchain - much like the Internet - requires collaboration of various actors in order to realize the full benefits of the technology. Unless all actors use a certain standard, the pace of technological dissemination will continue to be slow. Technological adoption is characterized by network effects, where the costs decrease with the increase in use of a certain technology. Since shifting to distributed ledger technology involves significant costs, open source software, communities and ecosystems that develop around these have a significant part to play.
+
+The cryptocurrency-based blockchain model, popularized by public blockchains like Bitcoin and Ethereum, currently falls short of fulfilling a host of requirements that many types of organizations would have to fulfill in order to be compliant when using blockchain and distributed ledger technologies - for instance, in the areas of financial services, healthcare, and government.
+Hyperledger is a unique platform that is developing permissioned distributed ledger frameworks specifically designed for enterprises, including those in industries with strong compliance requirements. Enterprise use cases require capabilities such as scalability and throughput, built-in or interoperable identity modules for the parties involved in a transaction or a network, or even access to regulators who can access all data in the ledger as read-only to ensure compliance. The latter is particularly important because, regardless of the innovation, it has to operate within the current regulatory framework, as well as comply with any new rules that come into place specifically targeted at blockchain technologies.
+
+Hyperledger business blockchain frameworks are used to build enterprise blockchains for a consortium of organizations. They are different than public ledgers like the Bitcoin blockchain and Ethereum.
+
+The Hyperledger frameworks include the following components, described also in \labelindexref{Figure}{img:componenteBkch} 
+	\begin{itemize}
+	\item An append-only distributed \textbf{ledger}
+	\item \textbf{A consensus algorithm} for agreeing to changes in the ledger
+	\item \textbf{Privacy} of transactions through permissioned access
+	\item \textbf{Smart contracts} to process transaction requests.
+	\end{itemize}
+
+\fig[scale=0.7]{src/img/componenteBkch.jpg}{img:componenteBkch}{Components of Blockchain for Business(source \cite{edXTut})} 
+
+
+The Hyperledger consortium has many different projects that focus on different aspects of how ledgers can work and what use cases they can be applied for.
+
+Hyperledger Composer has created a modelling language that allows you to define the assets, participants, and transactions that make up your business network using business vocabulary. In addition, the transaction logic is then written by developers using Javascript. This simple interface allows business people and technologists to work together on defining their business network.
+
+Hyperledger Composer provides a suite of tools for building blockchain business networks. These tools allow you to:
+\begin{itemize}
+	\item Model your business blockchain network
+	\item Generate REST APIs for interacting with your blockchain network
+	\item Generate a skeleton Angular application.
+\end{itemize}
+
+Built in Javascript, Hyperledger Composer provides an easy-to-use set of components that developers can quickly learn and implement. The project was contributed by Oxchains and IBM.
+
+The benefits of Hyperledger Composer are:
+\begin{itemize}
+	\item \textbf{Faster creation of blockchain applications}, eliminating the massive effort required to build blockchain applications from scratch
+	\item \textbf{Reduced risk} with well-tested, efficient design that aligns understanding across business and technical analysts
+	\item \textbf{Greater flexibility} as the higher-level abstractions make it far simpler to iterate.
+\end{itemize}
+

@@ -1,0 +1,106 @@
+\chapter{Business Specifications and Architecture}
+\label{chapter:chapter3}
+
+\section{Description and Business Specifications}
+\label{sub-sec:chapter3-section1}
+We propose a Decision Support System that enables leaders and decision makers to have a better view of their business after the Blockchain revolution. This system aims to offer architectural solutions for business people based on their project’s architecture and business needs. The main focus is to help users to have a simple dashboard where to describe the existing business design and architecture and the most important business flow along with the other organization they exchange data. 
+
+The system, \textbf{\project}, offers a clear understanding about the way a business will change after the adoption of Blockchain in just a few clicks. More than that, the system will be integrated with Hyperledger Composer framework in order to reduce the time and costs of redesigning/remodeling existing businesses using Hyperledger Composer. 
+
+\textbf{\project} aims to make decision makers more confident about the possibility of adoption of Blockchain and to accelerate the revolution of Blockchain.
+
+\section{Business Use Cases}
+\label{sub-sec:chapter3-section2}
+The solution is a proof of concept that plans to achieve the following goals:
+\begin{itemize}
+	\item Examine several use cases where blockchain technology is actively used to solve real world business problems.
+	\item Discover the factors to look at when evaluating if blockchain technology is right for a particular project.
+	\item Decide when to use and when not to use blockchain technology.
+\end{itemize}
+
+There are certain factors to consider when evaluating blockchain distributed ledger technology for your business. How many participants are in your system? What is the geographical distribution of the participants? What sort of performance requirements do you have? Defining the rules, risks, and responsibilities of each party in your blockchain system is useful as you consider transferring a database to a decentralized environment such as one of the Hyperledger frameworks.
+
+Blockchain is best suited for business applications where one or more of the following conditions apply:
+\begin{itemize}
+	\item There is a need for a shared common database
+	\item The parties involved with the process have conflicting incentives, or do not have trust among participants
+	\item There are multiple parties involved or writers to a database
+	\item There are currently trusted third parties involved in the process that facilitate interactions between multiple parties who must trust the third party. This could include escrow services, data feed providers, licensing authorities, or a notary public
+	\item Cryptography is currently being used or should be used. Cryptography facilitates data confidentiality, data integrity, authentication, and non-repudiation
+	\item Data for a business process is being entered into many different databases along the lifecycle of the process. It is important that this data is consistent across all entities, and/or digitization of such a process is desired
+	\item There are uniform rules governing participants in the system
+	\item Decision making of the parties is transparent, rather than confidential
+	\item There is a need for an objective, immutable history or log of facts for parties’ reference
+	\item Transaction frequency does not exceed 10,000 transactions per second.
+\end{itemize}
+
+Blockchain technology is a powerful tool, but it is not always the right tool for the job at hand. If you are contemplating using blockchain technology, be sure to evaluate the problem fully.
+
+The following conditions are not currently well suited to blockchain-based solutions:
+\begin{itemize}
+	\item The process involves confidential data
+	\item The process stores a lot of static data, or the data is quite large
+	\item Rules of transactions change frequently
+	\item The use of external services to gather/store data
+\end{itemize}
+
+For some applications, other options are simply more efficient. When evaluating blockchain technology, consider whether regular file storage, a centralized database, or database replication with master/slave relationship between the original and copies is suitable. If those structures are suitable, then you can deploy your application with reduced complexity. 
+
+Similarly, some applications can simply utilize cryptographic methods common in blockchains, without the database replication mechanisms of a blockchain.
+
+In the \labelindexref{Diagram}{img:BlockchainDecisionFlowchart} we provide generalized, high-level decision points about when to use or not to use blockchain technology for your business.
+
+\fig[scale=0.5]{src/img/BlockchainDecisionFlowchart.png}{img:BlockchainDecisionFlowchart}{Blockchain Decision Path(source \cite{edXTut})} 
+
+\section{Architecture}
+\label{sub-sec:chapter3-section2}
+The system architecture is a client-server application. The client component is going to be represented by a intuitive dashboard that will allow users to determine whether or not their business is suitable for the switch and if so, how it is going to look like after the switch.
+The server component will be responsible for building the model and a high level architecture for an existing project that will involve Blockchain on Hyperledger.
+
+The model is going to be store in a format compatible with Hyperledger Composer Model File in order to make the integration process easier and faster.
+
+A sample of a Hyperledger Composer Model file for a Digital Property Network:
+\begin{verbatim}
+/*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+namespace net.biz.digitalPropertyNetwork
+
+asset LandTitle identified by titleId {
+o String   titleId
+--> Person   owner
+o String   information
+o Boolean  forSale   optional
+}
+
+asset SalesAgreement identified by salesId {
+o String    salesId
+--> Person    buyer
+--> Person    seller
+--> LandTitle title
+}
+
+participant Person identified by personId {
+o String personId
+o String firstName
+o String lastName
+}
+
+
+transaction RegisterPropertyForSale {
+--> Person seller
+--> LandTitle title
+}
+
+\end{verbatim}
