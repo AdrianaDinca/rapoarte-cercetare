@@ -1,0 +1,67 @@
+\chapter{Project Implementation}
+\label{chapter:chapter3}
+
+\section{Functionalities}
+\label{sub-sec:chapter3-section1}
+\textbf{\project} is an application build for Hyperledger Composer integration that stores models for business network and enables user to upload and download the business network archives from the one of the industries fields defined.
+
+The application has three main functionalities:
+\begin{itemize}
+	\item upload business network archive in one defined category
+	\item validate business network archive structure and files syntax
+	\item download business network archive from one of the available categories
+\end{itemize}
+The project has three modules, each module is responsible for one of the functionality mentioned above.
+These functionalities are available from a desktop interface \labelindexref{Figure}{img:BNMMainPanel}.
+
+
+\fig[scale=0.5]{src/img/BNMMainPanel.png}{img:BNMMainPanel}{Business Network Modeling Interface} 
+Don and Alex Tapscott \cite{tapscott} have defined the twelve important directions that will be reformed by the Blockchain revolution:
+\begin{itemize}
+	\item \textbf{Transport} - cars wallet for paying fines and penalties or for paying an overtaking price in a traffic jam in case of an emergency
+	\item \textbf{Infrastructure Administration} - a connecting infrastructure that applies road taxes based on the degree of deterioration
+	\item \textbf{Energy, Water and Garbage Management} - using IoT based on Blockchain to track production, distribution, consumption and collecting
+	\item \textbf{Resource Extraction and Agriculture} - keep a complete history of an animal nutrition, health and medication consumed; collect ground and plants parameters to notify institutions if there is an exploitation
+	\item \textbf{Environment Monitoring and Emergency Services} - global monitoring agents to improve the prediction and to warn early by using weather sensors, chemical dangerous product' sensors or fire sensors in case of a forest fire or a lightning strike
+	\item \textbf{Medical Insurance} - medical supply administration and patient medical history store on Blockchain ledger; self monitoring pills and medical prostheses
+	\item \textbf{Financial Services and Insurance Companies} - financial institutions can store their wrights on financial assets and the assets can be easily tracked; digital currencies enable the storage and value transfer for big and small participants hence it allows rick evaluation and management
+	\item \textbf{Evidence Tracking} - all physical assets are digitized and stored on Blockchain such as patents, properties, insurance, approvals, etc.
+	\item \textbf{Buildings Administration and Properties} - a better management of the space available by replacing the main functionality of a building or office with other activities after work hours 
+	\item \textbf{Industrial Operations and  Manufacturing} - create a industrial Blockchain to monitor the production lines, stock inventory, distribution, quality, etc.
+	\item \textbf{House Management} - "smart houses" had a relatively heavy start, but the market is growing constantly and adding Blockchain power to it will support its growth; automatic payments for energy and water consumption or a proper estimation for plumber services payment
+	\item \textbf{Retail Sale} - receive alerts about goods you want to buy when you're in front of the store and pay for them with your Blockchain wallet
+\end{itemize} 
+
+This classification takes into account both the existing technologies and the future of IT\&C world.
+
+Adding a new sample of one of the categories is followed by a validation step. Only the \emph{.bna} file that respects the content and the syntax defined by Hyperledger Composer framework will be added in the application repository.
+For one category, the user can download one or more samples. The list of samples for each category is available after selecting the category.
+
+Adding a new category to this list can be done via the application interface when trying to upload the business network model from an area that is not listed above. This action requires a system administrator validation therefore the administrator is notified by an email and can decide whether or not the category is needed.
+
+For each category there is a sample business network model defined by the \emph{.bna} file and it get be downloaded by anyone that needs the sample.
+The \emph{.bna} file then is deployed on the Hyperledger Composer Playground to start using the network.
+
+\section{Project Modules}
+\label{sub-sec:chapter3-section2}
+The project has a client-server architecture, therefore there the application has two main components: the client and the server.
+The client component is represented by a intuitive dashboard that allow users to select one category and download samples from that category or to upload the business network models they designed in the application repository using the upload functionality.
+The server component is composed by two modules one for download and the other one for upload. The programming language is Python which is an interpreted high-level language that enables clear programming both for small and large scales.
+The communication between the server and the client is done via a REST API.
+The client is an web application based on Django framework. 
+Django is a high-level Python Web framework that enables fast development and clean design for a simple web solution.
+
+The server stores the \emph{.bna} files in the same file system where it runs. The space issue is not consider an issue in this stage due to the fact that the number of \emph{.bna} files is relatively small and the size of the \emph{.bna} file too.
+
+The web browser is available by accesing the following url: http://<bnmc_ip>:8000/bnm
+
+The server exposes the following REST API to the client application:
+\begin{itemize}
+	\item \begin{verbatim}/rest/bna\end{verbatim} - type: GET, query parameter type: String query parameter name: id, response: a \emph{.bna} file
+	\item \begin{verbatim}/rest/bna\end{verbatim} - type: POST, response type: application-json, response: {id:<val>}
+	\item \begin{verbatim}/rest/category\end{verbatim} - type: GET, response: application-json
+	\item \begin{verbatim}/rest/category\end{verbatim} - type: POST, query parameter type: String, query parameter name: categoryName, payload: \emph{.bna} file, response: external
+\end{itemize}
+
+%TODO: add some screen shots with the web application	
+

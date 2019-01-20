@@ -1,0 +1,109 @@
+\chapter{Project Technologies and Software}
+\label{chapter:chapter2}
+
+\textbf{\project} is an application developed in Python that has two main functionalities.
+
+The first functionality refers to the possibility to download a business network from one of the available categories. The downloaded files is an archive with a basic business network that can be deployed in the Hyperledger Composer Playground or in a local Hyperledger Composer Environment.
+The second functionality enables an user to upload samples of business networks for each category. More then that, an user can add an new category if needed. This action requires a validation from the system's administration.
+
+The application is an extension of the Hyperledger Composer framework that aims to fill in the gaps of the business network modeling process. 
+Right now, the framework requires business network model in order to connect to the Hyperledger Fabric and start doing businesses using the Blockchain power.
+
+This project helps users to obtain samples of Blockchain business network from different areas of expertise.
+In order to determine all the areas that can make use of the Blockchain technologies, we used a classification done by Don and Alex Tapscott \cite{tapscott}.
+
+\section{Hyperledger Project}
+\label{sub-sec:chapter1-section1}
+As mention in section \ref{sub-sec:intro-subsection2}, the Blockchain technology requires advanced technical skills and professionals to help businessmen and leaders use its power.
+
+In order to solve the expertise issue and to encourage non-technical people use and test the power of Blockchain, organizations and companies (that understand the Blockchain revolution) had developed frameworks to facilitate the use of the Blockchain technology. IBM is one of the first organization involved into Blockchain that initiated the Hyperledger project and that released it to the public under the Linux Foundation.
+
+IBM Blockchain platform has the following properties:
+\begin{itemize}
+	\item Permissioned network - the participants of the network are known therefore the network offers decentralized trust
+	\item Confidential transactions - expose only the information you want to share and only with the participants you want to share it
+	\item Pluggable architecture - the size of the network can be customized
+	\item Easy to Get Started - develop smart contracts in any programming language 
+\end{itemize}
+
+Minting for proof-of-work, the ledger distribution, decentralization and immutability are already integrated into Hyperledger frameworks and modules, thus making use of the power of Blockchain was simplified. 
+
+Hyperledger provides an alternative to the cryptocurrency-based blockchain model, and focuses on developing blockchain frameworks and modules to support global enterprise solutions. The focus of Hyperledger is to provide a transparent and collaborative approach to blockchain development.
+Hyperledger blockchains are generally permissioned blockchains, which means that the parties that join the network are authenticated and authorized to participate on the network. Hyperledger’s main goal is to create enterprise grade, open source, distributed ledger frameworks and code bases to support business use cases.
+
+If you look at permissionless blockchains, like the Bitcoin blockchain or the Ethereum blockchain, anyone can join the network, as well as write and read transactions. The actors in the system are not known, which means there could be some malicious actors within the network.
+Hyperledger reduces these security risks and ensures that only the parties that want to transact are the ones that are part of the transaction and, rather than displaying the record of the transactions to the whole network, they remain visible only to the parties involved. So, Hyperledger provides all the capabilities of the blockchain architecture - data privacy, information sharing, immutability, with a full stack of security protocols - all for the enterprise. For more information on Blockchain and distributed ledger technologies check \cite{isotc307blockch}.
+
+The cryptocurrency-based blockchain model, popularized by public blockchains like Bitcoin and Ethereum, currently falls short of fulfilling a host of requirements that many types of organizations would have to fulfill in order to be compliant when using blockchain and distributed ledger technologies - for instance, in the areas of financial services, healthcare, and government.
+
+Hyperledger is a unique platform that is developing permissioned distributed ledger frameworks specifically designed for enterprises, including those in industries with strong compliance requirements. Enterprise use cases require capabilities such as scalability and throughput, built-in or interoperable identity modules for the parties involved in a transaction or a network, or even access to regulators who can access all data in the ledger as read-only to ensure compliance. The latter is particularly important because, regardless of the innovation, it has to operate within the current regulatory framework, as well as comply with any new rules that come into place specifically targeted at blockchain technologies.
+
+Hyperledger business blockchain frameworks are used to build enterprise blockchains for a consortium of organizations. They are different than public ledgers like the Bitcoin blockchain and Ethereum.
+As of May 2018, Hyperledger consists of eight projects, five of which are distributed ledger frameworks. The other three projects are modules that support these frameworks. For a better understanding, check \labelindexref{Figure}{img:modularIUmbrella}.
+\fig[scale=0.7]{src/img/modularIUmbrella.jpg}{img:modularIUmbrella}{Hyperledger Modular Umbrella Approach(source \cite{edXTut})} 
+
+The Hyperledger frameworks include the following components, described also in \labelindexref{Figure}{img:componenteBkch}:
+	\begin{itemize}
+	\item An append-only distributed \textbf{ledger}
+	\item \textbf{A consensus algorithm} for agreeing to changes in the ledger
+	\item \textbf{Privacy} of transactions through permissioned access
+	\item \textbf{Smart contracts} to process transaction requests.
+	\end{itemize}
+
+\fig[scale=0.7]{src/img/componenteBkch.jpg}{img:componenteBkch}{Components of Blockchain for Business(source \cite{edXTut})} 
+
+\section{Hyperledger Composer}
+\label{sub-sec:chapter1-section2}
+The Hyperledger consortium has many different projects that focus on different aspects of how ledgers can work and what use cases they can be applied for.
+
+Hyperledger Composer has created a modelling language that allows you to define the assets, participants, and transactions that make up your business network using business vocabulary. In addition, the transaction logic is then written by developers using Javascript. This simple interface allows business people and technologists to work together on defining their business network.
+The framework main goal was to reduce time and accelerate the Blockchain adoption and to make it easier to integrate business systems with the Blockchain.
+
+The Hyperledger Composer is using the Hyperledger Fabric blockchain infrastructure and runtime that has pluggable blockchain consensus protocols to validate transactions  accordingly with the participants policy.
+
+This framework is using a business network model to quickly model the business by defining the assets, participants and the transactions. The framework provides with some sample of business network or require the users to deploy their network models.
+The business network model is an archive that contains a list of files:
+\begin{itemize}
+	\item \emph{Model file .cto} - assets, participants and transactions
+	\item \emph{Script File .js} - transactions functions
+	\item \emph{Access Control .acl} - access control rules
+	\item \emph{Query File .qry} - query definitions
+\end{itemize}
+All this files are stored in a business network archive that has the extension \emph{.bna}.
+The Business Network Archive \emph{.bna} is deployed in one of the distributed ledger Hyperledger solution such as Hyperledger Fabric Cloud or Local or in a simulated online environment (web browser/ node.js). See \labelindexref{Figure}{img:BNAStructure} for a better description of the \emph{.bna} file. 
+
+\fig[scale=0.3]{src/img/BNAStructure.png}{img:BNAStructure}{Business Network Archive Structure(source \cite{bnaStructure})} 
+
+Hyperledger Composer provides a suite of tools for building blockchain business networks. These tools allow you to:
+\begin{itemize}
+	\item Editors for modeling your business blockchain network
+	\item Generate REST APIs for interacting with your blockchain network
+	\item Generate a skeleton Angular application.
+\end{itemize}
+
+Built in Javascript, Hyperledger Composer provides an easy-to-use set of components that developers can quickly learn and implement. The project was contributed by Oxchains and IBM.
+
+The benefits of Hyperledger Composer are:
+\begin{itemize}
+	\item \textbf{Faster creation of blockchain applications}, eliminating the massive effort required to build blockchain applications from scratch
+	\item \textbf{Reduced risk} with well-tested, efficient design that aligns understanding across business and technical analysts
+	\item \textbf{Greater flexibility} as the higher-level abstractions make it far simpler to iterate.
+\end{itemize}
+
+After using this framework we reached the conclusion that it's a great choice for beginners that want to test the Blockchain technology and make use of its power.
+The framework can be install easily and the composer playground or a local Hyperledger Fabric are sufficient to start testing the business network.
+The main limitation we noticed was related with the business network modeling process.
+In the composer playground environment were some samples of business networks but not enough to cover the hole areas that will be revolutionized by Blockchain.
+
+\textbf{\project} is a tool that solves the modeling issues of the Hyperledger Composer by creating samples for twelve fields of the business world.
+The purpose of the tool is to created the bigest \emph{.bna} repository of \emph{.bna} files. The application allows users to deploy and download \emph{.bna} files by selecting one of the existing business fields.
+If an user create a new category, the request is validated by the tool's administrator before accepting the proposed category and the file uploaded.
+
+Each \emph{.bna} file must pass some validation rules before being stored in the repository.
+
+The programming language used to develop this application is Python. The user interface is a simple website interface build using Django Framework. 
+The motivation of using Python is related with the fact that the application requires file processing for validation and this programming language is very powerful and has a simple syntax for implementing parser solutions and file syntax validation rules.
+
+In addition to this, the Django framework offers an abstraction layer for structuring and manipulating the data of the web application.
+
+ 

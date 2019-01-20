@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{isotc307blockch}
+ISO/TC 307.
+\newblock Blockchain and distributed ledger technologies.
+\newblock \url{https://www.iso.org/committee/6266604.html}.
+\newblock Accessed: 2018-05-28.
+
+\bibitem{bnaStructure}
+Hyperledger Composer.
+\newblock Welcome to hyperledger composer.
+\newblock
+  \url{https://hyperledger.github.io/composer/v0.19/introduction/introduction},
+  2019.
+\newblock Accessed: 2019-01-5.
+
+\bibitem{tapscott}
+Alex~Tapscott Don~Tapscott.
+\newblock {\em Blockchain Revolution: How the Technology Behind Bitcoin and
+  Other Cryptocurrencies Is Changing the World}.
+\newblock Portfolio, 2016.
+
+\bibitem{edXTut}
+LinuxFoundationX LFS171x.
+\newblock Blockchain for business - an introduction to hyperledger
+  technologies.
+\newblock \url{https://courses.edx.org/}, 2017.
+\newblock Accessed: 2018-05-27.
+
+\end{thebibliography}

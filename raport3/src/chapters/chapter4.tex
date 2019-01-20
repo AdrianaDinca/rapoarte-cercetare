@@ -1,0 +1,26 @@
+\chapter{Project Use Case}
+\label{chapter:chapter4}
+
+\section{Use Case Description}
+\label{sub-sec:chapter4-section1}
+We choose to demo a business use case for the field "Evidence Tracking and Documents" starting with downloading the business network model from \project application and deploying the \emph{.bna} file to the Hyperledger Fabric.
+
+For this demo, we created a virtual machine that runs a Linux OS (Ubuntu 18.04) with a full environment configured. For simplification, both the \project and the Hyperledger Composer run on the same VM. 
+
+We want to create a system that helps business organizations and universities store the students' profile. Having a Blockchain solution that stores data about students such as their courses and studies level.
+The idea is to offer the participants of the network information about students based on their role in the business network.
+For example, the university can access information about students' degrees and personal data, the student has full access to his/her profile and external institutions such as other universities or companies can access only information that the student agrees to display. One possible information that a student may want to share with companies can be the level of study and the courses he attended to or other certifications.
+
+Such a system guarantees that nobody can change the student's history and simplifies the process of validating diplomas. Therefore, it is useful for both students that can transfer faster from one university to another and for employment by proving that he/she has the skills for a job, for universities by a faster and automatic student's data transfer and for companies and organization by improving their recruitment process.
+
+\section{Use Case Steps}
+\label{sub-sec:chapter4-section2}
+The use case described above requires executing the following steps:
+\begin{itemize}
+	\item download a business network model suitable for the business field chosen
+	\item deploy the business network archive to the Hyperledger Composer
+	\item check that all the business logic and  business network definition is correct for the business use case
+	\item add some test data about student/s and do some testing to check that the business network is correctly defined; if you are play the role of the student you should have full access to the data from the Blockchain ledger; if you are the student' university or other institution the access level should be the one defined by the student in the \emph{Access Control} file from the \emph{.bna}	
+\end{itemize}
+
+
