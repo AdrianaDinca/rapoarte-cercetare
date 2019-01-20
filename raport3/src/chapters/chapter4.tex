@@ -23,4 +23,40 @@ The use case described above requires executing the following steps:
 	\item add some test data about student/s and do some testing to check that the business network is correctly defined; if you are play the role of the student you should have full access to the data from the Blockchain ledger; if you are the student' university or other institution the access level should be the one defined by the student in the \emph{Access Control} file from the \emph{.bna}	
 \end{itemize}
 
+This business network defines:
+\begin{verbatim}
+**Participant**
+`Student`
+`University`
+`Organization`
+
+**Asset**
+`StudentProfile`
+
+**Transaction**
+`StudentProfileTransaction`
+
+**Event**
+`StudentProfileEvent`
+\end{verbatim}
+
+\emph{StudentProfile/s} are owned by \emph{Student/s}, and the value property on a \emph{StudentProfile} can be modified by submitting a \emph{StudentProfileTransaction}. The \emph{StudentProfileTransaction} emits a \emph{StudentProfileEvent} that notifies applications of the old and new values for each modified \emph{StudentProfile}.	
+The list of \emph{Student} participants is defined in \labelindexref{Figure}{img:student}.
+The list of \emph{University} participants is defined in \labelindexref{Figure}{img:university}.
+The list of \emph{Organization} participants is defined in \labelindexref{Figure}{img:organization}.
+
+
+\fig[scale=0.2]{src/img/student.png}{img:student}{Participant - Student} 
+\fig[scale=0.2]{src/img/university.png}{img:university}{Participant - University} 
+\fig[scale=0.2]{src/img/university.png}{img:university}{Participant - Organization}
+
+After defining the participants we have to create the assets. In our example, the asset is the \emph{StudentProfile}(see \labelindexref{Figure}{img:studentprofile1}).
+\fig[scale=0.2]{src/img/profile1.png}{img:studentprofile1}{Asset - StudentProfile}
+
+To test the Hyperledger Composer framework, we submitted a transaction (see \labelindexref{Figure}{img:transaction}), where we changed the value of a \emph{StudentProfile}. The new value can be seen in \labelindexref{Figure}{img:studentprofile2}.
+
+\fig[scale=0.3]{src/img/transaction.png}{img:transaction}{Submit a StudentProfileTransactions}.
+
+\fig[scale=0.2]{src/img/profile2.png}{img:studentprofile2}{Asset - Updated data of a StudentProfile}
+
 
