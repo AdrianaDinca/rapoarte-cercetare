@@ -4,7 +4,7 @@
 ISO/TC 307.
 \newblock Blockchain and distributed ledger technologies.
 \newblock \url{https://www.iso.org/committee/6266604.html}.
-\newblock Accessed: 2018-05-28.
+\newblock Accessed: 2019-01-10.
 
 \bibitem{bnaStructure}
 Hyperledger Composer.
@@ -12,7 +12,7 @@ Hyperledger Composer.
 \newblock
   \url{https://hyperledger.github.io/composer/v0.19/introduction/introduction},
   2019.
-\newblock Accessed: 2019-01-5.
+\newblock Accessed: 2019-01-05.
 
 \bibitem{tapscott}
 Alex~Tapscott Don~Tapscott.
@@ -25,6 +25,6 @@ LinuxFoundationX LFS171x.
 \newblock Blockchain for business - an introduction to hyperledger
   technologies.
 \newblock \url{https://courses.edx.org/}, 2017.
-\newblock Accessed: 2018-05-27.
+\newblock Accessed: 2019-01-06.
 
 \end{thebibliography}
