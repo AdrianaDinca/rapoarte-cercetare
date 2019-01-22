@@ -3,7 +3,7 @@
 
 \section{Functionalities}
 \label{sub-sec:chapter3-section1}
-\textbf{\project} is an application build for Hyperledger Composer integration that stores models for business network and enables user to upload and download the business network archives from the one of the industries fields defined.
+\textbf{\project} is an application build for Hyperledger Composer integration that stores models of business networks and enables user to upload and download the business network archives from the one of the industries fields defined.
 
 The application has three main functionalities:
 \begin{itemize}
@@ -22,7 +22,7 @@ Don and Alex Tapscott \cite{tapscott} have defined the twelve important directio
 	\item \textbf{Resource Extraction and Agriculture} - keep a complete history of an animal nutrition, health and medication consumed; collect ground and plants parameters to notify institutions if there is an exploitation
 	\item \textbf{Environment Monitoring and Emergency Services} - global monitoring agents to improve the prediction and to warn early by using weather sensors, chemical dangerous product' sensors or fire sensors in case of a forest fire or a lightning strike
 	\item \textbf{Medical Insurance} - medical supply administration and patient medical history store on Blockchain ledger; self monitoring pills and medical prostheses
-	\item \textbf{Financial Services and Insurance Companies} - financial institutions can store their wrights on financial assets and the assets can be easily tracked; digital currencies enable the storage and value transfer for big and small participants hence it allows rick evaluation and management
+	\item \textbf{Financial Services and Insurance Companies} - financial institutions can store their wright on financial assets and the assets can be easily tracked; digital currencies enable the storage and value transfer for big and small participants hence it allows rick evaluation and management
 	\item \textbf{Evidence Tracking} - all physical assets are digitized and stored on Blockchain such as patents, properties, insurance, approvals, etc.
 	\item \textbf{Buildings Administration and Properties} - a better management of the space available by replacing the main functionality of a building or office with other activities after work hours 
 	\item \textbf{Industrial Operations and  Manufacturing} - create a industrial Blockchain to monitor the production lines, stock inventory, distribution, quality, etc.
@@ -37,19 +37,21 @@ For one category, the user can download one or more samples. The list of samples
 
 Adding a new category to this list can be done via the application interface when trying to upload the business network model from an area that is not listed above. This action requires a system administrator validation therefore the administrator is notified by an email and can decide whether or not the category is needed.
 
-For each category there is a sample business network model defined by the \emph{.bna} file and it get be downloaded by anyone that needs the sample.
+For each category there is at least a business network model defined by the \emph{.bna} file and it can be downloaded by anyone that needs the sample.
 The \emph{.bna} file then is deployed on the Hyperledger Composer Playground to start using the network.
 
 \section{Project Modules}
 \label{sub-sec:chapter3-section2}
-The project has a client-server architecture, therefore there the application has two main components: the client and the server.
+The project has a client-server architecture, therefore the application has two main components: the client and the server.
 The client component is represented by a intuitive dashboard that allow users to select one category and download samples from that category or to upload the business network models they designed in the application repository using the upload functionality.
-The server component is composed by two modules one for download and the other one for upload. The programming language is Python which is an interpreted high-level language that enables clear programming both for small and large scales.
+The server component is composed by two modules that ensure the upload and download functionalities. The upload module is responsible with the archive validation and storage in the proper category. The download module is returning the archive based on its id and responds to REST calls to return the categories defined and the list of archive for a specific category.
+ 
+The programming language is Python which is an interpreted high-level language that enables clear programming both for small and large scales.
 The communication between the server and the client is done via a REST API.
 The client is an web application based on Django framework. 
 Django is a high-level Python Web framework that enables fast development and clean design for a simple web solution.
 
-The server stores the \emph{.bna} files in the same file system where it runs. The space issue is not consider an issue in this stage due to the fact that the number of \emph{.bna} files is relatively small and the size of the \emph{.bna} file too.
+The server stores the \emph{.bna} files in the same file system where it runs. The space is not consider an issue in this stage due to the fact that the number of \emph{.bna} files is relatively small and the size of the \emph{.bna} file too.
 
 The web browser is available by accesing the following url: http://<bnmc_ip>:8000/bnm
 

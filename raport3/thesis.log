@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  22 JAN 2019 00:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  22 JAN 2019 10:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,11 +509,8 @@ LaTeX Info: Redefining \] on input line 2818.
 
 Writing index file thesis.idx
 (./thesis.aux (./src/chapters/intro.aux) (./src/chapters/chapter2.aux)
-(./src/chapters/chapter3.aux) (./src/chapters/chapter4.aux
-
-LaTeX Warning: Label `img:university' multiply defined.
-
-) (./src/chapters/conclusion.aux))
+(./src/chapters/chapter3.aux) (./src/chapters/chapter4.aux)
+(./src/chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -725,11 +722,11 @@ Chapter 3.
 
 
 
-]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 58.
+] [9]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 60.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [9]) [10]
+)) [10]
 \openout2 = `src/chapters/chapter4.aux'.
 
 
@@ -743,58 +740,55 @@ Chapter 4.
 <src/img/bnm.png, id=199, 1858.945pt x 997.7275pt>
 File: src/img/bnm.png Graphic file (type png)
 <use src/img/bnm.png>
-Package pdftex.def Info: src/img/bnm.png  used on input line 27.
+Package pdftex.def Info: src/img/bnm.png  used on input line 33.
 (pdftex.def)             Requested size: 371.78242pt x 199.54196pt.
 <src/img/evidence.png, id=202, 1858.945pt x 998.73125pt>
 File: src/img/evidence.png Graphic file (type png)
 <use src/img/evidence.png>
-Package pdftex.def Info: src/img/evidence.png  used on input line 33.
+Package pdftex.def Info: src/img/evidence.png  used on input line 39.
 (pdftex.def)             Requested size: 371.78242pt x 199.7427pt.
  [12 <./src/img/bnm.png> <./src/img/evidence.png>]
-
-LaTeX Warning: Hyper reference `img:organization' on page 13 undefined on input
- line 55.
-
-
-LaTeX Warning: Reference `img:organization' on page 13 undefined on input line 
-55.
-
-<src/img/student.png, id=211, 1519.6775pt x 618.31pt>
+<src/img/student.png, id=212, 1519.6775pt x 618.31pt>
 File: src/img/student.png Graphic file (type png)
 <use src/img/student.png>
-Package pdftex.def Info: src/img/student.png  used on input line 58.
+Package pdftex.def Info: src/img/student.png  used on input line 64.
 (pdftex.def)             Requested size: 303.93011pt x 123.6598pt.
-<src/img/university.png, id=212, 1506.62875pt x 455.7025pt>
+<src/img/university.png, id=213, 1506.62875pt x 455.7025pt>
 File: src/img/university.png Graphic file (type png)
 <use src/img/university.png>
-Package pdftex.def Info: src/img/university.png  used on input line 59.
+Package pdftex.def Info: src/img/university.png  used on input line 65.
 (pdftex.def)             Requested size: 301.3204pt x 91.13887pt.
-File: src/img/university.png Graphic file (type png)
-<use src/img/university.png>
-Package pdftex.def Info: src/img/university.png  used on input line 60.
-(pdftex.def)             Requested size: 301.3204pt x 91.13887pt.
-<src/img/profile1.png, id=214, 1519.6775pt x 572.1375pt>
+<src/img/organization.png, id=214, 1518.67375pt x 577.15625pt>
+File: src/img/organization.png Graphic file (type png)
+<use src/img/organization.png>
+Package pdftex.def Info: src/img/organization.png  used on input line 66.
+(pdftex.def)             Requested size: 303.72937pt x 115.4292pt.
+<src/img/profile1.png, id=216, 1519.6775pt x 572.1375pt>
 File: src/img/profile1.png Graphic file (type png)
 <use src/img/profile1.png>
-Package pdftex.def Info: src/img/profile1.png  used on input line 63.
+Package pdftex.def Info: src/img/profile1.png  used on input line 69.
 (pdftex.def)             Requested size: 303.93011pt x 114.42546pt.
-[13 <./src/img/student.png> <./src/img/university.png>]
-<src/img/transaction.png, id=223, 707.64375pt x 777.90625pt>
+<src/img/transaction.png, id=219, 707.64375pt x 777.90625pt>
 File: src/img/transaction.png Graphic file (type png)
 <use src/img/transaction.png>
-Package pdftex.def Info: src/img/transaction.png  used on input line 67.
+Package pdftex.def Info: src/img/transaction.png  used on input line 73.
 (pdftex.def)             Requested size: 212.29475pt x 233.37367pt.
-<src/img/profile2.png, id=224, 1513.655pt x 583.17876pt>
+<src/img/profile2.png, id=220, 1513.655pt x 583.17876pt>
 File: src/img/profile2.png Graphic file (type png)
 <use src/img/profile2.png>
-Package pdftex.def Info: src/img/profile2.png  used on input line 69.
-(pdftex.def)             Requested size: 302.72563pt x 116.63368pt.
-) [14 <./src/img/profile1.png> <./src/img/transaction.png>] [15 <./src/img/prof
-ile2.png>]
+Package pdftex.def Info: src/img/profile2.png  used on input line 75.
+(pdftex.def)             Requested size: 454.1pt x 174.95497pt.
+
+Overfull \hbox (41.53503pt too wide) in paragraph at lines 75--75
+ [] 
+ []
+
+) [13 <./src/img/student.png> <./src/img/university.png>] [14 <./src/img/organi
+zation.png> <./src/img/profile1.png> <./src/img/transaction.png>] [15 <./src/im
+g/profile2.png>]
 \openout2 = `src/chapters/conclusion.aux'.
 
-
-(./src/chapters/conclusion.tex
+ (./src/chapters/conclusion.tex
 Chapter 5.
 ) [16
 
@@ -820,20 +814,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 7D9E1DF7EB8EAF585E7D317EDF6E5E43;921.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 11389 strings out of 494923
- 166418 string characters out of 6180742
- 271014 words of memory out of 5000000
- 14398 multiletter control sequences out of 15000+600000
+ 11394 strings out of 494923
+ 166549 string characters out of 6180742
+ 271035 words of memory out of 5000000
+ 14402 multiletter control sequences out of 15000+600000
  14645 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  51i,12n,49p,784b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -851,10 +838,10 @@ k/ljfour/jknappen/ec/ecrm2488.600pk> </home/disertatie/.texlive2017/texmf-var/f
 onts/pk/ljfour/jknappen/ec/ecrm1440.600pk></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (20 pages, 788895 bytes).
+Output written on thesis.pdf (20 pages, 829841 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
+ 689 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
  54 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

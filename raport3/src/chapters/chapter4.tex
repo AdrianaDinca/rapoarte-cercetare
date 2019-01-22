@@ -11,7 +11,13 @@ We want to create a system that helps business organizations and universities st
 The idea is to offer the participants of the network information about students based on their role in the business network.
 For example, the university can access information about students' degrees and personal data, the student has full access to his/her profile and external institutions such as other universities or companies can access only information that the student agrees to display. One possible information that a student may want to share with companies can be the level of study and the courses he attended to or other certifications.
 
-Such a system guarantees that nobody can change the student's history and simplifies the process of validating diplomas. Therefore, it is useful for both students that can transfer faster from one university to another and for employment by proving that he/she has the skills for a job, for universities by a faster and automatic student's data transfer and for companies and organization by improving their recruitment process.
+Such a system guarantees that nobody can change the student's history and simplifies the process of validating diplomas. 
+Therefore, it is useful for all the network participants:
+\begin{itemize}
+	\item for students that want to transfer to another university or that want to prove that they have the skills to get the desired job
+	\item for universities by improving the time and costs of students' data collecting and transferring to other academic institutions
+	\item for companies and organizations that want to validate the resume information they receive
+\end{itemize}
 
 \section{Use Case Steps}
 \label{sub-sec:chapter4-section2}
@@ -57,7 +63,7 @@ The list of \emph{Organization} participants is defined in \labelindexref{Figure
 
 \fig[scale=0.2]{src/img/student.png}{img:student}{Participant - Student} 
 \fig[scale=0.2]{src/img/university.png}{img:university}{Participant - University} 
-\fig[scale=0.2]{src/img/university.png}{img:university}{Participant - Organization}
+\fig[scale=0.2]{src/img/organization.png}{img:organization}{Participant - Organization}
 
 After defining the participants we have to create the assets. In our example, the asset is the \emph{StudentProfile}(see \labelindexref{Figure}{img:studentprofile1}).
 \fig[scale=0.2]{src/img/profile1.png}{img:studentprofile1}{Asset - StudentProfile}
@@ -66,6 +72,6 @@ To test the Hyperledger Composer framework, we submitted a transaction (see \lab
 
 \fig[scale=0.3]{src/img/transaction.png}{img:transaction}{Submit a StudentProfileTransactions}.
 
-\fig[scale=0.2]{src/img/profile2.png}{img:studentprofile2}{Asset - Updated data of a StudentProfile}
+\fig[scale=0.3]{src/img/profile2.png}{img:studentprofile2}{Asset - Updated data of a StudentProfile}
 
 
