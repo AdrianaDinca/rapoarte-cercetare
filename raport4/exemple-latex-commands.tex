@@ -1,0 +1,47 @@
+This thesis presents the \textbf{\project}.
+This is an example of a footnote \footnote{\url{www.google.com}}. 
+You can see here a reference to \labelindexref{Section}{sub-sec:proj-objectives}.
+
+Here we have defined the CS abbreviation.\abbrev{CS}{Computer Science} and the UPB abbreviation.\abbrev{UPB}{University Politehnica of Bucharest}
+
+We have now included \labelindexref{Figure}{img:report-framework}.
+
+\fig[scale=0.5]{src/img/reporting-framework.pdf}{img:report-framework}{Reporting Framework}
+
+We can also have citations like \cite{iso-odf}.
+We are now discussing the \textbf{Ultimate answer to all knowledge}.
+This line is particularly important it also adds an index entry for \textit{Ultimate answer to all knowledge}.\index{Ultimate answer to all knowledge}
+
+
+
+We can also include listings like the following:
+
+% Inline Listing example
+\lstset{language=make,caption=Application Makefile,label=lst:app-make}
+\begin{lstlisting}
+CSRCS = app.c
+SRC_DIR =..
+include $(SRC_DIR)/config/application.cfg
+\end{lstlisting}
+
+Listings can also be referenced. References don't have to include chapter/table/figure numbers... so we can have hyperlinks \labelref{like this}{lst:makefile-test}.
+
+\subsection{Tables}
+
+We can also have tables... like \labelindexref{Table}{table:reports}.
+
+\begin{center}
+	\begin{table}[htb]
+		\caption{Generated reports - associated Makefile targets and scripts}
+		\begin{tabular}{l*{6}{c}r}
+			Generated report & Makefile target & Script \\
+			\hline
+			Full Test Specification & full_spec & generate_all_spec.py  \\
+			Test Report & test_report & generate_report.py  \\
+			Requirements Coverage & requirements_coverage &
+			generate_requirements_coverage.py   \\
+			API Coverage & api_coverage & generate_api_coverage.py  \\
+		\end{tabular}
+		\label{table:reports}
+	\end{table}
+\end{center}

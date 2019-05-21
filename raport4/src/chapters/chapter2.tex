@@ -1,0 +1,53 @@
+\chapter{Project Technologies and Software}
+\label{chapter:chapter2}
+
+\section{Hyperledger Project}
+\label{sub-sec:chapter1-section1}
+
+\section{Hyperledger Fabric}
+\label{sub-sec:chapter1-section2}
+
+\section{Hyperledger Composer}
+\label{sub-sec:chapter1-section3}
+
+\iffalse
+MAY CONTAIN COPY-PASTE IDEAS
+NOT USE IN FINAL THESIS
+The Hyperledger consortium has many different projects that focus on different aspects of how ledgers can work and what use cases they can be applied for.
+
+Hyperledger Composer has created a modelling language that allows you to define the assets, participants, and transactions that make up your business network using business vocabulary. In addition, the transaction logic is then written by developers using Javascript. This simple interface allows business people and technologists to work together on defining their business network.
+The framework main goal was to reduce time and accelerate the Blockchain adoption and to make it easier to integrate business systems with the Blockchain.
+
+The Hyperledger Composer is using the Hyperledger Fabric blockchain infrastructure and runtime that has pluggable blockchain consensus protocols to validate transactions  accordingly with the participants policy.
+
+This framework is using a business network model to quickly model the business by defining the assets, participants and the transactions. The framework provides with some sample of business network or require the users to deploy their network models.
+The business network model is an archive that contains a list of files:
+\begin{itemize}
+	\item \emph{Model file .cto} - assets, participants and transactions
+	\item \emph{Script File .js} - transactions functions
+	\item \emph{Access Control .acl} - access control rules
+	\item \emph{Query File .qry} - query definitions
+\end{itemize}
+All this files are stored in a business network archive that has the extension \emph{.bna}.
+The Business Network Archive \emph{.bna} is deployed in one of the distributed ledger Hyperledger solution such as Hyperledger Fabric Cloud or Local or in a simulated online environment (web browser/ node.js). See \labelindexref{Figure}{img:BNAStructure} for a better description of the \emph{.bna} file. 
+
+\fig[scale=0.3]{src/img/BNAStructure.png}{img:BNAStructure}{Business Network Archive Structure(source \cite{bnaStructure})} 
+
+Hyperledger Composer provides a suite of tools for building blockchain business networks. These tools allow you to:
+\begin{itemize}
+	\item Editors for modeling your business blockchain network
+	\item Generate REST APIs for interacting with your blockchain network
+	\item Generate a skeleton Angular application.
+\end{itemize}
+
+Built in Javascript, Hyperledger Composer provides an easy-to-use set of components that developers can quickly learn and implement. The project was contributed by Oxchains and IBM.
+
+The benefits of Hyperledger Composer are:
+\begin{itemize}
+	\item \textbf{Faster creation of blockchain applications}, eliminating the massive effort required to build blockchain applications from scratch
+	\item \textbf{Reduced risk} with well-tested, efficient design that aligns understanding across business and technical analysts
+	\item \textbf{Greater flexibility} as the higher-level abstractions make it far simpler to iterate.
+\end{itemize}
+\fi
+
+ 
