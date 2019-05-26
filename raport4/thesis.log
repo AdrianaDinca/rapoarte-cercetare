@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  21 MAY 2019 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  26 MAY 2019 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -631,12 +631,12 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (./src/global.tex) (./template/titlepage.en.tex
-<src/img/branding/upb.png, id=60, 217.5628pt x 225.84375pt>
+<src/img/branding/upb.png, id=64, 217.5628pt x 225.84375pt>
 File: src/img/branding/upb.png Graphic file (type png)
 <use src/img/branding/upb.png>
 Package pdftex.def Info: src/img/branding/upb.png  used on input line 12.
 (pdftex.def)             Requested size: 53.63545pt x 55.67508pt.
-<src/img/branding/acs.jpg, id=62, 168.63pt x 71.3064pt>
+<src/img/branding/acs.jpg, id=66, 168.63pt x 71.3064pt>
 File: src/img/branding/acs.jpg Graphic file (type jpg)
 <use src/img/branding/acs.jpg>
 Package pdftex.def Info: src/img/branding/acs.jpg  used on input line 14.
@@ -679,16 +679,16 @@ Chapter 1.
 
  (./src/chapters/chapter2.tex
 Chapter 2.
-) [3
+[3
 
 
 
-]
+]) [4]
 \openout2 = `src/chapters/chapter3.aux'.
 
  (./src/chapters/chapter3.tex
 Chapter 3.
-) [4
+) [5
 
 
 
@@ -697,7 +697,7 @@ Chapter 3.
 
  (./src/chapters/chapter4.tex
 Chapter 4.
-) [5
+) [6
 
 
 
@@ -706,7 +706,7 @@ Chapter 4.
 
  (./src/chapters/conclusion.tex
 Chapter 5.
-) [6
+) [7
 
 
 
@@ -718,7 +718,7 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
 No file thesis.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-[7
+[8
 
 
 ]
@@ -735,21 +735,21 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 10AF640C9EDA652391CC671B0F95EC76;929
-(rerunfilecheck)             After:  7AEBDAF28CDE8A127EF5215A02CB4928;930.
+(rerunfilecheck)             Before: 1BD2630F806494D405D13DEB5A4D90E6;1005
+(rerunfilecheck)             After:  21F0EB1473DBFF9BFE9CF27CFEA9C4B9;1082.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 10997 strings out of 494923
- 161052 string characters out of 6180742
- 267229 words of memory out of 5000000
- 14050 multiletter control sequences out of 15000+600000
+ 11003 strings out of 494923
+ 161168 string characters out of 6180742
+ 268284 words of memory out of 5000000
+ 14053 multiletter control sequences out of 15000+600000
  13259 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 51i,12n,45p,453b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,12n,45p,747b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/disertatie/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss100
 0.600pk> </home/disertatie/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/e
 cti1000.600pk> </home/disertatie/.texlive2017/texmf-var/fonts/pk/ljfour/jknappe
@@ -761,10 +761,10 @@ four/jknappen/ec/ecrm1000.600pk> </home/disertatie/.texlive2017/texmf-var/fonts
 mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/disertatie/.texlive20
 17/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk> </home/disertatie/.tex
 live2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk>
-Output written on thesis.pdf (10 pages, 255275 bytes).
+Output written on thesis.pdf (11 pages, 267074 bytes).
 PDF statistics:
- 527 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 555 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

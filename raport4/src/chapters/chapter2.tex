@@ -3,9 +3,45 @@
 
 \section{Hyperledger Project}
 \label{sub-sec:chapter1-section1}
+Hyperledger is a open source project focused on Blockchain technology that aims to bring IoT, supply chain, finance, banking and manufacturing together. Is is hosted by the Linux Foundation and includes leaders from all the mentioned areas.
+
+The Blockchain is a peer-to-peer distributed network, each participant of the network has its own copy of the ledger, and any transaction is validated by the majority of participants. The validation is done by solving Byzantine Generals Problem via consensus.
+The Hyperledger project offers solutions based on Blockchain and adds the possibility of creating \emph{smart contracts} and has a large number of assistive tools to facilitate the embrace of Blockchain.
+All projects developed under the umbrella of Hyperledger and Linux Foundation are applications that use a ledger of transactions to establish transparency, accountability and trust. These projects are for a wide variety of business areas by providing the infrastructure, tools and frameworks to build applications based on Blockchain easily and in a short period of time. Additionally these applications follow the legal constrains by keeping the network closed to authorized participants that can be made accountable for their actions.
+
+The project was launched in 2016 under the guidance of many important corporations such as IBM, Intel, etc. The first codebases that were released to the public were Hyperledger Fabric - a product that was the work result of three organizations (OpenBlockchain from IBM, libconsensus from Blockstream and the smart contracts from Digital Asset) and Hyperledger Sawtooth from Intel. 
+These two frameworks were offering support for growing the development of Blockchain business solutions. Later on, there were other projects released that continued to offer assistive tools to support this growth. All projects that were released under the Hyperledger project were supervised by the Hyperledger Technical Steering Committee, a group of eleven specialists that were elected from the technical contributor community.
+In May 2016 the Linux Foundation and the corporate members involved in Hyperledger project elected an Executive Director to make sure that this idea has all the resources needed to be successful. In this position was placed the co-founder of Apache Software Foundation - Brian Behlendorf. 
+The project became so successful so at the end of the next year the Hyperledger counted seven more projects and the number of members increased to more that 200.
+
+The most successful projects were Hyperledger Sawtooth - multi-language support for distributed ledger, Hyperledger Fabric - the distributed ledger written in GO language, Hyperledger Composer - framework for accelerating the process of developing Blockchain applications, Hyperledger Iroha - the distributed ledger written in C++ and Hyperledger Indy - distributed ledger for decentralized identities.
+All these frameworks and tools are used in real-life applications except for Hyperledger Composer which is still in incubation. The Hyperledger Composer is an assistive tool for developers to facilitate the process of building a business network using the Hyperledger Fabric. 
+It was proven that Hyperledger Composer is hard to maintain so the Hyperledger board decided to stop the development of new features and to keep the existing functionalities compatible with the new versions of Hyperledger Fabric.
+The main focus of the community is to add more features to Hyperledger Fabric framework which has a modular architecture so adding new features can be done quickly and without affecting the pre-existent functionalities.
+
+In the following sections we are going to describe the Hyperledger Fabric and Composer frameworks. The Blockchain technology promises a revolution as big as the Web and the Hyperledger group understood its potential so they formed a Blockchain incubator to offer support to any bright idea related with Blockchain technology, smart contracts and the business world.
+
+
 
 \section{Hyperledger Fabric}
 \label{sub-sec:chapter1-section2}
+
+\subsection{General aspects}
+\label{sub-sec:chapter1-subsection1}
+
+Hyperledger Fabric is an implementation of a distributed ledger developed mostly in Golang. The framework uses also other languages and technologies such as Javascript, Go or Java for smart contracts (chaincode), SDK in Node.js, Python, Java, Go and Rest.
+It is a solution for a secure, high-performance and permissioned Blockchain based network that has a modular architecture that allows plugins for any new features with no impact on the core functionalities.
+
+Before getting into more details about the features provided by this framework it is important to mention that it is developed for enterprise use cases so the solution must solve the identity issue for transaction of type know-your-customer or the money laundering issue by offering transparency to authorities as participants with advanced permissions in the network. Thus this framework is permissioned which means that the participants are not anonymous, their identity is known by the other participants so they can be made accountable for their actions. The framework network is private and the transaction content is confidential so it can contain business sensitive information.
+
+More than that the framework offers the  possibility of selecting a consensus protocol based on the business needs. For example, if the business network is used by a single enterprise or it is governed by a authorized identity there's no need for using the Byzantine Fault Tolerant (BFT) protocol so it may sufficient to go with a simplified version such as Crash Fault Tolerant (CFT) consensus protocol. As a result, the Hyperledger Fabric eliminates the low latency of transaction validation and  improves the network performance. The framework doesn't required CPU power for mining or for smart contract execution so the cost is similar with any distributed system.
+
+The Hyperledger Fabric has a wide community of developers and activists that help with the development and maintaining of Fabric codebase. The number of contributors has grown to more than 200 members and the organizations involved to 35 so the project benefits of a diverse set of skills. With such a support the future of this project is really promising. It has modular and pluggable architecture so it can bring innovation to many industries.
+
+\subsection{Technical aspects}
+\label{sub-sec:chapter1-subsection2}
+
+
 
 \section{Hyperledger Composer}
 \label{sub-sec:chapter1-section3}
