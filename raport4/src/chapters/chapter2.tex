@@ -21,8 +21,6 @@ The main focus of the community is to add more features to Hyperledger Fabric fr
 
 In the following sections we are going to describe the Hyperledger Fabric and Composer frameworks. The Blockchain technology promises a revolution as big as the Web and the Hyperledger group understood its potential so they formed a Blockchain incubator to offer support to any bright idea related with Blockchain technology, smart contracts and the business world.
 
-
-
 \section{Hyperledger Fabric}
 \label{sub-sec:chapter1-section2}
 
@@ -41,7 +39,28 @@ The Hyperledger Fabric has a wide community of developers and activists that hel
 \subsection{Technical aspects}
 \label{sub-sec:chapter1-subsection2}
 
+Modularity is one of the main characteristics of Hyperledger Fabric. It was
+designed to have a modular architecture so it can be used by a large number of industries from manufacturing to finance. 
 
+The project was designed to be modular so all the components can be plugged in/out. The list of components is composed of:
+\begin{itemize}
+	\item an \emph{ordering service} that makes sure that the order of transaction is correct and that the all peers receives the blocks of transactions via broadcast; the ordering services can be plugged in/out and it runs in an independent environment (e.g Docker container named \emph{hyperledger/fabric-orderer});
+	\item a \emph{membership service provider} that enables only authorized entities to take part in the network(e.g a Docker container named \emph{hyperledger/fabric-ca}); any entity that wants to connect to the business network has to have a cryptographic identity created by the business network Certification Authority (CA);
+	\item \emph{smart contracts} are applications that run independently in docker containers or other isolated environments and store agreements between network members; these smart contracts are named \emph{chaincode} and they can be written in almost any programming language;
+	\item a variety of \emph{DBMS} options to store the ledger; a common option is CouchDB that runs in a Docker container named \emph{hyperledger/fabric-couchdb};
+	\item more application's constrains for approval and validation policy;
+	\item an optional \emph{peer-to-peer gossip service} to leverage messages to all the peers by broadcast; makes sure that everyone receives up-to-date information about the ledger transactions and fills in any gaps if one node missed some of the broadcasts.	
+\end{itemize}
+
+The chaincode (smart contract) is an application that facilitates and verifies the execution of a digital agreement between one or more network participants. The ledger is responsible for executing the digital contract at the time that it need to be applied. In a business network one or more digital contracts can co-exist and everyone that is connected to that network can create a contract. The network is responsible for validating that application code and it should be consider invalid until it is validated using order-execute architecture. In most blockchain systems the smart contracts follow the rule order-execute so to reach consensus the order-execute design should be deterministic. Building a deterministic architecture  is quite challenging and the code should be written in domain-specific programming languages (e.g Ethereum developed a DSL - Solidity for their decentralized applications) in most of the cases.
+Additionally this architecture brings performance issues due to the fact that transactions are added sequentially in the ledger.
+
+The Hyperledger Fabric tries to solve the overhead of using the order-execute approach by proposing a new architecture type - execute-order-validate. This new design is composed by three stages. In the first stage the transactions are checked for correctness and if so they are immediately executed. After that, they are ordered using a consensus protocol and in the last stage they are validated according to an endorsement policy and added to the ledger. As a result of this approach the Hyperledger Fabric solves the issue of using DSL and non-determinism by removing any inconsistency and reduces the performace overhead. By removing any non-deterministic problem, the smart contracts can be written in any standard programming language. The first supported languages are Go and Node.js but the board of Hyperledger plans to support more popular programming languages such as Java in the future releases.
+
+Permissioned blockchain refers to restricting the access to the network to a known group of participants that are worth it to be trusted. It is not necessary that participants may know each other but all of them should be vetted by a trustful authority. The Fabric is using a permissioned blockchain system so each member of the business network can easily be identified and if his/her actions (e.g deploying a smart contract or changing the configuration of the network) are malicious that member can be made accountable and pay for them. In a permissionless blockchain system it is very hard to identify the real person that stood behind a certain action so Hyperledger Fabric is more suitable for business. The Certification Authority is one instrument that can vet for the business network members and any respectful business can easily obtain the authorization to participate in the network.
+
+
+Privacy and confidentiality
 
 \section{Hyperledger Composer}
 \label{sub-sec:chapter1-section3}
