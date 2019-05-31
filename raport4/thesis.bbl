@@ -1,6 +1,13 @@
 \begin{thebibliography}{1}
 
-\bibitem{fabric-doc}
+\bibitem{fabric-wiki}
+Hyperledger~Fabric Community.
+\newblock Hyperledger fabric documentation.
+\newblock Build with Sphinx and Read the Docs,
+  \url{https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html#}, 2019.
+\newblock Accessed Mar. 2019.
+
+\bibitem{fabric-article}
 Vita Bortnikov Christian Cachin Konstantinos Christidis Angelo De Caro David
   Enyeart Christopher Ferris Gennady Laventman Yacov Manevich Srinivasan
   Muralidharan Chet Murthy Binh Nguyen Manish Sethi Gari Singh Keith Smith
