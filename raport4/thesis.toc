@@ -6,10 +6,12 @@
 \contentsline {chapter}{\numberline {2}Project Technologies and Software}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Hyperledger Project}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Hyperledger Fabric}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Hyperledger Composer}{4}{section.2.3}
-\contentsline {chapter}{\numberline {3}Project Implementation}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Functionalities}{5}{section.3.1}
-\contentsline {chapter}{\numberline {4}Project Use Cases}{6}{chapter.4}
-\contentsline {section}{\numberline {4.1}ISG CAPEX Procedure}{6}{section.4.1}
-\contentsline {section}{\numberline {4.2}Use Case Description}{6}{section.4.2}
-\contentsline {chapter}{\numberline {5}Conclusion}{7}{chapter.5}
+\contentsline {subsection}{\numberline {2.2.1}General aspects}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Technical aspects}{4}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Hyperledger Composer}{6}{section.2.3}
+\contentsline {chapter}{\numberline {3}Project Implementation}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Functionalities}{9}{section.3.1}
+\contentsline {chapter}{\numberline {4}Project Use Cases}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}ISG CAPEX Procedure}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}Use Case Description}{10}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclusion}{11}{chapter.5}

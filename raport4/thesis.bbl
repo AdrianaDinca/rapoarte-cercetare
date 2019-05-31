@@ -1,5 +1,13 @@
 \begin{thebibliography}{1}
 
+\bibitem{composer-wiki}
+Hyperledger~Composer Community.
+\newblock Hyperledger composer documentation.
+\newblock Published on Hyperldeger Github,
+  \url{https://hyperledger.github.io/composer/latest/introduction/introduction.html},
+  2019.
+\newblock Accessed Mar. 2019.
+
 \bibitem{fabric-wiki}
 Hyperledger~Fabric Community.
 \newblock Hyperledger fabric documentation.

@@ -24,10 +24,10 @@ In the following sections we are going to describe the Hyperledger Fabric and Co
 \section{Hyperledger Fabric}
 \label{sub-sec:chapter1-section2}
 
-\iffalse
+%\iffalse
 \subsection{General aspects}
 \label{sub-sec:chapter1-subsection1}
-\fi
+%\fi
 Hyperledger Fabric is an implementation of a distributed ledger developed mostly in Golang. The framework uses also other languages and technologies such as Javascript, Go or Java for smart contracts (chaincode), SDK in Node.js, Python, Java, Go and Rest.
 It is a solution for a secure, high-performance and permissioned Blockchain based network that has a modular architecture that allows plugins for any new features with no impact on the core functionalities.
 
@@ -37,7 +37,7 @@ More than that the framework offers the  possibility of selecting a consensus pr
 
 The Hyperledger Fabric has a wide community of developers and activists that help with the development of new features and maintain the Fabric codebase. The number of contributors has grown to more than 200 members and the organizations involved to 35 so the project benefits of a diverse set of skills. With such a support the future of this project is really promising. It has modular and pluggable architecture so it can bring innovation to many industries.
 
-\iffalse
+%\iffalse
 \subsection{Technical aspects}
 \label{sub-sec:chapter1-subsection2}
 
@@ -74,52 +74,34 @@ In order to determine the performance of a Business Network based on Fabric, the
 
 Taking all these into account, the Hyperledger Fabric is one of the best solution for permissioned distributed systems that integrates the Blockchain technology.
 The Hyperledger community is really involved in improving and building strong solutions for Blockchain business networks and the Hyperledger Fabric project has the biggest support from the community. Fabric supports a wide range of industries: from banking, manufacturing, supply chain to retail, healthcare, etc.
-\fi
+%\fi
 
 \section{Hyperledger Composer}
 \label{sub-sec:chapter1-section3}
+The Hyperledger Composer framework is one of the assistive tools developed by Hyperledger team that focuses on helping developers accelerate the process of creating Blockchain systems for business.
+Building Blockchain applications from scratch require high technical skills from networking protocols, cryptography and consensus algorithms and the development period can extend to one or more years. Having these issues in mind, Hyperledger community started a project to reduce the time and the skills set required to build Blockchain based systems. The project is called Hyperledger Composer and it is really appreciated by developers by reducing the time and effort from years to months.
 
+The Hyperledger Composer framework can be easily integrated with Fabric via a Loopback REST API. Before getting into more details on how we can integrate the two projects it is important to describe the idea behind Hyperledger Composer.
 
+This framework is using a Business Network Archive (BNA) to store information about the participants of the Blockchain network, the assets they can store in the ledger via transactions. Each business requires a custom BNA which defines the type of members, their roles and permissions and the transactions that can be done in the Blockchain. For example, in the supply-chain industry we need one or many manufacturers, buyers/clients, distributors and regulators. All these participants have restricted access to submit transactions or change the network configurations based on their role. For example a buyer can submit an \emph{order} transaction but he/she cannot submit a \emph{delivery} transaction.
 
-
-\iffalse
-MAY CONTAIN COPY-PASTE IDEAS
-NOT USE IN FINAL THESIS
-The Hyperledger consortium has many different projects that focus on different aspects of how ledgers can work and what use cases they can be applied for.
-
-Hyperledger Composer has created a modelling language that allows you to define the assets, participants, and transactions that make up your business network using business vocabulary. In addition, the transaction logic is then written by developers using Javascript. This simple interface allows business people and technologists to work together on defining their business network.
-The framework main goal was to reduce time and accelerate the Blockchain adoption and to make it easier to integrate business systems with the Blockchain.
-
-The Hyperledger Composer is using the Hyperledger Fabric blockchain infrastructure and runtime that has pluggable blockchain consensus protocols to validate transactions  accordingly with the participants policy.
-
-This framework is using a business network model to quickly model the business by defining the assets, participants and the transactions. The framework provides with some sample of business network or require the users to deploy their network models.
-The business network model is an archive that contains a list of files:
+The BNA has a well defined structure and each component should be defined using a custom Composer syntax.
+According to Hyperledger Composer Community \cite{composer-wiki} the BNA has to follow this structure:
 \begin{itemize}
-	\item \emph{Model file .cto} - assets, participants and transactions
-	\item \emph{Script File .js} - transactions functions
-	\item \emph{Access Control .acl} - access control rules
-	\item \emph{Query File .qry} - query definitions
-\end{itemize}
-All this files are stored in a business network archive that has the extension \emph{.bna}.
-The Business Network Archive \emph{.bna} is deployed in one of the distributed ledger Hyperledger solution such as Hyperledger Fabric Cloud or Local or in a simulated online environment (web browser/ node.js). See \labelindexref{Figure}{img:BNAStructure} for a better description of the \emph{.bna} file. 
+	\item one or more Model files - written using Hyperledger Composer Modeling Language, an object oriented language that enables developers to define three elements: the namespace (only one for all the resources declared in the model), the list of entities of the network: participants, assets, events and transactions and the possibility to add entities defined in other namespaces;
+	\item one or more Transactions Functionalities file - each transaction should have a metadata, decorators and a JavaScript function; these functions run when a participant submits a transaction; the REST API exposed by Hyperledger Fabric is invoked in the transaction function via \emph{getNativeAPI} and the Hyperledger Composer API via \emph{getAssetRegistry}; also these functions can issue events that other external systems can listen to via the \emph{composer-client} library;
+	\item an Access Control role file -  written using Hyperledger Composer Access Control language that enables setting permissions for all the entities defined in the model; the rules that can be enabled/disabled are Create Read Update and Delete (C.R.U.D.); there are two types of access controls: business and network; both types are defined in the Access Control files and the business control  is applied after the network control;
+	\item a Query Definition file - it is an optional component that requires the \emph{composer-rest-server} to be up and running; there are two types of queries: named and dynamic; the named queries are static, defined in the BNM and exposed by the REST server via GET endpoints; the dynamic queries can be defined in transaction functions or directly in the client application.
+\end{itemize}  
+The \labelindexref{Figure}{img:composerBna} outlines the BNA structure with all the components and a brief description for each of them.
+\fig[scale=0.6]{src/img/composerBna.PNG}{img:composerBna}{Hyperledger Composer Business Network Archive}.
 
-\fig[scale=0.3]{src/img/BNAStructure.png}{img:BNAStructure}{Business Network Archive Structure(source \cite{bnaStructure})} 
+There two possible ways to use this framework: the playground and the CLI tools. The first solution offers a web user-interface to define, deploy and test business network directly on cloud or locally on the personal machine. The other solution is for Blockchain developers that want access to all the Fabric functionalities and that can be easily integrated with Visual Studio Code IDE and Atom editor.
 
-Hyperledger Composer provides a suite of tools for building blockchain business networks. These tools allow you to:
-\begin{itemize}
-	\item Editors for modeling your business blockchain network
-	\item Generate REST APIs for interacting with your blockchain network
-	\item Generate a skeleton Angular application.
-\end{itemize}
+More than that, the Hyperledger Composer has a specialized storage mechanism which decouples transactions information from any other information such as participants and assets data. All transactions are stored in the Blockchain ledger, everything else is located in the state database associated with that ledger. Another interesting feature is the Historian Registry that stores the transactions as \emph{HistorianRecord} assets of the business network. These assets' definition is available in the Hyperledger Composer Model and they store information about the transaction that created them, the identity of the participant and the participant that invoked the transaction.
 
-Built in Javascript, Hyperledger Composer provides an easy-to-use set of components that developers can quickly learn and implement. The project was contributed by Oxchains and IBM.
+Another concept related with the Composer framework is the Connection Profile. Each Blockchain Network has a Connection Profile that defines the system and it is created by the network administrator to enable members to connect to the system. The Hyperledger Composer uses the Identity concept to ensure that only authorized members connect to the network. An Identity has a private key, a digital certification and a metadata file that is optional and may store the network name and other details about it. A Connection Profile and an Identity form a Business Network Card that offers a member access to the network. It is worth mentioning that only one identity can be stored in a Business Network Card and that identity may be associated with one of the participant that exists in the network. The concept of Business Network Cards was introduced to enable groups of participants with the same access rights to access the network so it is related with the network access control management.
 
-The benefits of Hyperledger Composer are:
-\begin{itemize}
-	\item \textbf{Faster creation of blockchain applications}, eliminating the massive effort required to build blockchain applications from scratch
-	\item \textbf{Reduced risk} with well-tested, efficient design that aligns understanding across business and technical analysts
-	\item \textbf{Greater flexibility} as the higher-level abstractions make it far simpler to iterate.
-\end{itemize}
-\fi
+
 
  
