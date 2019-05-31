@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  28 MAY 2019 00:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  31 MAY 2019 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,12 +684,12 @@ Chapter 2.
 
 
 ] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
  [5]) [6]
 \openout2 = `src/chapters/chapter3.aux'.
 
@@ -719,11 +719,17 @@ Chapter 5.
 
 
 ]) (./src/appendix/index.tex) (./thesis.bbl
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 6.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-))
+)
+Underfull \hbox (badness 1496) in paragraph at lines 4--14
+\T1/cmr/m/n/10 Stathakopoulou Marko Vukoli¢ Sharon Weed Cocco Ja-son Yel-lick E
+lli An-droulaki,
+ []
+
+)
 No file thesis.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
 [10
@@ -745,10 +751,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 11023 strings out of 494923
- 161490 string characters out of 6180742
- 269339 words of memory out of 5000000
- 14068 multiletter control sequences out of 15000+600000
+ 11017 strings out of 494923
+ 161407 string characters out of 6180742
+ 269242 words of memory out of 5000000
+ 14065 multiletter control sequences out of 15000+600000
  13259 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  51i,12n,45p,991b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -764,10 +770,10 @@ mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/disertatie/.texlive20
 17/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk> </home/disertatie/.tex
 live2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on thesis.pdf (13 pages, 281810 bytes).
+Output written on thesis.pdf (13 pages, 280863 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 565 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

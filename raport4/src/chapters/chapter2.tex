@@ -3,7 +3,7 @@
 
 \section{Hyperledger Project}
 \label{sub-sec:chapter1-section1}
-Hyperledger is a open source project focused on Blockchain technology that aims to bring IoT, supply chain, finance, banking and manufacturing together. Is is hosted by the Linux Foundation and includes leaders from all the mentioned areas.
+Hyperledger is an open source project focused on Blockchain technology that aims to bring IoT, supply chain, finance, banking and manufacturing together. Is is hosted by the Linux Foundation and includes leaders from all the mentioned areas.
 
 The Blockchain is a peer-to-peer distributed network, each participant of the network has its own copy of the ledger, and any transaction is validated by the majority of participants. The validation is done by solving Byzantine Generals Problem via consensus.
 The Hyperledger project offers solutions based on Blockchain and adds the possibility of creating \emph{smart contracts} and has a large number of assistive tools to facilitate the embrace of Blockchain.
@@ -30,7 +30,7 @@ In the following sections we are going to describe the Hyperledger Fabric and Co
 Hyperledger Fabric is an implementation of a distributed ledger developed mostly in Golang. The framework uses also other languages and technologies such as Javascript, Go or Java for smart contracts (chaincode), SDK in Node.js, Python, Java, Go and Rest.
 It is a solution for a secure, high-performance and permissioned Blockchain based network that has a modular architecture that allows plugins for any new features with no impact on the core functionalities.
 
-Before getting into more details about the features provided by this framework it is important to mention that it is developed for enterprise use cases so the solution must solve the identity issue for transaction of type know-your-customer or the money laundering issue by offering transparency to authorities as participants with advanced permissions in the network. Thus this framework is permissioned which means that the participants are not anonymous, their identity is known by the other participants so they can be made accountable for their actions. The framework network is private and the transaction content is confidential so it can contain business sensitive information.
+Before getting into more details about the features provided by this framework it is important to mention that it is developed for enterprise use cases so the solution must solve the identity issue for transaction of type know-your-customer or the money laundering issue by offering transparency to authorities as participants with advanced permissions in the network. Thus this framework is permissioned which means that the participants are not anonymous, their identity is known by the other participants so they can be made accountable for their actions. The framework network is private and the transaction content is confidential so it can contain business sensitive information. In \cite{fabric-doc}, Elli Androulaki and others are presenting the Hyperledger Fabric as a distributed operating system with all characteristics from the following paragraph.
 
 More than that the framework offers the  possibility of selecting a consensus protocol based on the business needs. For example, if the business network is used by a single enterprise or it is governed by a authorized identity there's no need for using the Byzantine Fault Tolerant (BFT) protocol so it may sufficient to go with a simplified version such as Crash Fault Tolerant (CFT) consensus protocol. As a result, the Hyperledger Fabric eliminates the low latency of transaction validation and  improves the network performance. The framework doesn't required CPU power for mining or for smart contract execution so the cost is similar with any distributed system.
 
@@ -59,8 +59,20 @@ The Hyperledger Fabric tries to solve the overhead of using the order-execute ap
 
 Permissioned blockchain refers to restricting the access to the network to a known group of participants that are worth it to be trusted. It is not necessary that participants may know each other but all of them should be vetted by a trustful authority. The Fabric is using a permissioned blockchain system so each member of the business network can easily be identified and if his/her actions (e.g deploying a smart contract or changing the configuration of the network) are malicious that member can be made accountable and pay for them. In a permissionless blockchain system it is very hard to identify the real person that stood behind a certain action so Hyperledger Fabric is more suitable for business. The Certification Authority is one instrument that can vet for the business network members and any respectful business can easily obtain the authorization to participate in the network.
 
+Privacy and confidentiality is key for most of the business use-cases therefore any solution used has to guarantee that the data cannot be available to the public. 
+In permissionless systems the transactions' data is available to every node in the blockchain network so such a system fails to fulfill the privacy business requirements. The main approach of permissionless blockchain systems is to encrypt their data. However, this solution is far from perfect because businesses can hold enough computational power to break any encryption in a reasonable amount of time.
+The approach of permissioned systems is to restrict the distribution of private data to only the involved participants via a channel. The Hyperledger Fabric allows any member of the network to create channels for different purposes so they can share confidential data with authorized members.
+Another solution that can solve this issue for both for permissionless and permissioned blockchains is the Zero Knowledge Proofs (ZKP) but it is an area under research so in the meantime creating channel to share data with authorized entities is a good alternative.  
 
-Privacy and confidentiality
+As mentioned above, the Hyperledger Fabric offers support for pluggable components for many of its features. The ordering service is a pluggable module that is responsive for achieving consensus of ordering transactions. In the literature is mentioned two consensus algorithms: Crash Fault Tolerant (CFT) and Byzantine Fault Tolerant (BFT). For these two algorithms there can be more than one implementation.
+For example, the Hyperledger Fabric has two possible implementations for the CFT algorithm: Kafka (based on Zookeeper) and \emph{etcd} library from Raft.
+
+The performance of Hyperledger Fabric depends on a variety of parameters: the number of nodes of the network, the number and size of transactions and hardware limitations so it is difficult to generalize the performance of the Hyperledger Fabric project. 
+In order to determine the performance of a Business Network based on Fabric, the Hyperledger team has developed another project called Hyperledger Caliper. The community is contributing to define the set of measures that affect performance and scalability to help Caliper team build a powerful framework for benchmarking. 
+
+Taking all these into account, the Hyperledger Fabric is one of the best solution for permissioned distributed systems that integrates the blockchain technology.
+The Hyperledger community is really involved in improving and building strong solutions for blockchain business networks and the Hyperledger Fabric project has the biggest support from the community. Fabric supports a wide range of industries: from banking, manufacturing, supply chain to retail, healthcare, etc.
+
 
 \section{Hyperledger Composer}
 \label{sub-sec:chapter1-section3}
