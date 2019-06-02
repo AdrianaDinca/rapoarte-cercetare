@@ -1,6 +1,58 @@
-\chapter{Project Implementation}
+\chapter{Implementation}
 \label{chapter:chapter3}
 
-\section{Functionalities}
-\label{sub-sec:chapter3-section1}
+\section{General Aspects}
+\label{sec:chapter3-section1}
+After analyzing the existing Blockchain solutions we reached the conclusion that Hyperledger Fabric and Composer are suitable for the enterprise usage and we propose an application build using these two frameworks that solves the Capital Expenditures (CAPEX) related issues in the division Ixia Solution Group (ISG) of Keysight Technologies Inc. The proof of concept is focused on hardware supply chain for research and development teams of Network Visibility Solution (NVS) department.
+
+The project idea is using the Blockchain strengths to solve the transparency problem so any authorized member of  the network can check the status of a CAPEX order and it also improves the overall time of order processing.
+The Blockchain protocol uses proof-of-work to guarantee that only valid blocks of transactions are added in the ledger so once that data is added there's no way to modify it without being invalidated by the other members.
+As a result, all the orders added in the CAPEX supply chain are visible to all the authorized members so any attempt of crime is a fail.
+
+The CAPEX procedure involves also some difficult and time consuming discussions to get the approval for a certain CAPEX order. The employees that order a hardware device need to get approval from their manager and the manager must check the CAPEX budget before approving it. All these issues can be easily managed in a permissioned blockchain network where the participants have different levels of access based on their roles. This type of Blockchain solves the accountability issue by allowing access to the network only to authorized members. 
+
+After some research work, we discovered that Hyperledger Composer is a good solution to limit the network access based on the participant role in the business. This framework offers two layers of control access: network and business. The network layer is the first level of access so each participant has to use unique identification network card to connect to the Blockchain network. The second level of access control is the business layer that restrict participants to do certain actions based on their role in the business. For example, a participant that wants to order a hardware doesn't have access to schedule that hardware for manufacturing.
+
+Taking all of these into account, we build a project that uses Hyperledger Composer for business modeling, Hyperledger Fabric for accessing the Blockchain protocol via an API and solves all the issues described above.
+
+
+\section{Technical Aspects}
+\label{sec:chapter3-section2}
+In order to develop the hardware supply chain over the Blockchain protocol without too much effort we choose the frameworks developed by Hyperledger that facilitate the adoption of the Blockchain technology. The usage of these frameworks reduce the time and effort to develop the supply chain consistently.
+
+The Business Network Model (BNM) is a concept introduced by the Hyperledger Composer project that facilitates the access to all the Fabric features such as introducing members with different roles, developing business functionalities in JavaScript language. For defining the business logic we can use the Hyperledger Composer API to connect to the Fabric or invoke the Fabric native functions. In most of the enterprise use case we have to provide a mechanism to restrict the access to the network and to have a transparent view of everything that happens in the system. 
+These two frameworks fulfill really well the requirements of the business world so
+it is the obvious solution to select them for any Blockchain for business project.
+
+The project idea is to handle the CAPEX procedures so it has to follow a certain business model. In the NVS department, a CAPEX process involves many actors from team leaders, managers, manufactures and external authorities. 
+Keysight Technologies is an international company and it has to make sure that all the processes conducted internally and externally are complied with the laws where it operates.
+
+In the first stage we focused on defining a supply-chain solution that handles only the CAPEX processes conducted internally due to a lack of visibility about the external procedures of the delivery stage. 
+Therefore we have identified three types of participants: \emph{Employee}, \emph{Manufacturer} and \emph{Regulator}, the assets traded are the \emph{Order} and \emph{Chassis} and the type of transactions submitted are \emph{PlaceOrder} and \emph{UpdateOrderStatus}.
+
+As described in section \ref{sub-sec:chapter1-section3} we developed a Business Network Archive the follows the structure required by the Hyperledger Composer framework (see \labelindexref{Figure}{img:bnaStructure}). In the following paragraphs we are going to get into the implementation aspects of the supply-chain project in order to outline the advantages of integrating the Hyperledger frameworks and tools in the CAPEX business process. 
+
+\fig[scale=0.7]{src/img/bnaStructure.PNG}{img:bnaStructure}{Structure of the \emph{hardware-manufacture-network.bna} file} 
+
+The Business Network Model is defined in \emph{org.acme.chassis_network.cto} file and contains information about participants, assets, transactions, events, enums and concepts. All of these refer to the network resources and requires to be associated with a namespace. The namespace used by all these resources is \emph{org.acme.chassis_network}. A BNA can import resources from other namespaces and this practice is used when more than one organization is connected to the network. In our case there's only one organization that has access to the network and there's no need for other namespaces.
+
+The first group of resources is the class definition group and it includes the class type of Participant, Asset and Transaction. In the supply chain we have three types of participants so there are four classes definition of type participant: \emph{Employee}, \emph{Division} and its subclasses \emph{Manufacturer} and \emph{Regulator}, two types of assets so there are two classes definition of type asset: \emph{Chassis} and \emph{Order} and two types of transactions so there are two classes definition of type transaction: \emph{PlaceOrder} and \emph{UpdateOrderStatus}. 
+
+In the composer modeling language classes of type participants must be defined using the keyword \emph{participant} as it can be seen in \labelindexref{Figure}{img:participants}. Each participant type requires an identification property that is set using the phrase \emph{identified by} after the class name. For example, the \emph{Employee} participant is identified using its identification number called employeeId and has a set of properties defined after the "o " syntax. This modeling language is object-oriented and we can make use of the inheritance property so both the \emph{Manufacturer} and \emph{Regulator} are subclasses of the participant \emph{Division}.
+
+\fig[scale=0.8]{src/img/participants.PNG}{img:participants}{Hardware Supply-Chain: Participants} 
+
+Another resource used is the asset. The supply-chain flow is triggered by an employee when submitting an asset of type order and than one of the authorized manufacturer starts processing it by scheduling the device to be manufactured and assigning a serial number for unique identification. After the serial number was assigned a new asset if type chassis is created and the order chassis can be delivered. The order asset changes its status into delivered.
+The flow ends when the participant of type regulator receives the chassis asset and assigns an owner to that chassis by changing the status of the order. 
+In \labelindexref{Figure}{img:chassisAsset} and \labelindexref{Figure}{img:assetOrder} are defined the two type of asset resources used by the supply-chain.
+
+\fig[scale=0.8]{src/img/chassisAsset.PNG}{img:chassisAsset}{Hardware Supply-Chain: Asset of type \emph{Chassis}}
+
+\fig[scale=0.8]{src/img/orderAsset.PNG}{img:orderAsset}{Hardware Supply-Chain: Asset of type \emph{Order}}
+
+The \emph{Chassis} asset is defined using the reserved keyword \emph{asset} followed by the name \emph{Chassis}, the phrase \emph{identified by} and the name of the variable used for identification. In the Keysight hardware divisions the chassis is identified using their serial number. The other properties of this asset are the \emph{chassisDetails} - a field of type concept (which is an abstract class with no identification key), the \emph{chassisStatus} - an enum that stores information about the life-cycle stage of a device (never used, active and scrapped) and the \emph{order} - the employee that submitted the order (it is referenced with a reserved syntax \emph{-->}).
+
+
+
+
 
