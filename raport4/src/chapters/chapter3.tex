@@ -40,17 +40,60 @@ The first group of resources is the class definition group and it includes the c
 
 In the composer modeling language classes of type participants must be defined using the keyword \emph{participant} as it can be seen in \labelindexref{Figure}{img:participants}. Each participant type requires an identification property that is set using the phrase \emph{identified by} after the class name. For example, the \emph{Employee} participant is identified using its identification number called employeeId and has a set of properties defined after the "o " syntax. This modeling language is object-oriented and we can make use of the inheritance property so both the \emph{Manufacturer} and \emph{Regulator} are subclasses of the participant \emph{Division}.
 
-\fig[scale=0.8]{src/img/participants.PNG}{img:participants}{Hardware Supply-Chain: Participants} 
+\fig[scale=0.7]{src/img/participants.PNG}{img:participants}{Hardware Supply-Chain: Participants} 
 
 Another resource used is the asset. The supply-chain flow is triggered by an employee when submitting an asset of type order and than one of the authorized manufacturer starts processing it by scheduling the device to be manufactured and assigning a serial number for unique identification. After the serial number was assigned a new asset if type chassis is created and the order chassis can be delivered. The order asset changes its status into delivered.
-The flow ends when the participant of type regulator receives the chassis asset and assigns an owner to that chassis by changing the status of the order. 
-In \labelindexref{Figure}{img:chassisAsset} and \labelindexref{Figure}{img:assetOrder} are defined the two type of asset resources used by the supply-chain.
+The flow ends when the participant of type regulator receives the chassis asset and assigns an owner to that chassis by changing the status of the order. A participant of type \emph{Regulator} is someone from the division's management team (e.g a project manager).
+In \labelindexref{Figure}{img:chassisAsset} and \labelindexref{Figure}{img:orderAsset} are defined the two type of asset resources used by the supply-chain. 
 
 \fig[scale=0.8]{src/img/chassisAsset.PNG}{img:chassisAsset}{Hardware Supply-Chain: Asset of type \emph{Chassis}}
 
 \fig[scale=0.8]{src/img/orderAsset.PNG}{img:orderAsset}{Hardware Supply-Chain: Asset of type \emph{Order}}
 
 The \emph{Chassis} asset is defined using the reserved keyword \emph{asset} followed by the name \emph{Chassis}, the phrase \emph{identified by} and the name of the variable used for identification. In the Keysight hardware divisions the chassis is identified using their serial number. The other properties of this asset are the \emph{chassisDetails} - a field of type concept (which is an abstract class with no identification key), the \emph{chassisStatus} - an enum that stores information about the life-cycle stage of a device (never used, active and scrapped) and the \emph{order} - the employee that submitted the order (it is referenced with a reserved syntax \emph{-->}).
+
+The model has to contain also the type of transactions that can be submitted in the network and the events connected with them. In our business model we determine the need of two type of transactions: \emph{PlaceOrder} and \emph{UpdateOrderStatus}.
+These two types are required in order to have a complete flow of the CAPEX ordering process. In the first stage an employee needs to place an order, the order is than approved by the regulator and send to the manufacturer. During manufacturing, the order status is changed from scheduled for manufacturing to serial number assigned and then delivered. In the CAPEX procedures the manager is responsible to receive the orders and assign an owner for each of the devices. In \labelindexref{Figure}{img:placeOrderTrans} and \labelindexref{Figure}{img:updateOrderStatTrans} we outline the transactions definitions and the events associated: \emph{placeOrderTrans} and \emph{UpdateOrderStatusEvent}.
+
+
+\fig[scale=0.7]{src/img/updateOrderStatTrans.PNG}{img:updateOrderStatTrans}{Hardware Supply-Chain: Transaction of type \emph{UpdateOrderStatus} and its event}
+
+
+\fig[scale=0.7]{src/img/placeOrderTrans.PNG}{img:placeOrderTrans}{Hardware Supply-Chain: Transaction of type \emph{PlaceOrder} and its event}
+
+Each participant has a network card to connect to the supply-chain system that is provided an administrator. In addition to the network access control we can restrict the actions done by a member of the network by defining rules for all the possible actions. The possible type of operations are create, read, update and delete (CRUD) and we can use this operations to create rules for all types of participants in report with other resources. 
+
+In the supply-chain network the \emph{Employee} has to follow three rules: \emph{EmployeeMakeOrder}, \emph{EmployeePlaceOrder} and \emph{EmployeeReadOrder}
+(see \labelindexref{Figure}{img:employeeRole}). In these rules the participant is \emph{org.acme.chassis_network.Employee}, the resources used are \emph{org.acme.chassis_network.PlaceOrder} and \emph{org.acme.chassis_network.Order} and the rules specify if it allowed or not to perform one of the operations of CRUD. 
+
+\fig[scale=0.4]{src/img/employeeRole.png}{img:employeeRole}{Hardware Supply-Chain: Employee Rules}
+
+For the participant \emph{Manufacture} we had defined rules that involves the asset of type \emph{Chassis} (see \labelindexref{Figure}{img:manufacturerChassisRole}) and the asset of type \emph{Order} (see \labelindexref{Figure}{img:manufacturerOrderRole}). A participant of type \emph{Manufacturer} can create new chassis and view the existing devices manufactured in the hardware department. Also this type of participant can update the status of order and read the existing orders assigned to him/her.
+
+\fig[scale=0.4]{src/img/manufacturerChassisRole.png}{img:manufacturerChassisRole}{Hardware Supply-Chain: Manufacturer Chassis related Rules}
+
+\fig[scale=0.4]{src/img/manufacturerOrderRole.png}{img:manufacturerOrderRole}{Hardware Supply-Chain: Manufacturer Order related Rules}
+
+The last type of participant is the \emph{Regulator}. This role is associated with a manager that has the possibility extended permissions in the network. It can see all the orders submitted, who is the employee that ordered it and it has the possibity to assign a chassis to one of the employees (see \labelindexref{Figure}{img:regulatorRole}). This type of participant has a managerial role in the division so he/she is authorized to make changes in the network, to validate or invalidate a certain order and track the cause of orders' delays or other issues.
+
+\fig[scale=0.5]{src/img/regulatorRole.png}{img:regulatorRole}{Hardware Supply-Chain: Regulator Rule}
+
+Additionally to all of these, we need to set some default rules for the system administrator that is responsible with network and business access control.  The admin can create network cards for new members or deploy a new version of the \emph{.bna}. We can also set some generally applied rules for the network members. The rules of the system administrator and network members are described in \labelindexref{Figure}{img:systemRoles}. The participants in a business network can see the other members of the network. We think this rule is really useful in the early days of the network or for new members to learn about the system participants and be able to connect to them if they are in a situation that requires information from someone else in the business network. 
+
+The Hyperledger Composer has defined a default namespace \emph{org.hyperledger.composer.system} that has some predefined participants that can be used to enable the network administrator special privileges. In our business, the all participants have access to the system resources and only the \emph{org.hyperledger.composer.system.NetworkAdmin} has full access to the user resources.
+\fig[scale=0.5]{src/img/systemRoles.png}{img:systemRoles}{Hardware Supply-Chain: Hyperledger Composer predefined participants Rules}
+
+Another important aspect of the project implementation is the transactions definition. Transactions hold all the business logic and they use the Hyperledger APIs to connect to the Fabric and register the submitted transactions in the ledger.
+
+%TODO describe the API
+%TODO read the 3.2 section
+\labelindexref{Figure}{img:updateOrderStatus}
+\fig[scale=0.5]{src/img/updateOrderStatus.png}{img:updateOrderStatus}{}
+
+\labelindexref{Figure}{img:placeOrder}
+\fig[scale=0.5]{src/img/placeOrder.png}{img:placeOrder}{}
+
+
 
 
 
