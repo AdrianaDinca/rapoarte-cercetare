@@ -17,4 +17,13 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces \emph {PlaceOrder} Function \relax }}{16}{figure.caption.17}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces \emph {UpdateOrderStatus} Function \relax }}{17}{figure.caption.18}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Hardware Supply-Chain: Playground \relax }}{19}{figure.caption.19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Hardware Supply-Chain: Example of \emph {PlaceOrder} Transaction \relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {SCHEDULED_FOR_MANUFACTURE} \relax }}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {SERIAL_NUMBER_ASSIGNED} \relax }}{20}{figure.caption.22}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Hardware Supply-Chain: The manufactured chassis \relax }}{21}{figure.caption.23}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {DELIVERED} \relax }}{21}{figure.caption.24}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {OWNER_ASSIGNED} \relax }}{22}{figure.caption.25}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Hardware Supply-Chain: Chassis' Owner \relax }}{22}{figure.caption.26}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Hardware Supply-Chain: Blockchain Ledger \relax }}{22}{figure.caption.27}
 \addvspace {10\p@ }

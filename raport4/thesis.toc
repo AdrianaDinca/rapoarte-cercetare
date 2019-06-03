@@ -1,8 +1,7 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Report Overview}{1}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Project Description}{1}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Project Objectives and Motivation}{1}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.1}Project Description}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Project Objectives and Motivation}{1}{section.1.2}
 \contentsline {chapter}{\numberline {2}Study of Hyperledger Projects}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Hyperledger Project}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Hyperledger Fabric}{4}{section.2.2}
@@ -14,5 +13,5 @@
 \contentsline {section}{\numberline {3.2}Technical Aspects}{10}{section.3.2}
 \contentsline {chapter}{\numberline {4}Hardware Supply Chain}{18}{chapter.4}
 \contentsline {section}{\numberline {4.1}ISG CAPEX Procedure}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Use Case Description}{18}{section.4.2}
-\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}
+\contentsline {section}{\numberline {4.2}Use Case Description}{19}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclusion}{23}{chapter.5}
