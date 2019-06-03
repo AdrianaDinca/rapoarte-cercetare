@@ -11,7 +11,7 @@
 \contentsline {chapter}{\numberline {3}Implementation}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}General Aspects}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Technical Aspects}{10}{section.3.2}
-\contentsline {chapter}{\numberline {4}Hardware Supply Chain}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}ISG CAPEX Procedure}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Use Case Description}{19}{section.4.2}
+\contentsline {chapter}{\numberline {4}Business Procedures}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}ISG CAPEX Procedures}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2}Hardware Supply-Chain Use Cases}{19}{section.4.2}
 \contentsline {chapter}{\numberline {5}Conclusion}{23}{chapter.5}
