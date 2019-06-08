@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  3 JUN 2019 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  4 JUN 2019 09:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -631,23 +631,23 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (./src/global.tex) (./template/titlepage.en.tex
-<src/img/branding/cpru.jpg, id=68, 210.03468pt x 210.7875pt>
-File: src/img/branding/cpru.jpg Graphic file (type jpg)
-<use src/img/branding/cpru.jpg>
-Package pdftex.def Info: src/img/branding/cpru.jpg  used on input line 12.
-(pdftex.def)             Requested size: 53.63545pt x 53.82568pt.
-<src/img/branding/acs.jpg, id=69, 168.63pt x 71.3064pt>
+<src/img/branding/acs.jpg, id=68, 168.63pt x 71.3064pt>
 File: src/img/branding/acs.jpg Graphic file (type jpg)
 <use src/img/branding/acs.jpg>
-Package pdftex.def Info: src/img/branding/acs.jpg  used on input line 14.
+Package pdftex.def Info: src/img/branding/acs.jpg  used on input line 12.
 (pdftex.def)             Requested size: 123.77074pt x 52.33829pt.
+<src/img/branding/cpru.jpg, id=69, 210.03468pt x 210.7875pt>
+File: src/img/branding/cpru.jpg Graphic file (type jpg)
+<use src/img/branding/cpru.jpg>
+Package pdftex.def Info: src/img/branding/cpru.jpg  used on input line 14.
+(pdftex.def)             Requested size: 53.63545pt x 53.82568pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./src/img/branding/cpru.jp
-g> <./src/img/branding/acs.jpg>]) (./template/contents.pages.tex (./thesis.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./src/img/branding/acs.jpg
+> <./src/img/branding/cpru.jpg>]) (./template/contents.pages.tex (./thesis.toc)
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -944,7 +944,7 @@ mf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/disertatie/.texlive20
 live2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk> </home/disertati
 e/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on thesis.pdf (27 pages, 1108838 bytes).
+Output written on thesis.pdf (27 pages, 1108829 bytes).
 PDF statistics:
  808 PDF objects out of 1000 (max. 8388607)
  326 compressed objects within 4 object streams
