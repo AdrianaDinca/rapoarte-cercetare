@@ -27,11 +27,17 @@ Vita Bortnikov Christian Cachin Konstantinos Christidis Angelo De Caro David
   \url{https://arxiv.org/abs/1801.10228v2}.
 \newblock Accessed Mar. 2019.
 
-\bibitem{edXTut}
-LinuxFoundationX LFS171x.
-\newblock Blockchain for business - an introduction to hyperledger
-  technologies.
-\newblock \url{https://courses.edx.org/}, 2017.
-\newblock Accessed: 2019-01-06.
+\bibitem{pow-byzantine}
+Jeroen Rijnbout.
+\newblock Byzantine consensus through bitcoin's proof-of-work.
+\newblock Published on MCA,
+  \url{https://pdfs.semanticscholar.org/0d82/a314dd96265ac8542a9ca80e5c7db09594d2.pdf},
+  2017.
+\newblock Accessed Apr. 2019.
+
+\bibitem{bitcoinwhitepaper}
+Nakamoto Satoshi.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em The Cryptography Mailing list at metzdowd.com}, 2008.
 
 \end{thebibliography}

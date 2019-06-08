@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: src/chapters/intro.aux
+A level-1 auxiliary file: src/chapters/chapter1.aux
 A level-1 auxiliary file: src/chapters/chapter2.aux
 A level-1 auxiliary file: src/chapters/chapter3.aux
 A level-1 auxiliary file: src/chapters/chapter4.aux
@@ -80,45 +81,45 @@ Too many commas in name 1 of "Elli Androulaki, Artem Barger, Vita Bortnikov, Chr
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Elli Androulaki, Artem Barger, Vita Bortnikov, Christian Cachin, Konstantinos Christidis, Angelo De Caro, David Enyeart, Christopher Ferris, Gennady Laventman, Yacov Manevich, Srinivasan Muralidharan, Chet Murthy, Binh Nguyen, Manish Sethi, Gari Singh, Keith Smith, Alessandro Sorniotti, Chrysoula Stathakopoulou, Marko Vukolić, Sharon Weed Cocco, Jason Yellick" for entry fabric-article
 while executing---line 1090 of file plain.bst
-You've used 4 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            523 strings with 5216 characters,
-and the built_in function-call counts, 884 in all, are:
-= -- 87
-> -- 28
+            528 strings with 5411 characters,
+and the built_in function-call counts, 1088 in all, are:
+= -- 107
+> -- 35
 < -- 0
-+ -- 12
-- -- 8
-* -- 25
-:= -- 156
-add.period$ -- 16
-call.type$ -- 4
-change.case$ -- 16
++ -- 15
+- -- 10
+* -- 33
+:= -- 195
+add.period$ -- 19
+call.type$ -- 5
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 28
-empty$ -- 89
-format.name$ -- 8
-if$ -- 192
+cite$ -- 5
+duplicate$ -- 38
+empty$ -- 106
+format.name$ -- 10
+if$ -- 233
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 0
-newline$ -- 27
-num.names$ -- 8
-pop$ -- 34
+int.to.str$ -- 5
+missing$ -- 1
+newline$ -- 32
+num.names$ -- 10
+pop$ -- 38
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 15
 quote$ -- 0
-skip$ -- 23
+skip$ -- 30
 stack$ -- 0
-substring$ -- 20
-swap$ -- 4
+substring$ -- 25
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
+type$ -- 20
 warning$ -- 0
-while$ -- 8
-width$ -- 5
-write$ -- 49
+while$ -- 10
+width$ -- 6
+write$ -- 59
 (There were 36 error messages)

@@ -1,0 +1,31 @@
+\chapter{Background}
+\label{chapter:chapter1}
+
+\section{Blockchain Technology}
+\label{sec:chapter1-section1}
+
+Blockchain is a concept that offers support for a peer-to-peer electronic cash system that is able to solve the classic issues of digital money peer-based systems. The biggest challenge was the double spending issue that was solved by introducing a chain of blocks with transactions where each transaction/block has a unique hash computed using a proof-of-work algorithm. In order to add a transaction into a block it has to be validated by the majority of nodes to ensure the unique hash wasn't never added in the chain. After this validation, the transaction is added in the block and all the chains of the network update their database with this new transaction. 
+
+The proof-of-work algorithm is a hash function that requires a lot of CPU power in order to obtain a new unique hash. Thus, if an attacker tries to double spend its money it has to compute 2 hashes sequentially: the first hash is computed using the longest chain's proof-of-work and the second hash should be based on the new longest chain which already has the information about the money spend in the first transaction and as a result the network nodes are going to invalidate the second transaction. The problem still can appear if the attacker holds the majority of nodes by adding the second transaction in the chain. The possibility of having a monopoly on the system is really small if we think that it requires a lot of money to keep the nodes up and running. Additionally anyone can join the network from everywhere around the world with no real connection to the other members so this enables a wide diversity of individuals with different backgrounds and conceptions.
+
+A node can leave the network and return to it at any time by updating its Blockchain history chain with the newest transactions since its inactivity so the network broadcasts the protocol messages only to the nodes that are active. When a node rejoins the network it will add the already validated transactions in its chain. The blocks' chain of transactions holds immutable information, it is a prove of all the events happened in the network so it is called the Blockchain's ledger.
+
+The Blockchain idea was defined by Satoshi Nakamoto in his white paper called \emph{Bitcoin: A peer-to-peer electronic cash  system} \cite{bitcoinwhitepaper} as a electronic payments system that uses the Bitcoin digital currency to facilitate financial transfers between peers without the involvement of a central authority.
+This idea solves the Byzantine Generals Problem using proof-of-work for achieving consensus. Jaroen RijnBout \cite{pow-byzantine} describe how the Byzantine Generals Problem is solved using the consensus protocol proposed by Satoshi Nakamoto. He presents the story of many generals that want to crack the king's Wireless password and in order to achieve success the majority of generals must contribute to generate the CPU power at the same time to brute force the password. Thus, we need to specify a time of attack and check if the majority of generals agree with the plan. For setting the time of attack, all the generals propose a time and compute a transaction hash. The generals can agree or not on the proposal so they can decide to add it to the ledger or not. We know that an hour of CPU power is enough to brute force the king's password and the time to compute the hash for a transaction is ten minutes if (and only if) all the generals work in the same time. Therefore, we need six generals to attack at the same time for the attempt to be successful. In order to determine if enough generals agree with the attack we need a chain of transactions that starts with the transaction that has the proposal and other six transactions added sequentially. Therefore, each general that agrees with the attack can see if the number of generals that want to attack are enough so the attempt is successful.
+
+More than that, the Blockchain protocol removes the central authority by building a general solution to the Byzantin Generals Problem that allows members to reach consensus about the transactions' order.
+Satoshi's idea is considered the biggest revolution since the appearance of Internet and its potential goes beyond the financial world. It has the power to change the business world by innovating in the fields of supply-chain communication and provenance, cloud storage, manufacturing, electronic voting, employee payments, etc.
+In the following sections we are going to describe the business areas that can benefit from Blockchain and the way these changes can be accomplished along with the existing projects involved in this revolution.
+The technical details about the protocol are really well defined by Satoshi in his white paper \cite{bitcoinwhitepaper} so our aim is to identify the main directions of applicability of the Blockchain technology with both powerful and weak points. 
+
+
+\section{Blockchain for business}
+\label{sec:chapter1-sec2}
+The Blockchain technology is an young area of research and the range of industries that can take advantages of this protocol is wide enough but we manage to determine the main directions of applicability. Before describing each direction it is important to briefly describe the new features and concepts that were introduced after the Bitcoin public release.
+
+
+
+
+
+ 
+
