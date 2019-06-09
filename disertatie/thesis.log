@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  8 JUN 2019 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  9 JUN 2019 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -635,23 +635,23 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (./src/global.tex) (./template/titlepage.en.tex
-<src/img/branding/cpru.jpg, id=80, 210.03468pt x 210.7875pt>
-File: src/img/branding/cpru.jpg Graphic file (type jpg)
-<use src/img/branding/cpru.jpg>
-Package pdftex.def Info: src/img/branding/cpru.jpg  used on input line 12.
-(pdftex.def)             Requested size: 53.63545pt x 53.82568pt.
-<src/img/branding/acs.jpg, id=81, 168.63pt x 71.3064pt>
+<src/img/branding/acs.jpg, id=80, 168.63pt x 71.3064pt>
 File: src/img/branding/acs.jpg Graphic file (type jpg)
 <use src/img/branding/acs.jpg>
-Package pdftex.def Info: src/img/branding/acs.jpg  used on input line 14.
+Package pdftex.def Info: src/img/branding/acs.jpg  used on input line 12.
 (pdftex.def)             Requested size: 123.77074pt x 52.33829pt.
+<src/img/branding/cpru.jpg, id=81, 210.03468pt x 210.7875pt>
+File: src/img/branding/cpru.jpg Graphic file (type jpg)
+<use src/img/branding/cpru.jpg>
+Package pdftex.def Info: src/img/branding/cpru.jpg  used on input line 14.
+(pdftex.def)             Requested size: 53.63545pt x 53.82568pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./src/img/branding/cpru.jp
-g> <./src/img/branding/acs.jpg>]) (./template/contents.pages.tex (./thesis.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./src/img/branding/acs.jpg
+> <./src/img/branding/cpru.jpg>]) (./template/contents.pages.tex (./thesis.toc)
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -693,76 +693,79 @@ Chapter 2.
 
 
 
-]) [4]
-\openout2 = `src/chapters/chapter2.aux'.
-
- (./src/chapters/chapter2.tex
-Chapter 3.
-[5
-
-
-
-] [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+] [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
- [7] [8]
-<src/img/composerBna.PNG, id=221, 380.01974pt x 221.02576pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+ [5]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+) [6]) [7]
+\openout2 = `src/chapters/chapter2.aux'.
+
+
+(./src/chapters/chapter2.tex
+Chapter 3.
+[8
+
+
+
+] [9] [10] [11]
+<src/img/composerBna.PNG, id=238, 380.01974pt x 221.02576pt>
 File: src/img/composerBna.PNG Graphic file (type png)
 <use src/img/composerBna.PNG>
 Package pdftex.def Info: src/img/composerBna.PNG  used on input line 97.
 (pdftex.def)             Requested size: 228.0136pt x 132.61647pt.
-
-[9 <./src/img/composerBna.PNG>]
+ [12 <./src/img/composerBna.PNG>]
 Overfull \hbox (8.21191pt too wide) in paragraph at lines 103--104
 []\T1/cmr/m/n/10 Another con-cept re-lated with the Com-poser frame-work is the
  Con-nec-tion Pro-file. Each Blockchain
  []
 
-) [10]
+) [13]
 \openout2 = `src/chapters/chapter3.aux'.
 
  (./src/chapters/chapter3.tex
 Chapter 4.
-[11
+[14
 
 
 
 ]
 
-LaTeX Warning: Reference `sub-sec:chapter1-section3' on page 12 undefined on in
+LaTeX Warning: Reference `sub-sec:chapter1-section3' on page 15 undefined on in
 put line 33.
 
-<src/img/bnaStructure.PNG, id=239, 219.82124pt x 126.4725pt>
+<src/img/bnaStructure.PNG, id=255, 219.82124pt x 126.4725pt>
 File: src/img/bnaStructure.PNG Graphic file (type png)
 <use src/img/bnaStructure.PNG>
 Package pdftex.def Info: src/img/bnaStructure.PNG  used on input line 35.
 (pdftex.def)             Requested size: 153.87381pt x 88.53014pt.
-[12 <./src/img/bnaStructure.PNG>]
-<src/img/participants.PNG, id=246, 317.38576pt x 171.039pt>
+[15 <./src/img/bnaStructure.PNG>]
+<src/img/participants.PNG, id=262, 317.38576pt x 171.039pt>
 File: src/img/participants.PNG Graphic file (type png)
 <use src/img/participants.PNG>
 Package pdftex.def Info: src/img/participants.PNG  used on input line 43.
 (pdftex.def)             Requested size: 222.1685pt x 119.72647pt.
-<src/img/chassisAsset.PNG, id=249, 258.36525pt x 242.1045pt>
+<src/img/chassisAsset.PNG, id=265, 258.36525pt x 242.1045pt>
 File: src/img/chassisAsset.PNG Graphic file (type png)
 <use src/img/chassisAsset.PNG>
 Package pdftex.def Info: src/img/chassisAsset.PNG  used on input line 52.
 (pdftex.def)             Requested size: 206.69247pt x 193.68387pt.
-<src/img/orderAsset.PNG, id=250, 254.75175pt x 344.487pt>
+<src/img/orderAsset.PNG, id=266, 254.75175pt x 344.487pt>
 File: src/img/orderAsset.PNG Graphic file (type png)
 <use src/img/orderAsset.PNG>
 Package pdftex.def Info: src/img/orderAsset.PNG  used on input line 54.
 (pdftex.def)             Requested size: 203.80167pt x 275.58997pt.
-<src/img/placeOrderTrans.PNG, id=253, 280.6485pt x 151.16475pt>
+<src/img/placeOrderTrans.PNG, id=269, 280.6485pt x 151.16475pt>
 File: src/img/placeOrderTrans.PNG Graphic file (type png)
 <use src/img/placeOrderTrans.PNG>
 Package pdftex.def Info: src/img/placeOrderTrans.PNG  used on input line 59.
 (pdftex.def)             Requested size: 196.4526pt x 105.81459pt.
-<src/img/updateOrderStatTrans.PNG, id=254, 268.00125pt x 116.8365pt>
+<src/img/updateOrderStatTrans.PNG, id=270, 268.00125pt x 116.8365pt>
 File: src/img/updateOrderStatTrans.PNG Graphic file (type png)
 <use src/img/updateOrderStatTrans.PNG>
 Package pdftex.def Info: src/img/updateOrderStatTrans.PNG  used on input line 6
@@ -774,13 +777,13 @@ Overfull \hbox (11.61426pt too wide) in paragraph at lines 65--67
 ces used are \T1/cmr/m/it/10 org.acme.chassis_-net-work.PlaceOrder
  []
 
-[13 <./src/img/participants.PNG>]
-<src/img/employeeRole.png, id=261, 728.7225pt x 512.91624pt>
+[16 <./src/img/participants.PNG>]
+<src/img/employeeRole.png, id=278, 728.7225pt x 512.91624pt>
 File: src/img/employeeRole.png Graphic file (type png)
 <use src/img/employeeRole.png>
 Package pdftex.def Info: src/img/employeeRole.png  used on input line 68.
 (pdftex.def)             Requested size: 291.48383pt x 205.16286pt.
-<src/img/manufacturerChassisRole.png, id=264, 1147.28625pt x 347.2975pt>
+<src/img/manufacturerChassisRole.png, id=281, 1147.28625pt x 347.2975pt>
 File: src/img/manufacturerChassisRole.png Graphic file (type png)
 <use src/img/manufacturerChassisRole.png>
 Package pdftex.def Info: src/img/manufacturerChassisRole.png  used on input lin
@@ -791,30 +794,30 @@ Overfull \hbox (46.3414pt too wide) in paragraph at lines 72--72
  [] 
  []
 
-<src/img/manufacturerOrderRole.png, id=265, 882.29625pt x 514.92375pt>
+<src/img/manufacturerOrderRole.png, id=282, 882.29625pt x 514.92375pt>
 File: src/img/manufacturerOrderRole.png Graphic file (type png)
 <use src/img/manufacturerOrderRole.png>
 Package pdftex.def Info: src/img/manufacturerOrderRole.png  used on input line 
 74.
 (pdftex.def)             Requested size: 352.91225pt x 205.96585pt.
-<src/img/regulatorRole.png, id=267, 565.11125pt x 134.5025pt>
+<src/img/regulatorRole.png, id=284, 565.11125pt x 134.5025pt>
 File: src/img/regulatorRole.png Graphic file (type png)
 <use src/img/regulatorRole.png>
 Package pdftex.def Info: src/img/regulatorRole.png  used on input line 78.
 (pdftex.def)             Requested size: 282.55493pt x 67.25107pt.
-<src/img/systemRoles.png, id=269, 816.04875pt x 456.70625pt>
+<src/img/systemRoles.png, id=286, 816.04875pt x 456.70625pt>
 File: src/img/systemRoles.png Graphic file (type png)
 <use src/img/systemRoles.png>
 Package pdftex.def Info: src/img/systemRoles.png  used on input line 83.
 (pdftex.def)             Requested size: 408.02338pt x 228.35255pt.
-[14 <./src/img/chassisAsset.PNG>] [15 <./src/img/orderAsset.PNG> <./src/img/pla
+[17 <./src/img/chassisAsset.PNG>] [18 <./src/img/orderAsset.PNG> <./src/img/pla
 ceOrderTrans.PNG>]
-<src/img/placeOrder.png, id=283, 1012.78375pt x 558.085pt>
+<src/img/placeOrder.png, id=300, 1012.78375pt x 558.085pt>
 File: src/img/placeOrder.png Graphic file (type png)
 <use src/img/placeOrder.png>
 Package pdftex.def Info: src/img/placeOrder.png  used on input line 102.
 (pdftex.def)             Requested size: 405.10632pt x 223.23004pt.
-<src/img/updateOrderStatus.png, id=284, 1089.06876pt x 873.2625pt>
+<src/img/updateOrderStatus.png, id=301, 1089.06876pt x 873.2625pt>
 File: src/img/updateOrderStatus.png Graphic file (type png)
 <use src/img/updateOrderStatus.png>
 Package pdftex.def Info: src/img/updateOrderStatus.png  used on input line 105.
@@ -825,62 +828,62 @@ Overfull \hbox (23.05481pt too wide) in paragraph at lines 105--105
  [] 
  []
 
-) [16 <./src/img/updateOrderStatTrans.PNG> <./src/img/employeeRole.png>]
-[17 <./src/img/manufacturerChassisRole.png> <./src/img/manufacturerOrderRole.pn
-g> <./src/img/regulatorRole.png>] [18 <./src/img/systemRoles.png> <./src/img/pl
-aceOrder.png>] [19 <./src/img/updateOrderStatus.png>]
+) [19 <./src/img/updateOrderStatTrans.PNG> <./src/img/employeeRole.png>]
+[20 <./src/img/manufacturerChassisRole.png> <./src/img/manufacturerOrderRole.pn
+g> <./src/img/regulatorRole.png>] [21 <./src/img/systemRoles.png> <./src/img/pl
+aceOrder.png>] [22 <./src/img/updateOrderStatus.png>]
 \openout2 = `src/chapters/chapter4.aux'.
 
 
 (./src/chapters/chapter4.tex
 Chapter 5.
-[20
+[23
 
 
 
 ]
-<src/img/playground.png, id=316, 1299.85625pt x 652.4375pt>
+<src/img/playground.png, id=333, 1299.85625pt x 652.4375pt>
 File: src/img/playground.png Graphic file (type png)
 <use src/img/playground.png>
 Package pdftex.def Info: src/img/playground.png  used on input line 30.
 (pdftex.def)             Requested size: 389.95988pt x 195.73276pt.
-<src/img/placeOrder1.png, id=318, 613.29124pt x 414.54875pt>
+<src/img/placeOrder1.png, id=335, 613.29124pt x 414.54875pt>
 File: src/img/placeOrder1.png Graphic file (type png)
 <use src/img/placeOrder1.png>
 Package pdftex.def Info: src/img/placeOrder1.png  used on input line 34.
 (pdftex.def)             Requested size: 245.31215pt x 165.81656pt.
-<src/img/scheduled1.png, id=320, 615.29875pt x 412.54124pt>
+<src/img/scheduled1.png, id=337, 615.29875pt x 412.54124pt>
 File: src/img/scheduled1.png Graphic file (type png)
 <use src/img/scheduled1.png>
 Package pdftex.def Info: src/img/scheduled1.png  used on input line 39.
 (pdftex.def)             Requested size: 246.11513pt x 165.01357pt.
- [21 <./src/img/playground.png> <./src/img/placeOrder1.png>]
-<src/img/serialNumber1.png, id=328, 617.30624pt x 408.52625pt>
+ [24 <./src/img/playground.png> <./src/img/placeOrder1.png>]
+<src/img/serialNumber1.png, id=345, 617.30624pt x 408.52625pt>
 File: src/img/serialNumber1.png Graphic file (type png)
 <use src/img/serialNumber1.png>
 Package pdftex.def Info: src/img/serialNumber1.png  used on input line 43.
 (pdftex.def)             Requested size: 246.91812pt x 163.4076pt.
-<src/img/chassis1.png, id=330, 718.685pt x 216.81pt>
+<src/img/chassis1.png, id=347, 718.685pt x 216.81pt>
 File: src/img/chassis1.png Graphic file (type png)
 <use src/img/chassis1.png>
 Package pdftex.def Info: src/img/chassis1.png  used on input line 47.
 (pdftex.def)             Requested size: 359.34161pt x 108.40472pt.
-<src/img/delivered1.png, id=334, 621.32124pt x 425.59pt>
+<src/img/delivered1.png, id=351, 621.32124pt x 425.59pt>
 File: src/img/delivered1.png Graphic file (type png)
 <use src/img/delivered1.png>
 Package pdftex.def Info: src/img/delivered1.png  used on input line 52.
 (pdftex.def)             Requested size: 248.5241pt x 170.23297pt.
-<src/img/ownerAssigned1.png, id=335, 616.3025pt x 404.51125pt>
+<src/img/ownerAssigned1.png, id=352, 616.3025pt x 404.51125pt>
 File: src/img/ownerAssigned1.png Graphic file (type png)
 <use src/img/ownerAssigned1.png>
 Package pdftex.def Info: src/img/ownerAssigned1.png  used on input line 54.
 (pdftex.def)             Requested size: 246.51663pt x 161.80162pt.
-<src/img/chassisOwner1.png, id=336, 707.64375pt x 230.8625pt>
+<src/img/chassisOwner1.png, id=353, 707.64375pt x 230.8625pt>
 File: src/img/chassisOwner1.png Graphic file (type png)
 <use src/img/chassisOwner1.png>
 Package pdftex.def Info: src/img/chassisOwner1.png  used on input line 56.
 (pdftex.def)             Requested size: 353.82101pt x 115.43095pt.
-<src/img/history1.png, id=338, 1573.88pt x 392.46625pt>
+<src/img/history1.png, id=355, 1573.88pt x 392.46625pt>
 File: src/img/history1.png Graphic file (type png)
 <use src/img/history1.png>
 Package pdftex.def Info: src/img/history1.png  used on input line 60.
@@ -890,15 +893,15 @@ Overfull \hbox (59.60268pt too wide) in paragraph at lines 60--60
  [] 
  []
 
-[22 <./src/img/scheduled1.png> <./src/img/serialNumber1.png>]) [23 <./src/img/c
-hassis1.png> <./src/img/delivered1.png>] [24 <./src/img/ownerAssigned1.png> <./
+[25 <./src/img/scheduled1.png> <./src/img/serialNumber1.png>]) [26 <./src/img/c
+hassis1.png> <./src/img/delivered1.png>] [27 <./src/img/ownerAssigned1.png> <./
 src/img/chassisOwner1.png> <./src/img/history1.png>]
 \openout2 = `src/chapters/conclusion.aux'.
 
 
 (./src/chapters/conclusion.tex
 Chapter 6.
-) [25
+) [28
 
 
 
@@ -914,15 +917,22 @@ c-u-men-ta-tion.  Pub-
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 19--29
+Underfull \hbox (badness 1496) in paragraph at lines 25--35
 \T1/cmr/m/n/10 Stathakopoulou Marko Vukoli¢ Sharon Weed Cocco Ja-son Yel-lick E
 lli An-droulaki,
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 45--50
+\T1/cmr/m/n/10 lished on block-geeks.com, [][]$\T1/cmss/m/n/10 https : / / bloc
+kgeeks . com / guides / what-[]is-[]blockchain-[]technology/$[][]\T1/cmr/m/n/10
+ ,
  []
 
 )
 No file thesis.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-[26
+[29
 
 
 ]
@@ -944,13 +954,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 11226 strings out of 494923
- 165961 string characters out of 6180742
- 275042 words of memory out of 5000000
- 14195 multiletter control sequences out of 15000+600000
+ 11487 strings out of 494923
+ 168927 string characters out of 6180742
+ 275107 words of memory out of 5000000
+ 14448 multiletter control sequences out of 15000+600000
  13960 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 51i,12n,45p,1488b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,12n,45p,1493b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/disertatie/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss100
 0.600pk> </home/disertatie/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/e
 cbx1200.600pk> </home/disertatie/.texlive2017/texmf-var/fonts/pk/ljfour/jknappe
@@ -964,10 +974,10 @@ mf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/disertatie/.texlive20
 live2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk> </home/disertati
 e/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on thesis.pdf (29 pages, 1118135 bytes).
+Output written on thesis.pdf (32 pages, 1131803 bytes).
 PDF statistics:
- 848 PDF objects out of 1000 (max. 8388607)
- 351 compressed objects within 4 object streams
- 81 named destinations out of 1000 (max. 500000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 367 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
  278 words of extra memory for PDF output out of 10000 (max. 10000000)
 
