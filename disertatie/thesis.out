@@ -1,19 +1,23 @@
-\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{1.1 Project Description}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{1.2 Project Objectives and Motivation}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{2 Background}{}% 4
-\BOOKMARK [1][-]{section.2.1}{2.1 Blockchain Technology}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.2}{2.2 Blockchain for business}{chapter.2}% 6
-\BOOKMARK [0][-]{chapter.3}{3 Study of Hyperledger Projects}{}% 7
-\BOOKMARK [1][-]{section.3.1}{3.1 Hyperledger Project}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{3.2 Hyperledger Fabric}{chapter.3}% 9
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 General aspects}{section.3.2}% 10
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Technical aspects}{section.3.2}% 11
-\BOOKMARK [1][-]{section.3.3}{3.3 Hyperledger Composer}{chapter.3}% 12
-\BOOKMARK [0][-]{chapter.4}{4 Implementation}{}% 13
-\BOOKMARK [1][-]{section.4.1}{4.1 General Aspects}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.2}{4.2 Technical Aspects}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{5 Business Procedures}{}% 16
-\BOOKMARK [1][-]{section.5.1}{5.1 ISG CAPEX Procedures}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.2}{5.2 Hardware Supply-Chain Use Cases}{chapter.5}% 18
-\BOOKMARK [0][-]{chapter.6}{6 Conclusion}{}% 19
+\BOOKMARK [0][-]{table.caption.2}{Acknowledgements}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{1.1 Project Description}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{1.2 Project Objectives and Motivation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{1.3 Contributions}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{1.4 Summary}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{2 Background}{}% 8
+\BOOKMARK [1][-]{section.2.1}{2.1 Blockchain Technology}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{2.2 Blockchain for Business}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{3 Study of Hyperledger Projects}{}% 11
+\BOOKMARK [1][-]{section.3.1}{3.1 Hyperledger Organization}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.2}{3.2 Hyperledger Fabric}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 General Aspects}{section.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Technical Aspects}{section.3.2}% 15
+\BOOKMARK [1][-]{section.3.3}{3.3 Hyperledger Composer}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{4 Implementation}{}% 17
+\BOOKMARK [1][-]{section.4.1}{4.1 General Aspects}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{4.2 Technical Aspects}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{5 Business Procedures}{}% 20
+\BOOKMARK [1][-]{section.5.1}{5.1 ISG CAPEX Procedures}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.2}{5.2 Hardware Supply-Chain Use Cases}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion}{}% 23

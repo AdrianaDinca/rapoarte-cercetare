@@ -2,29 +2,29 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Hyperledger Composer Business Network Archive \relax }}{13}{figure.caption.5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Hyperledger Composer Business Network Archive \relax }}{13}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Structure of the \emph {hardware-manufacture-network.bna} file \relax }}{16}{figure.caption.6}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Hardware Supply-Chain: Participants \relax }}{17}{figure.caption.7}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Hardware Supply-Chain: Asset of type \emph {Chassis} \relax }}{18}{figure.caption.8}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Hardware Supply-Chain: Asset of type \emph {Order} \relax }}{19}{figure.caption.9}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Hardware Supply-Chain: Transaction of type \emph {PlaceOrder} and its event \relax }}{19}{figure.caption.10}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Hardware Supply-Chain: Transaction of type \emph {UpdateOrderStatus} and its event \relax }}{20}{figure.caption.11}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Hardware Supply-Chain: Employee Rules \relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Hardware Supply-Chain: Manufacturer Chassis related Rules \relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Hardware Supply-Chain: Manufacturer Order related Rules \relax }}{21}{figure.caption.14}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Hardware Supply-Chain: Regulator Rule \relax }}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Hardware Supply-Chain: Hyperledger Composer predefined participants Rules \relax }}{22}{figure.caption.16}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces \emph {PlaceOrder} Function \relax }}{22}{figure.caption.17}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces \emph {UpdateOrderStatus} Function \relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Structure of the \emph {hardware-manufacture-network.bna} file \relax }}{16}{figure.caption.7}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Hardware Supply-Chain: Participants \relax }}{17}{figure.caption.8}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Hardware Supply-Chain: Asset of type \emph {Chassis} \relax }}{18}{figure.caption.9}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Hardware Supply-Chain: Asset of type \emph {Order} \relax }}{19}{figure.caption.10}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Hardware Supply-Chain: Transaction of type \emph {PlaceOrder} and its event \relax }}{19}{figure.caption.11}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Hardware Supply-Chain: Transaction of type \emph {UpdateOrderStatus} and its event \relax }}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Hardware Supply-Chain: Employee Rules \relax }}{20}{figure.caption.13}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Hardware Supply-Chain: Manufacturer Chassis related Rules \relax }}{21}{figure.caption.14}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Hardware Supply-Chain: Manufacturer Order related Rules \relax }}{21}{figure.caption.15}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Hardware Supply-Chain: Regulator Rule \relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Hardware Supply-Chain: Hyperledger Composer predefined participants Rules \relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces \emph {PlaceOrder} Function \relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces \emph {UpdateOrderStatus} Function \relax }}{23}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Hardware Supply-Chain: Playground \relax }}{25}{figure.caption.19}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Hardware Supply-Chain: Example of \emph {PlaceOrder} Transaction \relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {SCHEDULED_FOR_MANUFACTURE} \relax }}{26}{figure.caption.21}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {SERIAL_NUMBER_ASSIGNED} \relax }}{26}{figure.caption.22}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Hardware Supply-Chain: The manufactured chassis \relax }}{27}{figure.caption.23}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {DELIVERED} \relax }}{27}{figure.caption.24}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {OWNER_ASSIGNED} \relax }}{28}{figure.caption.25}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Hardware Supply-Chain: Chassis' Owner \relax }}{28}{figure.caption.26}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Hardware Supply-Chain: Blockchain Ledger \relax }}{28}{figure.caption.27}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Hardware Supply-Chain: Playground \relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Hardware Supply-Chain: Example of \emph {PlaceOrder} Transaction \relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {SCHEDULED_FOR_MANUFACTURE} \relax }}{26}{figure.caption.22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {SERIAL_NUMBER_ASSIGNED} \relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Hardware Supply-Chain: The manufactured chassis \relax }}{27}{figure.caption.24}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {DELIVERED} \relax }}{27}{figure.caption.25}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Hardware Supply-Chain: Update order status in \emph {OWNER_ASSIGNED} \relax }}{28}{figure.caption.26}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Hardware Supply-Chain: Chassis' Owner \relax }}{28}{figure.caption.27}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Hardware Supply-Chain: Blockchain Ledger \relax }}{28}{figure.caption.28}
 \addvspace {10\p@ }
