@@ -20,42 +20,37 @@ Fabric is the most popular project developed by Hyperledger. It offers a modular
 
 \section{Motivations and Objectives}
 \label{sec:intro-section2}
-We were motivated to choose this direction of research because it is an young technology with multiple areas of applicability for business and it offers solutions to building a new Internet where trust is embedded. As a result of this research, we reached the conclusion that dedicating this thesis to systematize the Blockchain opportunities for the business world and based on this we build some short and long term objectives:
-\begin{itemize}
-	\item
-\end{itemize}
+We were motivated to choose this direction of research because it is an young technology with multiple areas of applicability for business and it offers solutions to building a new Internet where trust is embedded. As a result of this research, we reached the conclusion that systematizing the Blockchain opportunities for the business world is valuable and based on this we build some short and long term objectives:
 
-
-
-Many software applications developed by Ixia teams run on dedicated hardware and in many situations only one employee can use that hardware at a time.
-The existing Capital Expense (CAPEX) procedure is very complicated and the time between ordering a new device and receiving it can be really long. It may happen that the team doesn't need it anymore at the time the device was received. The dedicated hardware is expensive (some chassis may cost up to \$50000) so not receiving it on time may cost the department a lot of money and it can also delay the releases.
-
-On each quarter, the manager has the responsibility of determining what are the hardware needs of the team and send the list to her/his superior for approval.
-Also, the manager has to check the price of the devices requested and if the costs are over the CAPEX budget, the hardware list should be prioritized. 
-After completing the list and set the priorities if needed, the manager has to fill an \emph{Internal Sales Order} on an internal platform and than wait for the device to be delivered.
-
-A huge disadvantage of this procedure is the lack of transparency regarding the status of the order and the time estimation until receiving the order.
-In addition to this the costs may differ due to the international tax changes. 
-
-The \textbf{\emph{{\project}}} project is a supply-chain business network that solves both the transparency and the access control restrictions.
-This system is using Hyperledger Composer framework for modeling the business network: participants, transaction and assets and connects to the Hyperledger Fabric via its API to add transactions in the Blockchain database and to manage participants' access accordingly with their roles in the network.
-Therefore the Hyperledger Fabric is suitable for solving the hardware devices supply chain transparency and bottleneck issues and to restrict the access of the participants involved in accordance with their position in the company.
-
+\paragraph{$\bullet$ Exploration stage:} we analyzed the existing Blockchain for business projects and identified the main industries  where this protocol can revolutionize the business operations and we also described the reasons why Blockchain can change the business world; we outlined the main characteristics of this technology that enables entrepreneurs to completely redesign their organization; finally we managed to systematize the business areas that can be innovated;
+	
+\paragraph{$\bullet$ Evaluation stage:} we explored Blockchain based projects to identify the best approaches to build such a system and tested the most popular technologies and frameworks that offer transparency, accountability and decentralization; we discovered the Hyperledger community and explored some of its solutions for developing Blockchain based applications from scratch without advanced technical skills; the Hyperledger organization aims to support cross-industry Blockchain networks and it offers assistance for new ideas of Blockchain for enterprises;
+	
+\paragraph{$\bullet$ Validation stage:} we validated that the adoption of the Blockchain technology in business doesn't required high skilled professionals by using open-source assistive tools so we build a Blockchain based application using two of the Hyperledger projects: Fabric and Composer; we proposed a network for CAPEX business operations for Ixia Solutions Group that solves the accountability, transparency and authorization issues of the current procedure; this system is based on a business model that define the participants, their role in the CAPEX process, the type of operations associated with it and a business logic for every operation involved in this procedure.
 
 \section{Contributions}
 \label{sec:intro-sec3}
+This thesis of Blockchain for business was a tough challenge from the point of view of variety - there are a wide range of Blockchain based projects that aim to innovate the business world so the amount of information is quite vast and not everything is valid. Firstly, in chapter \ref{chapter:chapter1} we described the business related characteristics of Blockchain and we determine the industries where Blockchain can change the business completely. We systematized all the information gathered and presented two possible classifications: the first one is based on the industry activity and the second goes beyond the current state of business by introducing new business models and empowers everyone to prosper by creating new value or maximizing the profit by eliminating the third party.  
 
+In chapters \ref{chapter:chapter2} and \ref{chapter:chapter3} we presented the Hyperledger implementation of Blockchain and offered a brief description of the most popular projects so we claim our contribution to the Hyperledger's promotion by offering an easy to follow guide to develop Blockchain application using Hyperledger Fabric and Composer frameworks.
+
+Another contribution is represented by the hardware supply-chain network developed as a replacement for the CAPEX process for the Network Visibility Solutions department of ISG. The network is using Hyperledger Fabric's Blockchain implementation, a simplified version of the consensus protocol and a membership service module to offer a system that is transparent - everyone can see the transactions issued in the network, participants are certified so the system offers accountability and they have limited access based on their role in the CAPEX process. Therefore, we build a proof-of-concept application that solves the business operations issues of CAPEX in ISG using the Blockchain protocol advantages without the need to develop a solution from scratch by integrating open-source frameworks.
 \section{Summary}
 \label{sec:intro-sec4}
-This thesis contains six chapters as follows:
-\begin{itemize}
-	\item \textbf{Chapter 1 - Introduction}
-	\item \textbf{Chapter 2 - Background}
-	\item \textbf{Chapter 3 - Study of Hyperledger Projects}
-	\item \textbf{Chapter 4 - Implementation}
-	\item \textbf{Chapter 5 - Business Procedures}
-	\item \textbf{Chapter 6 - Conclusion}
-\end{itemize}
+The thesis contains six chapters as follows:
+
+\paragraph{$\bullet$ Chapter 1 - Introduction} provides a brief description about the state of the art of this scientific paper by presenting how the Blockchain protocol solves the business issues of the digital world. Also, in this chapter we outline the motivations and objectives of the thesis alongside our contributions to the Blockchain for business' research field.
+
+\paragraph{$\bullet$ Chapter 2 - Background} describes the most important characteristics of the Blockchain protocol and how Blockchain can be used to fulfill business requirements. More than that we outline the two types of Blockchain for business areas types of classification. The first type is oriented to fit the current business environment without radical changes and the second type of classification is more generic and provides insights into the future of business after embedding Blockchain - the \emph{Trust Protocol} into digital business.
+
+\paragraph{$\bullet$ Chapter 3 - Study of Hyperledger Projects} aims to present the Hyperledger organization, its goals and the incubator of Blockchain based projects. Our focus is to describe the Hyperledger Fabric and Composer technical specifications in order to prepare the ground for a better understanding of  the implementation aspects of {\project} network.  
+
+\paragraph{$\bullet$ Chapter 4 - Implementation} offers insights into the design and implementation details of the {\project} system developed in order to outline the usefulness of this protocol in the business world. The application idea originated as a result of a release delay due to insufficient specialized hardware in one of the Network Visibility Solutions projects so we decided to solve the problems of CAPEX orders' lack of transparency and no reliable time estimations for orders delivery. All these issues are solved by the {\project} system that uses Hyperledger frameworks and tools.
+
+\paragraph{$\bullet$ Chapter 5 - Hardware Supply-Chain Network} describes the existing CAPEX processes and identifies the business operations issues in the current flow of events. In order to prove how our solution fixes these problems we present the main uses case of the system in detail. In order to demonstrate the correctness and completeness of the business network model developed we use the Composer UI for testing called \emph{Playground}. 
+
+\paragraph{$\bullet$ Chapter 6 - Conclusion} builds the thesis conclusions by summarizing the thesis' contributions for Blockchain for business and suggest other research directions that weren't covered by this paper.
+
 
 %\ref{sub-sec:intro-subsection2}
 %\textbf{\project} 

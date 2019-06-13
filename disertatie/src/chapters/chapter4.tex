@@ -1,5 +1,20 @@
-\chapter{Business Procedures}
+\chapter{Hardware Supply-Chain Network}
 \label{chapter:chapter4}
+
+Many software applications developed by Ixia Solutions Group (ISG) teams run on dedicated hardware and in many situations only one employee can use that hardware at a time.
+The existing Capital Expense (CAPEX) procedure is very complicated and the time between ordering a new device and receiving it can be really long. It may happen that the team doesn't need it anymore at the time the device was received. The dedicated hardware is expensive (some chassis may cost up to \$50000) so not receiving it on time may cost the department a lot of money and it can also delay the releases.
+
+On each quarter, the manager has the responsibility of determining what are the hardware needs of the team and send the list to her/his superior for approval.
+Also, the manager has to check the price of the devices requested and if the costs are over the CAPEX budget, the hardware list should be prioritized. 
+After completing the list and set the priorities if needed, the manager has to fill an \emph{Internal Sales Order} on an internal platform and than wait for the device to be delivered.
+
+A huge disadvantage of this procedure is the lack of transparency regarding the status of the order and the time estimation until receiving the order.
+In addition to this the costs may differ due to the international tax changes. 
+
+The \textbf{\emph{{\project}}} project is a supply-chain business network that solves both the transparency and the access control restrictions.
+This system is using Hyperledger Composer framework for modeling the business network: participants, transaction and assets and connects to the Hyperledger Fabric via its API to add transactions in the Blockchain database and to manage participants' access accordingly with their roles in the network.
+Therefore the Hyperledger Fabric is suitable for solving the hardware devices supply chain transparency and bottleneck issues and to restrict the access of the participants involved in accordance with their position in the company.
+
 
 \section{ISG CAPEX Procedures}
 \label{sub-sec:chapter4-section1}
