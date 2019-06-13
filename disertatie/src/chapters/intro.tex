@@ -1,32 +1,46 @@
 \chapter{Introduction}
 \label{chapter:intro}
 
-\section{Project Description}
+This thesis presents the Blockchain technology from a business perspective as an attempt to identify the main areas of applicability for the business world.
+In order to validate the information gathered in the state of the art and research stages we build a Blockchain based system in the area of hardware supply-chain for the Capital Expense process of the Network Visibility department of Ixia Solutions Group, Keysight Technologies. The content of this thesis outlines the benefits and limitations of this protocol and how the business world can revolutionize its processes by adopting it.
+
+In this chapter we describe briefly the current state of Blockchain for business and how it can solve the biggest problems of Internet. Furthermore, we are going to outline what are our motivations for building a hardware supply-chain using Hyperledger frameworks and what objectives we want to accomplish as well as our contributions to the scientific community.
+
+\section{State of the art}
 \label{sec:intro-section1}
-In this report we aim to prove the advantages of using Hyperledger Fabric by building a supply chain system that is transparent for all the entities involved in this process and to reduce the time consumption of the acquisition procedures.
-Ixia has an exhausting CAPEX process for acquiring the hardware devices needed by the development and QA teams so we believe that building a system based on Blockchain that solves the transparency and bottleneck issues is the perfect fit for replacing the existing procedures.
- 
+Alex Tapscott and Don Tapscott \cite{tapscott} affirm that in business we need to follow the four basic principals of integrity: honesty, responsibility, transparency and consideration. Before the Blockchain innovation, the digital world relied exclusively on third party entities for certifying a business partner. The Blockchain is considered to be the only solution of the third-party issue so it is called the \emph{Trust Protocol}. This technology has an enormous potential to revolutionize the Internet by offering it the integrity level required for business operations.
+Blockchain offers a new prosperity plan for peer-to-peer economy, speeding the process of financial inclusion, global protection for economic rights, eliminating bureaucracy and corruption from foreign aid, rewarding value creators, corporation redesign as the motor of capitalism, animate the IoT via collaboration, building a new Blockchain entrepreneurship, etc.
 
-Hyperledger Fabric is a opensource framework developed by IBM and supported by the Linux Foundation that offers a permissioned private Blockchain solution. 
-The framework is developed for private companies that know exactly the type of entities that are involved in their processes and what are their roles.
-Therefore the Hyperledger Fabric is suitable for solving the hardware devices supply chain transparency and bottleneck issues and to restrict the access of the participants involved in accordance with their position in the company. The hardware supply chain is CAPEX process that requires special approvals and priority analysis which is time consuming and often hard to track.
+Many companies and governmental organizations consider this technology a threat because of its power to close down industries such as banks and to create a new democracy by equal distribution of decision power. In its early stage the Blockchain was associated with the black market so it offered its opponents a reason to undermine it.
+
+However, the Blockchain's enthusiasts contend its potentially dangerous aspects and they started to build Blockchain based applications for e-commerce, electronic voting systems, digital identity, financial transaction, business collaboration, etc. For supporting the growth of Blockchain networks, the online community developed solutions to help entrepreneurs adopt the protocol in their business. 
+Hyperledger is a multi-projects organization that focuses on developing frameworks and tools to assist enterprises to integrate this protocol in their business.
+Fabric is the most popular project developed by Hyperledger. It offers a modular Blockchain implementation for cross-industry networks that provides an authorization layer to enable access only to trustworthy members. 
 
 
-\section{Project Objectives and Motivation}
+\section{Motivations and Objectives}
 \label{sec:intro-section2}
-Hardware supply is an important aspect of the Ixia's employee daily work. Many software applications developed by Ixia teams run on dedicated hardware and in many situations only one employee can use that hardware at a time.
-The existing CAPEX procedure is very complicated and the time between ordering a new device and receiving it can be really long. It may happen that the team doesn't need it anymore at the time the device was received. The dedicated hardware is expensive (some chassis may cost up to \$50000) so not receiving it on time may cost the department a lot of money and it can also delay the releases.
+We were motivated to choose this direction of research because it is an young technology with multiple areas of applicability for business and it offers solutions to building a new Internet where trust is embedded. As a result of this research, we reached the conclusion that dedicating this thesis to systematize the Blockchain opportunities for the business world and based on this we build some short and long term objectives:
+\begin{itemize}
+	\item
+\end{itemize}
+
+
+
+Many software applications developed by Ixia teams run on dedicated hardware and in many situations only one employee can use that hardware at a time.
+The existing Capital Expense (CAPEX) procedure is very complicated and the time between ordering a new device and receiving it can be really long. It may happen that the team doesn't need it anymore at the time the device was received. The dedicated hardware is expensive (some chassis may cost up to \$50000) so not receiving it on time may cost the department a lot of money and it can also delay the releases.
 
 On each quarter, the manager has the responsibility of determining what are the hardware needs of the team and send the list to her/his superior for approval.
 Also, the manager has to check the price of the devices requested and if the costs are over the CAPEX budget, the hardware list should be prioritized. 
-After completing the list and set the priorities if needed, the manager has to fill an \emph{Internal Sales Order} on an internal platform. 
-The hardware manufacturing managers have to check if there're are new ISOs for their teams to build or if they have the devices on stock. If the hardware machines are on stock they will be delivered to the department/manager that requested them. If there's no hardware with the desired specification on stock, the manager has to schedule it for manufacturing.
-Also, the manufacturing managers need to make sure that the financial transaction was done successfully before delivering the hardware so they have to discuss with the financial department and validate that everything is ok.
+After completing the list and set the priorities if needed, the manager has to fill an \emph{Internal Sales Order} on an internal platform and than wait for the device to be delivered.
+
 A huge disadvantage of this procedure is the lack of transparency regarding the status of the order and the time estimation until receiving the order.
 In addition to this the costs may differ due to the international tax changes. 
 
 The \textbf{\emph{{\project}}} project is a supply-chain business network that solves both the transparency and the access control restrictions.
 This system is using Hyperledger Composer framework for modeling the business network: participants, transaction and assets and connects to the Hyperledger Fabric via its API to add transactions in the Blockchain database and to manage participants' access accordingly with their roles in the network.
+Therefore the Hyperledger Fabric is suitable for solving the hardware devices supply chain transparency and bottleneck issues and to restrict the access of the participants involved in accordance with their position in the company.
+
 
 \section{Contributions}
 \label{sec:intro-sec3}
