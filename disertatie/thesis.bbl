@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+
+\bibitem{composer-sample}
+Sample hyperledger composer business network definitions.
+\newblock Published on github.com,
+  \url{https://github.com/hyperledger/composer-sample-networks.git}, 2017.
+\newblock Accessed Mar. 2019.
+
+\bibitem{oecd}
+Organisation for economic co-operation and development.
+\newblock Published on Oecd.org, \url{https://www.oecd.org/about/}, 2019.
+\newblock Accessed Apr. 2019.
+
+\bibitem{composer-wiki}
+Hyperledger~Composer Community.
+\newblock Hyperledger composer documentation.
+\newblock Published on Hyperldeger Github,
+  \url{https://hyperledger.github.io/composer/latest/introduction/introduction.html},
+  2019.
+\newblock Accessed Mar. 2019.
+
+\bibitem{fabric-wiki}
+Hyperledger~Fabric Community.
+\newblock Hyperledger fabric documentation.
+\newblock Build with Sphinx and Read the Docs,
+  \url{https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html#}, 2019.
+\newblock Accessed Mar. 2019.
+
+\bibitem{composer-playground}
+Hyperledger Composer.
+\newblock Composer playground.
+\newblock Published on github.com,
+  \url{https://hyperledger.github.io/composer/latest/index.html}.
+\newblock Accessed Mar. 2019.
+
+\bibitem{composer-model}
+Hyperledger Composer.
+\newblock Introduction.
+\newblock Published on hyperledger.github.io,
+  \url{https://hyperledger.github.io/composer/v0.19/introduction/introduction.html}.
+\newblock Accessed Mar. 2019.
+
+\bibitem{tapscott}
+Alex~Tapscott Don~Tapscott.
+\newblock {\em Blockchain Revolution: How the Technology Behind Bitcoin and
+  Other Cryptocurrencies Is Changing the World}.
+\newblock Portfolio, 2016.
+
+\bibitem{fabric-article}
+Vita Bortnikov Christian Cachin Konstantinos Christidis Angelo De Caro David
+  Enyeart Christopher Ferris Gennady Laventman Yacov Manevich Srinivasan
+  Muralidharan Chet Murthy Binh Nguyen Manish Sethi Gari Singh Keith Smith
+  Alessandro Sorniotti Chrysoula Stathakopoulou Marko Vukolić Sharon Weed
+  Cocco Jason~Yellick Elli~Androulaki, Artem~Barger.
+\newblock Hyperledger fabric: A distributed operating system for permissioned
+  blockchains.
+\newblock Appears in proceedings of EuroSys 2018 conference,
+  \url{https://arxiv.org/abs/1801.10228v2}.
+\newblock Accessed Mar. 2019.
+
+\bibitem{pow-byzantine}
+Jeroen Rijnbout.
+\newblock Byzantine consensus through bitcoin's proof-of-work.
+\newblock Published on MCA,
+  \url{https://pdfs.semanticscholar.org/0d82/a314dd96265ac8542a9ca80e5c7db09594d2.pdf},
+  2017.
+\newblock Accessed Apr. 2019.
+
+\bibitem{blockgeeks}
+Ameer Rosic.
+\newblock What is blockchain technology? a step-by-step guide for beginners.
+\newblock Published on blockgeeks.com,
+  \url{https://blockgeeks.com/guides/what-is-blockchain-technology/}, 2019.
+\newblock Accessed Apr. 2019.
+
+\bibitem{bitcoinwhitepaper}
+Nakamoto Satoshi.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em The Cryptography Mailing list at metzdowd.com}, 2008.
+
+\end{thebibliography}
