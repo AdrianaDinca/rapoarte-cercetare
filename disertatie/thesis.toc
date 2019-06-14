@@ -27,7 +27,7 @@
 \contentsline {chapter}{\numberline {4}Implementation}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}General Aspects}{17}{section.4.1}
 \contentsline {section}{\numberline {4.2}Technical Aspects}{18}{section.4.2}
-\contentsline {chapter}{\numberline {5}Hardware Supply-Chain Network}{26}{chapter.5}
-\contentsline {section}{\numberline {5.1}ISG CAPEX Procedures}{26}{section.5.1}
-\contentsline {section}{\numberline {5.2}Hardware Supply-Chain Use Cases}{27}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusion}{32}{chapter.6}
+\contentsline {chapter}{\numberline {5}Hardware Supply-Chain Network}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}ISG CAPEX procedures}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Hardware Supply-Chain Use Cases}{28}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusion}{34}{chapter.6}

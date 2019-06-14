@@ -1,4 +1,10 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{composer-sample}
+Sample hyperledger composer business network definitions.
+\newblock Published on github.com,
+  \url{https://github.com/hyperledger/composer-sample-networks.git}, 2017.
+\newblock Accessed Mar. 2019.
 
 \bibitem{oecd}
 Organisation for economic co-operation and development.
@@ -18,6 +24,20 @@ Hyperledger~Fabric Community.
 \newblock Hyperledger fabric documentation.
 \newblock Build with Sphinx and Read the Docs,
   \url{https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html#}, 2019.
+\newblock Accessed Mar. 2019.
+
+\bibitem{composer-playground}
+Hyperledger Composer.
+\newblock Composer playground.
+\newblock Published on github.com,
+  \url{https://hyperledger.github.io/composer/latest/index.html}.
+\newblock Accessed Mar. 2019.
+
+\bibitem{composer-model}
+Hyperledger Composer.
+\newblock Introduction.
+\newblock Published on hyperledger.github.io,
+  \url{https://hyperledger.github.io/composer/v0.19/introduction/introduction.html}.
 \newblock Accessed Mar. 2019.
 
 \bibitem{tapscott}
