@@ -1,6 +1,6 @@
 \chapter{Hardware Supply-Chain Network}
 \label{chapter:chapter4}
-The \textbf{\emph{\project}} project is a supply-chain business network that solves the transparency problem and enables access control restrictions.
+The \textbf{\emph{\project}} project is a supply business network that solves the transparency problem and enables access control restrictions.
 This system is using Hyperledger Composer framework for modeling the business network: participants, transactions and assets and connects to the Hyperledger Fabric via its API to add transactions in the Blockchain database and to manage participants' access accordingly with their roles in the network.
 Therefore, the Hyperledger Fabric is suitable for solving the hardware devices supply chain transparency and bottleneck issues and to restrict the members' access in accordance with their position in the company.
 
@@ -8,21 +8,21 @@ Therefore, the Hyperledger Fabric is suitable for solving the hardware devices s
 \section{ISG CAPEX procedures}
 \label{sec:chapter4-section1}
 
-Ixia Solutions Group (ISG) is one of the newly acquisitions of Keysight Technologies that focuses on developing software applications for testing the network performance, getting network visibility by monitoring the traffic and finding security threats before compromising any data.
+ISG~\footnote{Ixia Solutions Group} is one of the newly acquisitions of Keysight Technologies that focuses on developing software applications for testing the network performance, getting network visibility by monitoring the traffic and finding security threats before compromising any data.
 Therefore employees need specialized hardware devices such as routers, gateways, switches to more powerful machines as packet brokers, ESXI servers, clusters, etc.
 The ISG division offers deep expertise in network testing, security and visibility which requires investing in powerful hardware equipment.
-In each quarter of the financial year the ISG division has a CAPEX budget to invest in hardware so each team can request new hardware devices.
-Each manager has the responsibility of identifying the hardware requirements by consulting his/her team and assuring that the total cost doesn't exceed the budget in which case the CAPEX list should be prioritized.
+In each quarter of the financial year the ISG division has a CapEx~\footnote{Capital Expense} budget to invest in hardware so each team can request new hardware devices.
+Every manager has the responsibility of identifying the hardware requirements by consulting his/her team and assuring that the total cost doesn't exceed the budget in which case the CapEx list should be prioritized.
 
-When the CAPEX requirements list is completed, the manager can proceed to order them.
+When the CapEx requirements list is completed, the manager can proceed to order them.
 For ordering the equipment he/she has to send emails for approval and after the order is accepted by a superior, the manager can added it in an internal platform.
 
-The RMA procedure can be performed by the team manager as soon as he/she is informed about the hardware malfunction. Most hardware devices have an warranty period where they can be replaced or repaired free of charges by the manufacturing divisions. Before sending it to RMA the employee has to get approval from his/her manager who also needs to ask for approval from the superior.
+The RMA~\footnote{Return Merchandise Authorization - return a product under warranty to receive a refund, repair, etc.} procedure can be performed by the team manager as soon as he/she is informed about the hardware malfunction. Most hardware devices have an warranty period where they can be replaced or repaired free of charges by the manufacturing divisions. Before sending it to RMA the employee has to get approval from his/her manager who also needs to ask for approval from the superior.
 
-Taking all these into consideration, the CAPEX can become quite exhausting and if something happens with the hardware it is hard to find the root cause of the issue. In order to solve the issue of transparency when tracking a device and to reduce the time of getting all the required approvals we propose a Blockchain based solution that allows everyone to check the status of orders and hardware devices. More than that we want a solution that offers immutability so nobody can modify the history of a device which is one of the core features of the Blockchain protocol.
+Taking all these into consideration, the CapEx can become quite exhausting and if something happens with the hardware it is hard to find the root cause of the issue. In order to solve the issue of transparency when tracking a device and to reduce the time of getting all the required approvals we propose a Blockchain based solution that allows everyone to check the status of orders and hardware devices. More than that we want a solution that offers immutability so nobody can modify the history of a device which is one of the core features of the Blockchain protocol.
 The idea is to build a permissioned Blockchain application that solves the transparency and immutability problems. In addition, it needs to be able to offer support for managing the network access control.
 For reasons of competitiveness a business has to keep its internal procedures private and it is important to use a solution that enables only authorized members to get access to the system data.
-At the end of the evaluation stage, we found two frameworks developed by Hyperledger community that meet these business requirements so we decided to use them to build our hardware supply-chain system that can be used to replace the CAPEX complicated procedures.
+At the end of the evaluation stage, we found two frameworks developed by Hyperledger community that meet these business requirements so we decided to use them to build our hardware supply-chain system that can replace the complicated CapEx  procedures.
 
 \section{Hardware Supply-Chain Use Cases}
 \label{sec:chapter4-section2}
@@ -41,11 +41,11 @@ The first use case flow is triggered by an employee by creating an asset of type
 Each order has assigned a manufacturer that is in charge and authorized to create the device.
 The manufacturer analyzes the order and checks if the requested device is available or need to be scheduled for manufacturing. If no device is available the manufacturer submits a transaction of type \emph{UpdateOrderStatus} and update the order status in \emph{SCHEDULED_FOR_MANUFACTURE} (see \labelindexref{Figure}{img:scheduled1}). 
 
-\fig[scale=0.4]{src/img/scheduled1.png}{img:scheduled1}{Hardware Supply-Chain: Update order status in \emph{SCHEDULED_FOR_MANUFACTURE} (UI offered by \cite{composer-playground})}
+\fig[scale=0.4]{src/img/scheduled1.png}{img:scheduled1}{Hardware Supply-Chain: Order Status \emph{SCHEDULED_FOR_MANUFACTURE} (UI offered by \cite{composer-playground})}
 
-When he finishes creating the hardware order, he/she sets a serial number for the device by submitting a transaction of type \emph{UpdateOrderStatus} with the status \emph{SERIAL_NUMBER_ASSIGNED} and a unique value for the field \emph{serialNumber} (see \labelindexref{Figure}{img:serialNumber1}).
+When he finishes creating the hardware ordered, he/she sets a serial number for the device by submitting a transaction of type \emph{UpdateOrderStatus} with the status \emph{SERIAL_NUMBER_ASSIGNED} and a unique value for the field \emph{serialNumber} (see \labelindexref{Figure}{img:serialNumber1}).
 
-\fig[scale=0.4]{src/img/serialNumber1.png}{img:serialNumber1}{Hardware Supply-Chain: Update order status in \emph{SERIAL_NUMBER_ASSIGNED} (UI offered by \cite{composer-playground})}
+\fig[scale=0.4]{src/img/serialNumber1.png}{img:serialNumber1}{Hardware Supply-Chain: Order Status in \emph{SERIAL_NUMBER_ASSIGNED} (UI offered by \cite{composer-playground})}
 
 In this moment, a new chassis is added in the list of assets stored in the Blockchain that can be easily identified via its serial number (see \labelindexref{Figure}{img:chassis1}).
 
@@ -61,17 +61,17 @@ to the manufacture. If the manager approves the return of the device, he has to 
 In order to illustrate this use case we created a new order with \emph{orderId} 1000 that has the same specifications as order with \emph{orderId} 100 and added a new transaction of update status for the use case when an employee receives a device that doesn't meet the order' specifications. For more details see \labelindexref{Figure}{img:octeonOwner}.
 The \emph{Manufacturer} that had registered the device serial number has to manage the use case when a device is return to manufacture. He can also check in the business network the status of the returned devices (see \labelindexref{Figure}{img:octeonReturn}) and the order status (see \labelindexref{Figure}{img:orderNotInAccordance}). 
  
-\fig[scale=0.4]{src/img/delivered1.png}{img:delivered1}{Hardware Supply-Chain: Update order status in \emph{DELIVERED} (UI offered by \cite{composer-playground})}
+\fig[scale=0.4]{src/img/delivered1.png}{img:delivered1}{Hardware Supply-Chain: Order Status \emph{DELIVERED} (UI offered by \cite{composer-playground})}
 
-\fig[scale=0.4]{src/img/ownerAssigned1.png}{img:ownerAssigned1}{Hardware Supply-Chain: Update order status in \emph{OWNER_ASSIGNED} (UI offered by \cite{composer-playground})}
+\fig[scale=0.4]{src/img/ownerAssigned1.png}{img:ownerAssigned1}{Hardware Supply-Chain: Order Status \emph{OWNER_ASSIGNED} (UI offered by \cite{composer-playground})}
 
 \fig[scale=0.5]{src/img/chassisOwner1.png}{img:chassisOwner1}{Hardware Supply-Chain: Chassis' Owner (UI offered by \cite{composer-playground})}
 
-\fig[scale=0.5]{src/img/octeonOwner.png}{img:octeonOwner}{Hardware Supply-Chain: Update order status in \emph{NOT_IN_ACCORDANCE} (UI offered by \cite{composer-playground})}
+\fig[scale=0.5]{src/img/octeonOwner.png}{img:octeonOwner}{Hardware Supply-Chain: Order Status \emph{NOT_IN_ACCORDANCE} (UI offered by \cite{composer-playground})}
 
 \fig[scale=0.6]{src/img/octeonReturn.png}{img:octeonReturn}{Hardware Supply-Chain: Chassis  status \emph{RETURN} (UI offered by \cite{composer-playground})}
 
-\fig[scale=0.6]{src/img/orderNotInAccordance.png}{img:octeonReturn}{Hardware Supply-Chain: Order  status \emph{NOT_IN_ACCORDANCE} (UI offered by \cite{composer-playground})}
+\fig[scale=0.6]{src/img/orderNotInAccordance.png}{img:orderNotInAccordance}{Hardware Supply-Chain: Order  status \emph{NOT_IN_ACCORDANCE} (UI offered by \cite{composer-playground})}
 
 All the submitted transactions are registered and stored in the Blockchain ledger so nobody can corrupt that data. Having an immutable ledger is one of the powerful advantages of the Blockchain usage. The Hyperledger Composer playground offers also the possibility to read the information stored in the ledger (see \labelindexref{Figure}{img:history1}).
 \\

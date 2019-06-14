@@ -3,44 +3,44 @@
 
 \section{General Aspects}
 \label{sec:chapter3-section1}
-After analyzing the existing Blockchain solutions we reached the conclusion that Hyperledger Fabric and Composer are suitable for the enterprise usage and we propose an application build using these two frameworks that solves the Capital Expense (CAPEX) related issues in the division Ixia Solution Group (ISG) of Keysight Technologies Inc. This proof of concept focuses on hardware supply for the research and development teams of Network Visibility Solution (NVS) department.
+After analyzing the existing Blockchain solutions we reached the conclusion that Hyperledger Fabric and Composer are suitable for the enterprise usage and we propose an application build using these two frameworks that solves the CapEx~\footnote{Capital Expense} related issues in the division ISG~\footnote{Ixia Solution Group} of Keysight Technologies Inc. This proof of concept focuses on hardware supply for the research and development teams of NVS~\footnote{Network Visibility Solutions} department.
 
-Many software applications developed by Ixia Solutions Group (ISG) run on dedicated hardware and in many situations only one employee can use that hardware at a time.
-The existing Capital Expense (CAPEX) procedure is very complicated and the time between ordering a new device and receiving it can be really long. It may happen that it isn't needed anymore by the time the device is received. The dedicated hardware is expensive (some devices may cost up to \$50000) so not receiving it on time may cost the department a lot of money and it can also delay the releases.
+Many software applications developed by ISG run on dedicated hardware and in many situations only one employee can use that hardware at a time.
+The existing CapEx procedure is very complicated and the time between ordering a new device and receiving it can be really long. It may happen that it isn't needed anymore by the time the device is received. The dedicated hardware is expensive (some devices may cost up to \$50000) so not receiving it on time may cost the department a lot of money and it can also delay the releases.
 
 On each quarter, the manager has the responsibility of determining what are the hardware requirements of his teams and send the list to her/his superior for approval.
-Also, the manager has to check the price of the requested devices and if the costs are over the CAPEX budget, the hardware list should be prioritized. 
+Also, the manager has to check the price of the requested devices and if the costs are over the CapEx budget, the hardware list should be prioritized. 
 After completing the list and setting the priorities, the manager has to fill in an \emph{Internal Sales Order}(ISO) on an ordering platform. After creating the ISO the manager has to wait for the order to be delivered.
 
 A huge disadvantage of this procedure is the lack of transparency regarding the status of the order and the time estimation until receiving the order.
-In addition to this the costs may differ due to the international tax changes. 
+In addition to these problems, the costs may differ due to the international tax changes. 
 
-The project idea is to use the Blockchain strengths to solve the transparency problem so any authorized member of  the network can check the status of a CAPEX order and it also improves the overall time of order processing.
+The project idea is to use the Blockchain strengths to solve the transparency problem so any authorized member of  the network can check the status of a CapEx order and it also improves the overall time of order processing.
 The Blockchain protocol uses proof-of-work to guarantee that only valid blocks of transactions are added in the ledger so once that data is added there's no way to modify it without being invalidated by the other members.
-As a result, all the orders added in the CAPEX supply chain are visible to all the authorized members so any attempt of crime is a fail.
+As a result, all the orders added in the CapEx supply chain are visible to all the authorized members so any attempt of crime is a failure.
 
-The CAPEX procedure involves also some difficult and time consuming discussions to get the approval for a certain CAPEX order. The employees that order a hardware device need to get approval from their manager and the manager must check the CAPEX budget before approving it. All these issues can be easily managed in a permissioned blockchain network where the participants have different levels of access based on their roles. This type of Blockchain solves the accountability issue by allowing access to the network only to authorized members. 
+The CapEx procedure involves also some difficult and time consuming discussions to get the approval for a certain CapEx order. The employees that order a hardware device need to get approval from their manager and the manager must check the CapEx budget before approving it. All these issues can be easily managed in a permissioned blockchain network where the participants have different levels of access based on their roles. This type of Blockchain solves the accountability issue by allowing access to the network only to authorized members. 
 
-After some research work, we discovered that Hyperledger Composer is a good solution to limit the network access based on the participant role in the business. This framework offers two layers of control access: network and business. The network layer is the first level of access so each participant has to use unique identification network card to connect to the Blockchain network. The second level of access control is the business layer that restrict participants to do certain actions based on their role in the business. For example, a participant that wants to order a hardware doesn't have access to schedule that hardware for manufacturing.
+After some research work, we discovered that Hyperledger Composer is a good solution to limit the network access based on the participant role in the business. This framework offers two layers of access control: network and business. The network layer is the first level of access so each participant has to use a unique identification network card to connect to the Blockchain network. The second level of access control is the business layer that restrict participants to do certain actions based on their role in the business. For example, a participant that can order a hardware doesn't have access to schedule it for manufacturing.
 
 Taking all of these into account, we build a project that uses Hyperledger Composer for business modeling, Hyperledger Fabric for accessing the Blockchain protocol via an API and solves all the issues described above.
 
 
 \section{Technical Aspects}
 \label{sec:chapter3-section2}
-In order to develop the hardware supply chain over the Blockchain protocol without too much effort we choose the frameworks developed by Hyperledger that facilitate the adoption of the Blockchain technology. The usage of these frameworks reduce the time and effort to develop the supply chain consistently.
+In order to develop the hardware supply chain using the Blockchain protocol without too much effort we choose the frameworks implemented by Hyperledger that facilitate the adoption of the Blockchain technology. The usage of these frameworks reduce the time and effort to develop the supply chain consistently.
 
-The Business Network Model (BNM) is a concept introduced by the Hyperledger Composer project that facilitates the access to all the Fabric features such as introducing members with different roles, developing business functionalities in JavaScript language. For defining the business logic we can use the Hyperledger Composer API to connect to the Fabric or invoke the Fabric native functions. In most of the enterprise use case we have to provide a mechanism to restrict the access to the network and to have a transparent view of everything that happens in the system. 
+The Business Network Model (BNM) is a concept introduced by the Hyperledger Composer project that facilitates the access to all the Fabric features such as introducing members with different roles or developing business functionalities in JavaScript language. For defining the business logic we can use the Hyperledger Composer API to connect to the Fabric or invoke the Fabric native functions. In most of the enterprise use cases we have to provide a mechanism to restrict the network access and to have a transparent view of everything that happens in the system. 
 These two frameworks fulfill really well the requirements of the business world so
 it is the obvious solution to select them for any Blockchain for business project.
 
-The project idea is to handle the CAPEX procedures so it has to follow a certain business model. In the NVS department, a CAPEX process involves many actors from team leaders, managers, manufactures and external authorities. 
+The project idea is to handle the CapEx procedures so it has to follow a certain business model. In the NVS department, a CapEx process involves many actors from team leaders, managers, manufactures and external authorities. 
 Keysight Technologies is an international company and it has to make sure that all the processes conducted internally and externally are complied with the laws where it operates.
 
-In the first stage we focused on defining a supply-chain solution that handles only the CAPEX processes conducted internally due to a lack of visibility about the external procedures of the delivery stage. 
+In the first stage we focused on defining a supply-chain solution that handles only the CapEx processes conducted internally due to a lack of visibility about the external procedures of the delivery stage. 
 Therefore we have identified three types of participants: \emph{Employee}, \emph{Manufacturer} and \emph{Regulator}, the assets traded are the \emph{Order} and \emph{Chassis} and the type of transactions submitted are \emph{PlaceOrder} and \emph{UpdateOrderStatus}.
 
-As described in section \ref{sec:chapter1-section3} we developed a Business Network Archive the follows the structure required by the Hyperledger Composer framework (see \labelindexref{Figure}{img:bnaStructure}). In the following paragraphs we are going to get into the implementation aspects of the supply-chain project in order to outline the advantages of integrating the Hyperledger frameworks and tools in the CAPEX business process. 
+As described in section \ref{sec:chapter1-section3} we developed a Business Network Archive the follows the structure required by the Hyperledger Composer framework (see \labelindexref{Figure}{img:bnaStructure}). In the following paragraphs we are going to get into the implementation aspects of the supply-chain project in order to outline the advantages of integrating the Hyperledger frameworks and tools in the CapEx business process. 
 
 The {\project}'s business model was inspired by the \emph{Vehicle Manufacture Network} sample offered by Hyperledger Composer and its source code can be found on Hyperledger Composer github repository~\footnote{ https://github.com/hyperledger/composer-sample-networks.git}.
 
@@ -58,19 +58,19 @@ Another type of resources are the assets. In our business network we have identi
 An asset is defined using the reserved keyword \emph{asset} followed by the asset's name, the phrase \emph{identified by} and the name of the variable used for identification.
 The \emph{Order} asset is used
 to start the ordering procedure and have a mechanism to track all the intermediate steps previous to register the new hardware device. 
-The \emph{Chassis} asset is used to track the hardware devices that were registered. In the Keysight hardware divisions, the chassis is identified using a serial number. The other properties of this asset are the \emph{chassisDetails} - a field of type concept (which is an abstract class with no identification key), the \emph{chassisStatus} - an enum that stores information about the life-cycle stage of a device (never used, active and scrapped) and the \emph{order} - the employee that submitted the order (it is referenced with a reserved syntax \emph{-->}).
+The \emph{Chassis} asset is used to track the hardware devices that were registered. In the Keysight hardware divisions, the chassis is identified using a serial number. The other properties of this asset are the \emph{chassisDetails} - a field of type concept (which is an abstract class with no identification key), the \emph{chassisStatus} - an enum that stores information about the life-cycle stage of a device (never used, active, returned and scrapped) and the \emph{order} - the employee that submitted the order (it is referenced with a reserved syntax \emph{-->}).
 In \labelindexref{Figure}{img:chassisAsset} and \labelindexref{Figure}{img:orderAsset} are defined the two type of asset resources used by the supply-chain. 
 
 \fig[scale=0.7]{src/img/chassisAsset.png}{img:chassisAsset}{Hardware Supply-Chain: Asset of type \emph{Chassis} (inspired by \cite{composer-sample})}
 
 \fig[scale=0.7]{src/img/orderAsset.png}{img:orderAsset}{Hardware Supply-Chain: Asset of type \emph{Order} (inspired by \cite{composer-sample})}
 
-The model has to contain also the type of transactions that can be submitted in the network and the events connected with them. In our business model we determine the need of two type of transactions: \emph{PlaceOrder} and \emph{UpdateOrderStatus}.
-These two types are required in order to have a complete flow of the CAPEX ordering process. In the first stage an employee needs to place an order, the order is than approved by the regulator and send to the manufacturer. During manufacturing, the order status is changed from scheduled for manufacturing to serial number assigned and then delivered. In the CAPEX procedures the manager is responsible to receive the orders and assign an owner for each of the devices. In \labelindexref{Figure}{img:placeOrderTrans} and \labelindexref{Figure}{img:updateOrderStatTrans} we outline the transactions definitions and the events associated: \emph{PlaceOrderEvent} and \emph{UpdateOrderStatusEvent}.
+The model has to contain also the type of transactions that can be submitted in the network and the events connected with them. In our business model we determined the need of two type of transactions: \emph{PlaceOrder} and \emph{UpdateOrderStatus}.
+These two types are required in order to have a complete flow of the CapEx ordering process. In the first stage an employee needs to place an order, the order is than approved by the regulator and send to the manufacturer. During manufacturing, the order status is changed from scheduled for manufacturing to serial number assigned and then delivered. In the CapEx procedures the manager is responsible to receive the orders and assign an owner for each of the devices. In \labelindexref{Figure}{img:placeOrderTrans} and \labelindexref{Figure}{img:updateOrderStatTrans} we outline the transactions definitions and the events associated: \emph{PlaceOrderEvent} and \emph{UpdateOrderStatusEvent}.
 
-\fig[scale=0.7]{src/img/placeOrderTrans.png}{img:placeOrderTrans}{Hardware Supply-Chain: Transaction of type \emph{PlaceOrder} and its event (inspired by \cite{composer-sample})}
+\fig[scale=0.7]{src/img/placeOrderTrans.png}{img:placeOrderTrans}{Hardware Supply-Chain: Transaction \& Event \emph{PlaceOrder} (inspired by \cite{composer-sample})}
 
-\fig[scale=0.7]{src/img/updateOrderStatTrans.png}{img:updateOrderStatTrans}{Hardware Supply-Chain: Transaction of type \emph{UpdateOrderStatus} and its event (inspired by \cite{composer-sample})}
+\fig[scale=0.7]{src/img/updateOrderStatTrans.png}{img:updateOrderStatTrans}{Hardware Supply-Chain: Transaction \& Event \emph{UpdateOrderStatus} (inspired by \cite{composer-sample})}
 
 Each participant has a network card to connect to the supply-chain system that is provided by an administrator. In addition to the network access control we can restrict the actions done by a member of the network by defining rules for all the possible actions. The possible type of operations are create, read, update and delete (CRUD) and we can use this operations to create rules for all types of participants in report with other resources. 
 
@@ -85,14 +85,14 @@ For the participant \emph{Manufacturer} we had defined rules that involves the a
 
 \fig[scale=0.5]{src/img/manufacturerOrderRole.png}{img:manufacturerOrderRole}{Hardware Supply-Chain: Manufacturer Order related Rules (inspired by \cite{composer-sample})}
 
-The last rule is associated with a participant of type \emph{Regulator} who has extended permissions in the network. He/She can see all the orders submitted, who is the employee that ordered it and he/she has the possibility to assign a chassis to one of the employees (see \labelindexref{Figure}{img:regulatorRole}). This type of participant has a managerial role in the division so he/she is authorized to make changes in the network, to validate or invalidate a certain order and track the cause of orders' delays or other issues.
+The last rule is associated with a participant of type \emph{Regulator} who has extended permissions in the network. He/She can see all the orders submitted, who is the employee that ordered it and has the possibility to assign a chassis to one of the employees (see \labelindexref{Figure}{img:regulatorRole}). This type of participant has a managerial role in the division so he/she is authorized to make changes in the network, to validate or invalidate a certain order and track the cause of orders' delays or other issues.
 
 \fig[scale=0.5]{src/img/regulatorRole.png}{img:regulatorRole}{Hardware Supply-Chain: Regulator Rule (inspired by \cite{composer-sample})}
 
 Additionally to all of these, we need to set some default rules for the system administrator that is responsible with network and business access control.  The admin can create network cards for new members or deploy a new version of the \emph{.bna}. We can also set some generally applied rules for the network members. The rules of the system administrator and network members are described in \labelindexref{Figure}{img:systemRoles}. All participants can see the other members of the network. We think this rule is really useful in the early days of the network or for new members to learn about the system participants and be able to connect to them if they are in a situation that requires information from someone else in the business network. 
 
 The Hyperledger Composer has defined a default namespace \emph{org.hyperledger.composer.system} that has some predefined participants that can be used to enable the network administrator special privileges. In our business, all participants have access to the system resources and only the \emph{org.hyperledger.composer.system.NetworkAdmin} has full access to the user resources.
-\fig[scale=0.5]{src/img/systemRoles.png}{img:systemRoles}{Hardware Supply-Chain: Hyperledger Composer predefined participants Rules (inspired by \cite{composer-sample})}
+\fig[scale=0.5]{src/img/systemRoles.png}{img:systemRoles}{Hardware Supply-Chain: Predefined Participants Rules (inspired by \cite{composer-sample})}
 
 Another important aspect of the project implementation is the transactions definition. Transactions hold all the business logic and they use the Hyperledger APIs to connect to the Fabric and register the submitted transactions in the ledger.
 
