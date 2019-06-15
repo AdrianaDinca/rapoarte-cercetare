@@ -33,6 +33,13 @@ Hyperledger Composer.
   \url{https://hyperledger.github.io/composer/latest/index.html}.
 \newblock Accessed Mar. 2019.
 
+\bibitem{composer-restserver}
+Hyperledger Composer.
+\newblock Hyperledger composer rest server.
+\newblock Published on hyperledger.github.io,
+  \url{https://hyperledger.github.io/composer/v0.19/reference/rest-server}.
+\newblock Accessed May 2019.
+
 \bibitem{composer-model}
 Hyperledger Composer.
 \newblock Introduction.

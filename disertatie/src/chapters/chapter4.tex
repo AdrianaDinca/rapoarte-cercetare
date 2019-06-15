@@ -73,10 +73,12 @@ The \emph{Manufacturer} that had registered the device serial number has to mana
 
 \fig[scale=0.6]{src/img/orderNotInAccordance.png}{img:orderNotInAccordance}{Hardware Supply-Chain: Order  status \emph{NOT_IN_ACCORDANCE} (UI offered by \cite{composer-playground})}
 
-All the submitted transactions are registered and stored in the Blockchain ledger so nobody can corrupt that data. Having an immutable ledger is one of the powerful advantages of the Blockchain usage. The Hyperledger Composer playground offers also the possibility to read the information stored in the ledger (see \labelindexref{Figure}{img:history1}).
-\\
-\fig[scale=0.3]{src/img/history1.png}{img:history1}{Hardware Supply-Chain: Blockchain Ledger (UI offered by \cite{composer-playground})}
+All the submitted transactions are registered and stored in the Blockchain ledger so nobody can corrupt that data. Having an immutable ledger is one of the powerful advantages of the Blockchain usage. The Hyperledger Composer Playground offers also the possibility to read the information stored in the ledger. The first transactions stored in the ledger are issued by the Hyperledger Composer and Fabric frameworks as we can see in \labelindexref{Figure}{img:noHistoryLedger}. In our scenario we issued five transactions: one of type \emph{PlaceOrder} and four of type \emph{UpdateOrderStatus} (status updates: \emph{SCHEDULED_TO_MANUFACTURE}, \emph{SERIAL_NUMBER_ASSIGNED}, \emph{DELIVERED} and \emph{OWNER_ASSIGNED}). In \labelindexref{Figure}{img:history1} we can see the Blockchain ledger with the issued transactions.
+
+\fig[scale=0.4]{src/img/noHistoryLedger.png}{img:noHistoryLedger}{ First Blockchain Ledger Transactions (UI offered by \cite{composer-playground})}
+
+\fig[scale=0.4]{src/img/history1.png}{img:history1}{Hardware Supply-Chain: Blockchain Ledger (UI offered by \cite{composer-playground})}
 
 The second use case is similar with the one described above with the mention that the stage of delivery may be missing. In this situation the status of a chassis is set to \emph{SCRAPPED}.
 
-The user interface was provided by Hyperledger Composer playground but the business model archive can be integrated with other web frameworks via the \emph{composer-rest-server} module. The business network can be deployed on this server and we can connect from any web client to the REST API it has exposed.
+The user interface was provided by Hyperledger Composer Playground but the business model archive can be integrated with other web frameworks via the \emph{composer-rest-server} module. The business network can be deployed on this server and we can connect from any web client to the REST API it exposes. More information on how we can use the Composer REST Server are presented at the end of section \ref{sec:chapter3-section2}.
