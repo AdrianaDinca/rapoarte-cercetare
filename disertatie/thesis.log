@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  15 JUN 2019 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  16 JUN 2019 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -696,6 +696,9 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
  [7]
+
+LaTeX Warning: Citation `tapscott' on page 8 undefined on input line 60.
+
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [8] [9]) [10]
@@ -709,18 +712,18 @@ Chapter 3.
 
 
 ] [12] [13] [14]
-<src/img/composerBna.PNG, id=362, 380.01974pt x 221.02576pt>
+<src/img/composerBna.PNG, id=361, 380.01974pt x 221.02576pt>
 File: src/img/composerBna.PNG Graphic file (type png)
 <use src/img/composerBna.PNG>
 Package pdftex.def Info: src/img/composerBna.PNG  used on input line 97.
 (pdftex.def)             Requested size: 228.0136pt x 132.61647pt.
- [15 <./src/img/composerBna.PNG>]
+ [15]
 Overfull \hbox (8.21191pt too wide) in paragraph at lines 103--104
 []\T1/cmr/m/n/10 Another con-cept re-lated with the Com-poser frame-work is the
  Con-nec-tion Pro-file. Each Blockchain
  []
 
-) [16]
+) [16 <./src/img/composerBna.PNG>]
 \openout2 = `src/chapters/chapter3.aux'.
 
  (./src/chapters/chapter3.tex
@@ -730,34 +733,34 @@ Chapter 4.
 
 
 ]
-<src/img/bnaStructure.PNG, id=391, 219.82124pt x 126.4725pt>
+<src/img/bnaStructure.PNG, id=390, 219.82124pt x 126.4725pt>
 File: src/img/bnaStructure.PNG Graphic file (type png)
 <use src/img/bnaStructure.PNG>
 Package pdftex.def Info: src/img/bnaStructure.PNG  used on input line 46.
 (pdftex.def)             Requested size: 153.87381pt x 88.53014pt.
  [18]
-<src/img/participants.PNG, id=400, 317.38576pt x 171.039pt>
+<src/img/participants.PNG, id=399, 317.38576pt x 171.039pt>
 File: src/img/participants.PNG Graphic file (type png)
 <use src/img/participants.PNG>
 Package pdftex.def Info: src/img/participants.PNG  used on input line 54.
 (pdftex.def)             Requested size: 222.1685pt x 119.72647pt.
  [19 <./src/img/bnaStructure.PNG> <./src/img/participants.PNG>]
-<src/img/chassisAsset.png, id=411, 448.67625pt x 421.575pt>
+<src/img/chassisAsset.png, id=410, 448.67625pt x 421.575pt>
 File: src/img/chassisAsset.png Graphic file (type png)
 <use src/img/chassisAsset.png>
 Package pdftex.def Info: src/img/chassisAsset.png  used on input line 63.
 (pdftex.def)             Requested size: 314.07123pt x 295.10048pt.
-<src/img/orderAsset.png, id=414, 368.37625pt x 573.14125pt>
+<src/img/orderAsset.png, id=413, 368.37625pt x 573.14125pt>
 File: src/img/orderAsset.png Graphic file (type png)
 <use src/img/orderAsset.png>
 Package pdftex.def Info: src/img/orderAsset.png  used on input line 65.
 (pdftex.def)             Requested size: 257.8616pt x 401.19614pt.
-<src/img/placeOrderTrans.png, id=419, 382.42876pt x 252.945pt>
+<src/img/placeOrderTrans.png, id=418, 382.42876pt x 252.945pt>
 File: src/img/placeOrderTrans.png Graphic file (type png)
 <use src/img/placeOrderTrans.png>
 Package pdftex.def Info: src/img/placeOrderTrans.png  used on input line 70.
 (pdftex.def)             Requested size: 267.69829pt x 177.06029pt.
-<src/img/updateOrderStatTrans.png, id=422, 390.45876pt x 186.6975pt>
+<src/img/updateOrderStatTrans.png, id=421, 390.45876pt x 186.6975pt>
 File: src/img/updateOrderStatTrans.png Graphic file (type png)
 <use src/img/updateOrderStatTrans.png>
 Package pdftex.def Info: src/img/updateOrderStatTrans.png  used on input line 7
@@ -769,13 +772,13 @@ Overfull \hbox (11.61426pt too wide) in paragraph at lines 76--78
 ces used are \T1/cmr/m/it/10 org.acme.chassis_-net-work.PlaceOrder
  []
 
-<src/img/employeeRole.png, id=426, 728.7225pt x 512.91624pt>
+<src/img/employeeRole.png, id=425, 728.7225pt x 512.91624pt>
 File: src/img/employeeRole.png Graphic file (type png)
 <use src/img/employeeRole.png>
 Package pdftex.def Info: src/img/employeeRole.png  used on input line 79.
 (pdftex.def)             Requested size: 364.36035pt x 256.45749pt.
 [20 <./src/img/chassisAsset.png>]
-<src/img/manufacturerChassisRole.png, id=437, 1147.28625pt x 347.2975pt>
+<src/img/manufacturerChassisRole.png, id=436, 1147.28625pt x 347.2975pt>
 File: src/img/manufacturerChassisRole.png Graphic file (type png)
 <use src/img/manufacturerChassisRole.png>
 Package pdftex.def Info: src/img/manufacturerChassisRole.png  used on input lin
@@ -786,7 +789,7 @@ Overfull \hbox (46.3414pt too wide) in paragraph at lines 83--83
  [] 
  []
 
-<src/img/manufacturerOrderRole.png, id=440, 882.29625pt x 514.92375pt>
+<src/img/manufacturerOrderRole.png, id=439, 882.29625pt x 514.92375pt>
 File: src/img/manufacturerOrderRole.png Graphic file (type png)
 <use src/img/manufacturerOrderRole.png>
 Package pdftex.def Info: src/img/manufacturerOrderRole.png  used on input line 
@@ -797,25 +800,25 @@ Overfull \hbox (28.58208pt too wide) in paragraph at lines 85--85
  [] 
  []
 
-<src/img/regulatorRole.png, id=444, 565.11125pt x 134.5025pt>
+<src/img/regulatorRole.png, id=443, 565.11125pt x 134.5025pt>
 File: src/img/regulatorRole.png Graphic file (type png)
 <use src/img/regulatorRole.png>
 Package pdftex.def Info: src/img/regulatorRole.png  used on input line 89.
 (pdftex.def)             Requested size: 282.55493pt x 67.25107pt.
 [21 <./src/img/orderAsset.png>]
-<src/img/systemRoles.png, id=454, 816.04875pt x 456.70625pt>
+<src/img/systemRoles.png, id=453, 816.04875pt x 456.70625pt>
 File: src/img/systemRoles.png Graphic file (type png)
 <use src/img/systemRoles.png>
 Package pdftex.def Info: src/img/systemRoles.png  used on input line 94.
 (pdftex.def)             Requested size: 408.02338pt x 228.35255pt.
  [22 <./src/img/placeOrderTrans.png> <./src/img/updateOrderStatTrans.png>] [23 
 <./src/img/employeeRole.png> <./src/img/manufacturerChassisRole.png>]
-<src/img/placeOrder2.png, id=471, 655.44875pt x 445.665pt>
+<src/img/placeOrder2.png, id=470, 655.44875pt x 445.665pt>
 File: src/img/placeOrder2.png Graphic file (type png)
 <use src/img/placeOrder2.png>
 Package pdftex.def Info: src/img/placeOrder2.png  used on input line 113.
 (pdftex.def)             Requested size: 393.27228pt x 267.40106pt.
-<src/img/updateOrderStatus2.png, id=474, 759.83875pt x 807.015pt>
+<src/img/updateOrderStatus2.png, id=473, 759.83875pt x 807.015pt>
 File: src/img/updateOrderStatus2.png Graphic file (type png)
 <use src/img/updateOrderStatus2.png>
 Package pdftex.def Info: src/img/updateOrderStatus2.png  used on input line 116
@@ -827,12 +830,12 @@ Overfull \hbox (43.34178pt too wide) in paragraph at lines 116--116
  []
 
 [24 <./src/img/manufacturerOrderRole.png> <./src/img/regulatorRole.png>]
-<src/img/restAPI.png, id=490, 736.7525pt x 857.2025pt>
+<src/img/restAPI.png, id=489, 736.7525pt x 857.2025pt>
 File: src/img/restAPI.png Graphic file (type png)
 <use src/img/restAPI.png>
 Package pdftex.def Info: src/img/restAPI.png  used on input line 127.
 (pdftex.def)             Requested size: 368.37535pt x 428.6002pt.
-<src/img/employeeAPI.png, id=493, 531.9875pt x 449.68pt>
+<src/img/employeeAPI.png, id=492, 531.9875pt x 449.68pt>
 File: src/img/employeeAPI.png Graphic file (type png)
 <use src/img/employeeAPI.png>
 Package pdftex.def Info: src/img/employeeAPI.png  used on input line 129.
@@ -850,54 +853,54 @@ Chapter 5.
 
 
 ]
-<src/img/playground.png, id=531, 1299.85625pt x 652.4375pt>
+<src/img/playground.png, id=530, 1299.85625pt x 652.4375pt>
 File: src/img/playground.png Graphic file (type png)
 <use src/img/playground.png>
 Package pdftex.def Info: src/img/playground.png  used on input line 35.
 (pdftex.def)             Requested size: 389.95988pt x 195.73276pt.
-<src/img/placeOrder1.png, id=535, 613.29124pt x 414.54875pt>
+<src/img/placeOrder1.png, id=534, 613.29124pt x 414.54875pt>
 File: src/img/placeOrder1.png Graphic file (type png)
 <use src/img/placeOrder1.png>
 Package pdftex.def Info: src/img/placeOrder1.png  used on input line 39.
 (pdftex.def)             Requested size: 245.31215pt x 165.81656pt.
-<src/img/scheduled1.png, id=539, 615.29875pt x 412.54124pt>
+<src/img/scheduled1.png, id=538, 615.29875pt x 412.54124pt>
 File: src/img/scheduled1.png Graphic file (type png)
 <use src/img/scheduled1.png>
 Package pdftex.def Info: src/img/scheduled1.png  used on input line 44.
 (pdftex.def)             Requested size: 246.11513pt x 165.01357pt.
  [30 <./src/img/playground.png>]
-<src/img/serialNumber1.png, id=548, 617.30624pt x 408.52625pt>
+<src/img/serialNumber1.png, id=547, 617.30624pt x 408.52625pt>
 File: src/img/serialNumber1.png Graphic file (type png)
 <use src/img/serialNumber1.png>
 Package pdftex.def Info: src/img/serialNumber1.png  used on input line 48.
 (pdftex.def)             Requested size: 246.91812pt x 163.4076pt.
-<src/img/chassis1.png, id=552, 718.685pt x 216.81pt>
+<src/img/chassis1.png, id=551, 718.685pt x 216.81pt>
 File: src/img/chassis1.png Graphic file (type png)
 <use src/img/chassis1.png>
 Package pdftex.def Info: src/img/chassis1.png  used on input line 52.
 (pdftex.def)             Requested size: 359.34161pt x 108.40472pt.
  [31 <./src/img/placeOrder1.png> <./src/img/scheduled1.png>]
-<src/img/delivered1.png, id=567, 621.32124pt x 425.59pt>
+<src/img/delivered1.png, id=566, 621.32124pt x 425.59pt>
 File: src/img/delivered1.png Graphic file (type png)
 <use src/img/delivered1.png>
 Package pdftex.def Info: src/img/delivered1.png  used on input line 64.
 (pdftex.def)             Requested size: 248.5241pt x 170.23297pt.
-<src/img/ownerAssigned1.png, id=570, 616.3025pt x 404.51125pt>
+<src/img/ownerAssigned1.png, id=569, 616.3025pt x 404.51125pt>
 File: src/img/ownerAssigned1.png Graphic file (type png)
 <use src/img/ownerAssigned1.png>
 Package pdftex.def Info: src/img/ownerAssigned1.png  used on input line 66.
 (pdftex.def)             Requested size: 246.51663pt x 161.80162pt.
-<src/img/chassisOwner1.png, id=573, 707.64375pt x 230.8625pt>
+<src/img/chassisOwner1.png, id=572, 707.64375pt x 230.8625pt>
 File: src/img/chassisOwner1.png Graphic file (type png)
 <use src/img/chassisOwner1.png>
 Package pdftex.def Info: src/img/chassisOwner1.png  used on input line 68.
 (pdftex.def)             Requested size: 353.82101pt x 115.43095pt.
-<src/img/octeonOwner.png, id=576, 588.1975pt x 399.4925pt>
+<src/img/octeonOwner.png, id=575, 588.1975pt x 399.4925pt>
 File: src/img/octeonOwner.png Graphic file (type png)
 <use src/img/octeonOwner.png>
 Package pdftex.def Info: src/img/octeonOwner.png  used on input line 70.
 (pdftex.def)             Requested size: 294.09802pt x 199.74576pt.
-<src/img/octeonReturn.png, id=579, 692.5875pt x 207.77625pt>
+<src/img/octeonReturn.png, id=578, 692.5875pt x 207.77625pt>
 File: src/img/octeonReturn.png Graphic file (type png)
 <use src/img/octeonReturn.png>
 Package pdftex.def Info: src/img/octeonReturn.png  used on input line 72.
@@ -907,7 +910,7 @@ Overfull \hbox (2.99072pt too wide) in paragraph at lines 72--72
  [] 
  []
 
-<src/img/orderNotInAccordance.png, id=582, 714.67pt x 297.11pt>
+<src/img/orderNotInAccordance.png, id=581, 714.67pt x 297.11pt>
 File: src/img/orderNotInAccordance.png Graphic file (type png)
 <use src/img/orderNotInAccordance.png>
 Package pdftex.def Info: src/img/orderNotInAccordance.png  used on input line 7
@@ -918,7 +921,7 @@ Overfull \hbox (16.24033pt too wide) in paragraph at lines 74--74
  [] 
  []
 
-<src/img/noHistoryLedger.png, id=587, 1163.34625pt x 347.2975pt>
+<src/img/noHistoryLedger.png, id=586, 1163.34625pt x 347.2975pt>
 File: src/img/noHistoryLedger.png Graphic file (type png)
 <use src/img/noHistoryLedger.png>
 Package pdftex.def Info: src/img/noHistoryLedger.png  used on input line 78.
@@ -928,7 +931,7 @@ Overfull \hbox (52.76529pt too wide) in paragraph at lines 78--78
  [] 
  []
 
-<src/img/history1.png, id=590, 1155.31625pt x 382.42876pt>
+<src/img/history1.png, id=589, 1155.31625pt x 382.42876pt>
 File: src/img/history1.png Graphic file (type png)
 <use src/img/history1.png>
 Package pdftex.def Info: src/img/history1.png  used on input line 80.
@@ -970,25 +973,25 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 15.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 16.
 ))) (./thesis.bbl [37
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 6.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 1077) in paragraph at lines 15--21
-[]\T1/cmr/m/n/10 Hyperledger Com-poser Com-mu-nity.  Hy-per-ledger com-poser do
-c-u-men-ta-tion.  Pub-
+Underfull \hbox (badness 1028) in paragraph at lines 17--22
+[]\T1/cmr/m/n/10 Hyperledger Com-poser.  Hy-per-ledger com-poser rest server.  
+Pub-lished on hy-per-
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 37--42
-[]\T1/cmr/m/n/10 Hyperledger Com-poser.  Hy-per-ledger com-poser rest server.  
-Pub-lished on hy-per-
+Underfull \hbox (badness 1077) in paragraph at lines 79--85
+[]\T1/cmr/m/n/10 Hyperledger Com-poser Com-mu-nity.  Hy-per-ledger com-poser do
+c-u-men-ta-tion.  Pub-
  []
 
 )
@@ -1007,15 +1010,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: ABBB582DCDF198860DD5ABA21895B92C;1635.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 12117 strings out of 494923
- 176184 string characters out of 6180742
- 361332 words of memory out of 5000000
- 14966 multiletter control sequences out of 15000+600000
+ 12119 strings out of 494923
+ 176212 string characters out of 6180742
+ 352369 words of memory out of 5000000
+ 14967 multiletter control sequences out of 15000+600000
  20510 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  51i,12n,49p,1494b,1162s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1039,10 +1045,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/courier/ucrro8a.pfb>
-Output written on thesis.pdf (43 pages, 1341521 bytes).
+Output written on thesis.pdf (43 pages, 1341379 bytes).
 PDF statistics:
  1273 PDF objects out of 1440 (max. 8388607)
  624 compressed objects within 7 object streams
- 152 named destinations out of 1000 (max. 500000)
+ 153 named destinations out of 1000 (max. 500000)
  356 words of extra memory for PDF output out of 10000 (max. 10000000)
 

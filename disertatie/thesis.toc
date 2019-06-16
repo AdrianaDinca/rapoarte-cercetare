@@ -22,7 +22,7 @@
 \contentsline {section}{\numberline {3.1}Hyperledger Organization}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}Hyperledger Fabric}{12}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}General Aspects}{12}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Technical Aspects}{12}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Technical Aspects}{13}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Hyperledger Composer}{14}{section.3.3}
 \contentsline {chapter}{\numberline {4}Implementation}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}General Aspects}{17}{section.4.1}
